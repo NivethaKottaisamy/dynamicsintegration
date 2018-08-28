@@ -43,9 +43,9 @@ apiGateway().then(async function (resp) {
             done(null, resp); //first parameter takes an error if you can't get an access token
         }
     });
-    console.log(client);
     await client
         .api('/me')
+        .version("v1.0")
         .get((err, res) => {
             console.log(err); // prints info about authenticated user
             console.log(res);
