@@ -44,7 +44,7 @@ apiGateway().then(async function (resp) {
         }
     });
     await client
-        .api('/me')
+        .api('/users')
         .get((err, res) => {
             console.log(err); // prints info about authenticated user
             console.log(res);
