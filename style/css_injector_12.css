@@ -1,0 +1,332 @@
+/* cms */
+.form-item-field-csd-featured-story-und { display:none!important; }
+body .ui-dialog.browse-dialog .ui-dialog-content { clear: both; }
+
+/* home footer */
+.view-group-awards { text-align:center; border-bottom: 1px solid #fff; }
+.view-group-awards .views-row { display:inline-block;width:16%;height:auto;max-width:150px; vertical-align: top!important;}
+.view-group-awards img { display:inline-block;width:90%;height:auto;padding:0 5%;vertical-align: top!important;}
+.view-group-awards h3 { font-family: PFDinTextPro-Light;font-weight: normal;font-style: normal;font-size: 18px;letter-spacing: 1px;text-transform: uppercase;color: #13203D;margin: 0px;padding: 0px 10px;position: relative;top: -19px;background-color: #DDE5F0;display: inline-block; }
+.view-group-awards hr { height:1px; color:#DDE5F0; background-color:#DDE5F0; border:0px; border-bottom:1px solid #fff;  }
+.view-group-awards h4 { margin-top:20px; margin-bottom: 30px; font-family: PFDinTextPro-Light;font-weight: normal;font-style: normal;font-size: 12px;letter-spacing: 0px;color: #13203D; }
+.view-group-awards .view-content:after {visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+@media only screen and (max-width : 600px) {
+  .view-group-awards .views-row { width:30%; }
+}
+
+/*body.front  #dotmailer-branch-form-wrapper {display:none;}*/
+
+body.front .panels-flexible-column-cslive-1 .follow-us { margin-top:0px!important; }
+body.front .views-row.views-row-2.views-row-even.views-row-last.article-list { }
+
+body.front #dotmailer-branch-form-wrapper { background-color: #B7CADB !important; margin-right:0px!important; margin-bottom:0px!important; margin-top:10px; padding-top:5px!important; }
+body.front #dotmailer-branch-form-wrapper input#edit-submit { background-color: #202B50!important; background: #202B50!important;
+moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border: 2px solid #202B50;
+padding: 5px 20px;
+color: #fff !important;
+font-family: PFDinTextPro-Regular;
+-webkit-transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+-moz-transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+-ms-transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+-o-transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out; 
+position:relative; top:-1px; }
+body.front #dotmailer-branch-form-wrapper input#edit-submit:hover { color:#fff; }
+body.front #content #dotmailer-branch-form-wrapper input[type='text'] {moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+border: 0px!important;
+padding: 5px 10px!important;}
+body.front #content #dotmailer-branch-form-wrapper label { text-transform:none!important; }
+
+
+
+/* home footer */
+.footer_awards { text-align:center; }
+.footer_awards img { display:inline-block;width:33%;height:auto; }
+.footer_awards h3 { font-family: PFDinTextPro-Light;font-weight: normal;font-style: normal;font-size: 18px;letter-spacing: 1px;text-transform: uppercase;color: #13203D;margin: 0px;padding: 0px 10px;position: relative;top: -19px;background-color: #DDE5F0;display: inline-block; }
+.footer_awards hr { height:1px; color:#DDE5F0; background-color:#DDE5F0; border:0px; border-bottom:1px solid #fff;  }
+
+body #main-wrapper {-webkit-font-smoothing: antialiased;}
+
+/* traders bulletin list */
+body.page-node-860 .node-document .field-items .field-item,
+body.page-node-4952 .node-document .field-items .field-item
+{width: 50%;float: left;}
+
+
+body.front .row-14140 { display:none; } /* HIDE JR FROM HOMEPAGE */
+
+
+#cke_contents_edit-body-und-0-value { height:600px !important; }
+#field-content-areas-values .redirect-list { display:none !important; }
+fieldset.group-send-email { background-color: #D7E1EF; }
+select#edit-field-email-from-und { height: 250px; width: 500px; }
+.read_count { display:none; }
+
+
+
+
+/* hide old blog tools */
+.node-04_news_blog_article-form .field-name-field-publish-to-csd,
+.node-04_news_blog_article-form .field-name-field-email-branch,
+.node-04_news_blog_article-form .field-name-field-intermediaries-salesperson { display:none; }
+.node-content_in_page_quicklinks-form .field-name-field-service-page-follower { display:none; }
+#taxonomy-form-term #edit-field-file { display:none; }
+
+/* INTERNAL COMMS */
+body.page-node-3926 .latest-video { display:block!important; } 
+body.page-node-3926 .view-id-cs_news_category_listing,
+body.page-node-3926 .latest-video { width:390px; }
+body.page-node-3926 .view-id-cs_news_category_listing .views-row,
+body.page-node-3926 .latest-video .views-row { width:45.9%; float:left; }
+body.page-node-3926 .latest-video  .view-content:after,
+body.page-node-3926 .view-id-cs_news_category_listing  .view-content:after {  content: ""; display:table; clear: both; height:0px; overflow:hidden;  }
+body.page-node-3926 .latest-video  .view-content { background-color: #dde5f0 !important; }
+body.page-node-3926 .latest-video.t-grey-box .views-row { background-color: #dde5f0 !important; height:160px; }
+body.page-node-3926 .latest-video  .view-content a { }
+body.page-node-3926 #content .latest-video.t-grey-box h3 {color: #fff !important; background:transparent!important;  }
+body.page-node-3926 #content .latest-video.t-grey-box h3 span {display:none!important;  }
+body.page-node-3926 #content .latest-video.t-grey-box .view-header {background-color: #202B50 !important;}
+
+
+
+/* INTERMEDIARIES HOMEPAGE */
+.intermediaries-homepage-left { background:url('/sites/www.charles-stanley.co.uk/files/intermediaries_bg.png') top left #14213d; height:105px; margin-left: -10px; margin-right: -20px; margin-top:-10px; }
+#content .intermediaries-homepage-left h3 { color:#fff !important; font-family: CenturyStd-BookItalic; font-weight: normal; font-style: normal; font-size: 19px; padding:30px 0 0 20px; line-height:19px; }
+#content .intermediaries-homepage-left h2 { color:#fff !important; font-family: PFDinTextPro-Light; font-weight: normal; font-style: normal; font-size: 28px; text-transform: uppercase;  padding:0px 0 0 20px; line-height:30px; }
+.cslive-inside { position:relative; }
+
+.view-intermediaries-platforms-taxonomy {position: absolute; z-index:70; left: 578px; top: -10px; width:402px; }
+#overlay-content .view-intermediaries-platforms-taxonomy { position: relative; }
+.view-intermediaries-platforms-taxonomy .view-header { background:url('/sites/www.charles-stanley.co.uk/files/intermediaries_bg.png') top left #14213d; height:105px; }
+.view-intermediaries-platforms-taxonomy .views-exposed-widgets{ background-color:#ecf1f7; height:100px; position:relative; margin-bottom:0px !important;  }
+.view-intermediaries-platforms-taxonomy .views-exposed-widgets .views-exposed-widget { padding:20px; }
+.view-intermediaries-platforms-taxonomy .views-exposed-widgets .views-exposed-widget select { width:180px; }
+.view-intermediaries-platforms-taxonomy .views-exposed-widgets .views-exposed-widget label { font-family: PFDinTextPro-Regular; font-weight: normal; font-style: normal; font-size: 15px; color: #333 !important; }
+.view-intermediaries-platforms-taxonomy .views-field-field-platform-logo { position: absolute; top: 115px; right: 10px;}
+#content .view-intermediaries-platforms-taxonomy .view-header h3 { color:#fff !important; font-family: CenturyStd-BookItalic; font-weight: normal; font-style: normal; font-size: 19px; padding:30px 0 0 20px; line-height:19px; }
+#content .view-intermediaries-platforms-taxonomy .view-header h2 { color:#fff !important; font-family: PFDinTextPro-Light; font-weight: normal; font-style: normal; font-size: 28px; text-transform: uppercase;  padding:0px 0 0 20px; line-height:30px; border:0px; text-shadow:none; }
+.view-intermediaries-platforms-taxonomy .view-footer { background-color:#ecf1f7; padding:0 20px 0px 20px; }
+.view-intermediaries-platforms-taxonomy .view-footer .view-intermediaries-platforms-documents { border-top: #999 solid 1px; padding-top:10px; padding-bottom:20px; }
+.view-intermediaries-platforms-taxonomy .view-footer a { 
+font-family: PFDinTextPro-Regular;
+font-weight: normal;
+font-style: normal;
+font-size: 14px;
+display: block;
+padding: 5px 10px 3px 20px !important;
+background: url('/sites/www.charles-stanley.co.uk/files/smarrow.png') -1px center no-repeat;
+letter-spacing: 0px;
+color: #333 !important;
+-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+.view-intermediaries-platforms-taxonomy .view-footer a:hover { 
+background: url('/sites/www.charles-stanley.co.uk/files/smarrow.png') 3px center no-repeat #a6aeba;
+color: #ffffff !important;
+-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+text-decoration:none;
+}
+.view-intermediaries-platforms-taxonomy .view-footer {
+-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;}
+/* platform logo table */
+.view-intermediaries-platforms-taxonomy.view-display-id-block_1 {position: relative; z-index:1; left: 0px; top: 0px; width:auto; }
+.view-intermediaries-platforms-taxonomy.view-display-id-block_1 .view-header { background:none; background-color:#fff; height:auto; text-align:center; }
+#content .view-intermediaries-platforms-taxonomy.view-display-id-block_1 .view-header h3 { color:#414141!important; font-family: CenturyStd-Book; font-weight: normal; font-style: normal; font-size: 22px; padding:30px 0 10px 0px; line-height:22px; text-transform:uppercase;letter-spacing: 3px;  }
+#content .view-intermediaries-platforms-taxonomy.view-display-id-block_1 .view-header p { color:#414141!important; font-family: CenturyStd-Book; font-weight: normal; font-style: normal; font-size: 14px; padding:0px 0 40px 0px; line-height:22px;  }
+.view-intermediaries-platforms-taxonomy.view-display-id-block_1 .view-content { text-align:center; width:100%; border-top:1px solid #DDDDDE;border-bottom:1px solid #DDDDDE; padding:0;margin-bottom:30px;   }
+.view-intermediaries-platforms-taxonomy.view-display-id-block_1 .view-content:after {  content: ""; display:table; clear: both; height:0px; overflow:hidden;  }
+.view-intermediaries-platforms-taxonomy.view-display-id-block_1 .views-row { float:left; /*width:20%;*/ width:14.25%; line-height:100%!important; overflow:hidden;  }
+.view-intermediaries-platforms-taxonomy.view-display-id-block_1 .views-row .views-field-field-square-logo { border-right:1px solid #DDDDDE; }
+.view-intermediaries-platforms-taxonomy.view-display-id-block_1 .views-row-last .views-field-field-square-logo { border-right:1px solid #fff; }
+.view-intermediaries-platforms-taxonomy.view-display-id-block_1 .views-row .views-field-field-square-logo img { width:100%; height:auto; }
+
+/* platform logo page */
+.view-intermediaries-platforms-taxonomy.view-display-id-block_2 { position: relative!important; z-index:1!important; left: 0px!important; top: 0px!important; width:auto!important;opacity: 1!important; filter: alpha(opacity=100)!important;display:block!important; border-top:1px solid #fff; }
+.view-intermediaries-platforms-taxonomy.view-display-id-block_2 .views-field-field-blue-logo { width: 33.15%; float:left; }
+.view-intermediaries-platforms-taxonomy.view-display-id-block_2 .views-field-field-blue-logo img { width: 100%; height:auto; }
+.node-type-11-new-site-page-mixed-content-p .view-intermediaries-platforms-taxonomy.view-display-id-block_2 .view-intermediaries-platforms-documents .views-row { float:none; width:auto;  }
+.node-type-11-new-site-page-mixed-content-p .view-intermediaries-platforms-taxonomy.view-display-id-block_2 .view-content { background-color:#EFEEEA; text-align:left;  }
+.node-type-11-new-site-page-mixed-content-p .view-intermediaries-platforms-taxonomy.view-display-id-block_2 .view-content .view-content { background-color:#fff; text-align:left; margin-left:33.15%; padding-bottom:30px;  }
+.node-type-11-new-site-page-mixed-content-p .view-intermediaries-platforms-taxonomy.view-display-id-block_2 .view-intermediaries-platforms-documents { background:transparent; padding:0px; }
+.node-type-11-new-site-page-mixed-content-p .view-intermediaries-platforms-taxonomy.view-display-id-block_2 .view-intermediaries-platforms-documents a { background: url(/sites/www.charles-stanley.co.uk/files/small-doc_0.png) center left #fff no-repeat !important; padding: 15px 10px 15px 35px !important; text-align:left; border-bottom:1px solid #e5e5e5; margin:0 30px; }
+.node-type-11-new-site-page-mixed-content-p .view-intermediaries-platforms-taxonomy.view-display-id-block_2 .view-intermediaries-platforms-documents a:hover { color: #1E2646 !important; }
+.node-type-11-new-site-page-mixed-content-p .view-intermediaries-platforms-taxonomy.view-display-id-block_2 .views-field-name { padding: 15px 30px !important;color: #1E2646 !important;font-family: PFDinTextPro-Regular;font-weight: normal;font-style: normal;font-size: 18px;margin-left: 33.15%; }
+
+
+
+.panels-flexible-column-cslive-1 .follow-us { margin-right:10px; text-align:left; }
+#content .panels-flexible-column-cslive-1 .follow-us h3 { padding-left:15px; }
+.of-the-moment { margin-bottom:0px !important; }
+.latest-video.of-the-moment .views-field-title { font-size: 13px; }
+.of-the-moment.t-grey-box .views-row.views-row-first { padding-top:8px; }
+.of-the-moment.t-grey-box .views-row { padding-top:0px; }
+
+/* h1 homepage */
+body #logo h1 { text-indent: -3000px; height: 0px; width: 0px; overflow: hidden; margin: 0px !important; padding: 0px !important; float: left; display: inline-block; }
+
+
+/* twitter widget */
+iframe#twitter-widget-0 { width:227px!important; margin-bottom:10px; }
+
+/* branch homepage update */
+#content .homepage-slider .views-row .slide-item .text-wrapper h1 { margin:0px !important; padding:0px !important; /* letter-spacing: -1px;*/ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+#content .homepage-slider .views-row .slide-item.text-Dark h1{ color:#13203d; /*text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);*/ }
+#content .homepage-slider .views-row .slide-item.text-Light h1 { color:#fff; text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);/**/ }
+#content .homepage-slider .views-row .slide-item .text-wrapper h1 { font-size:200%; font-weight: 100; line-height: 120%; margin-bottom:10px !important; }
+#content .homepage-slider .views-row .slide-item h1 { /*font-family: 'ledger', Arial, serif;*/ font-weight: 100; letter-spacing:0px; }
+
+/* TEMP HIDE NWITM */
+.node-type-05-news-homepage-new .latest-video { display:none; } 
+
+
+
+/* intermediaries home */
+body.page-node-2503 .homepage-slider .views-row .slide-item.left .text-wrapper { top:auto; width:500px; bottom:45px; }
+body.page-node-2503 #content .homepage-slider .views-row .slide-item .text-wrapper h2 { font-size: 310%; font-family: PFDinTextPro-Light;
+font-weight: normal;
+font-style: normal;
+text-transform: uppercase; } 
+
+/* sedol inputs */
+#edit-field-sedol-security-name-und { width:80%; }
+#edit-field-sedol-code { display:none; }
+
+
+/* update to service page allowing two tel numbers */
+.pane-service-overview .view-display-id-block_6 { padding:0px; text-align:center;  }
+.pane-service-overview .view-display-id-block_6 .views-row { width:482px; display:inline-block; padding-top:80px; min-height:260px; vertical-align: top; }
+.pane-service-overview .view-display-id-block_6 .views-row-last { background: url('/sites/all/themes/sitedesign/images/interface/services/contact-border-right.png') top left no-repeat; width:488px; }
+#content .pane-service-overview .view-display-id-block_6 .views-row h3 { font-size:31px; }
+.pane-service-overview .view-display-id-block_6 .views-row-first.views-row-last  { background:none; width:auto; }
+#content .pane-service-overview .view-display-id-block_6 .views-row-first.views-row-last  h3 { font-size:41px; }
+
+
+
+/* service page updates */
+.pane-service-overview-services .view-display-id-block_1:after {   content: ""; clear: both; }
+#block-system-main-menu ul li a { padding-left:15px !important; padding-right:15px !important; }
+.qtip .panel-1col ul li { width:290px;}
+body #block-system-main-menu ul li a.qtip-hover { color: #FFF !important; background-color: #283f58 !important;}
+.qtip .menu-minipanels .panel-col-first .inside p { padding:0 30px !important; }
+.qtip .menu-minipanels .panel-col-first .inside p img { margin-left: -37px; }
+#content .pane-service-overview .view-display-id-block_4 .views-row li { font-family: CenturyStd-Book; font-weight: normal; font-style: normal; font-size: 15px; color: #2C2C2C !important; padding-bottom:10px; }
+#content .pane-service-overview .view-display-id-block_4 .views-row ul { padding:0 15px; margin:0 0 20px 0; }
+#content .pane-service-overview .view-display-id-block_4 .views-row .col-2 ul { padding-left:50px; }
+.pane-service-overview .view-display-id-block_1 .views-row { position:relative; }
+#content .pane-service-overview-services .view-display-id-block .service_overview_service h3 a { padding: 0 30px 10px 30px !important; }
+#content .pane-service-overview .view-display-id-block_4 p em { font-style:normal !important; font-family: CenturyStd-BookItalic !important; }
+#content .pane-service-overview .view-display-id-block_4 p a { text-decoration:underline; }
+#content .pane-service-overview .view-display-id-block_4 table { font-style:normal !important; font-weight:normal !important; font-family: CenturyStd-Book !important; margin-left:34px; margin-bottom:30px; font-size:16px !important; }
+#content .pane-service-overview .view-display-id-block_4 .col-1 table { margin-left:-2px; }
+#content .pane-service-overview .view-display-id-block_4 table tr th { font-style:normal !important; font-weight:normal !important; font-family: CenturyStd-Book !important; }
+#content .pane-service-overview-services .view-display-id-block .service_overview_service h3 a { font-size:20px !important; }
+.pane-service-overview-services .view-display-id-block_4 { border-top: 1px solid #ccc; }
+.pane-service-overview .view-display-id-block .views-row .header-text p a { color:#fff !important; }
+body.node-type-09-site-page-services-detail-pag #content p.risk-warning-primary-colour,
+body.node-type-08-site-page-services-overview-p #content p.risk-warning-primary-colour { background-color: #D8D8D3; padding:20px !important; width:85% !important; font-size:16px !important; }
+.pane-service-overview-services .view-display-id-block_4 .views-row { vertical-align: top; }
+
+.second-button { margin-left:10px; }
+
+
+/* minor tweaks */
+body.page-node-2952 #content .pane-service-overview-services .view-display-id-block_1 .view-footer { display:none; }
+body.page-node-2938 .pane-service-overview-services .view-display-id-block_6 { display:none; }
+body.page-node-2938 .pane-service-overview .view-display-id-block_7,
+body.page-node-3203 .pane-service-overview .view-display-id-block_7,
+body.page-node-2935 .pane-service-overview .view-display-id-block_7,
+body.page-node-3293 .pane-service-overview .view-display-id-block_7,
+body.page-node-3063 .pane-service-overview .view-display-id-block_7 { width:100%; }
+body.page-node-2894 #content .pane-service-overview .view-display-id-block_6 h3 { font-size: 28px; letter-spacing: 1px; color:#fff !important; }
+body.page-node-2942 #content .pane-service-overview .view-display-id-block_6 h3 { font-size: 25px; letter-spacing: 0px; color:#fff !important; }
+#content .pane-service-overview .view-display-id-block_4 .views-row h4 { font-family: CenturyStd-Book;
+font-weight: normal;
+font-style: normal;
+font-size: 20px;
+color: #333 !important;
+padding-bottom: 5px !important; }
+#content .pane-service-overview .view-display-id-block_4 .col-2 h4 { padding-left: 35px !important; }
+body.page-node-3234 .pane-service-overview .view-display-id-block { height:420px; }
+body.page-node-3234 .pane-service-overview .view-display-id-block .views-row .header-text { bottom:40px; }
+body.page-node-3234 #content .pane-service-overview .view-display-id-block .views-row .header-text h1 { padding-bottom:20px !important }
+body.page-node-3234 .pane-service-overview .view-display-id-block_4 { padding-bottom:0px; padding-top:40px; }
+body.page-node-3234 .pane-service-overview .view-display-id-block_5 { padding-bottom:60px; padding-top:40px; }
+body.page-node-3234 .pane-service-overview .view-display-id-block_6 .views-row { padding-top:40px; }
+body.page-node-3293 #content .pane-service-overview .view-display-id-block_6 .views-row-first.views-row-last h3 { font-size: 31px; padding: 0 145px !important; line-height: 170%; }
+body.page-node-2894 #content .pane-service-overview .view-display-id-block_6 .views-row-first.views-row-last h3 { font-size: 31px; padding: 0 195px !important; line-height: 170%; }
+
+
+/* service page contact local office */
+.pane-service-overview .view-display-id-block_10 { padding:80px 0; background-color:#12203E; text-align:center; float:left; width:50%; height:260px; }
+.pane-service-overview .view-display-id-block_10 .service-icon { background:url('/sites/all/themes/sitedesign/images/interface/services/icon-pin.png') center top no-repeat; }
+.pane-service-overview .view-display-id-block_10:hover .service-icon { background:url('/sites/all/themes/sitedesign/images/interface/services/icon-pin-over.png') center 10px no-repeat; /* TRANSISITION */
+-webkit-transition: background-image 0.9s ease-in-out, background-position 0.2s ease-in-out;
+-moz-transition: background-image 0.9s ease-in-out, background-position 0.2s ease-in-out;
+-ms-transition: background-image 0.9s ease-in-out, background-position 0.2s ease-in-out;
+-o-transition: background-image 0.9s ease-in-out, background-position 0.2s ease-in-out;
+transition: background-image 0.9s ease-in-out, background-position 0.2s ease-in-out;
+}
+.pane-service-overview .view-display-id-block_10 h3,
+.pane-service-overview .view-display-id-block_10 p 
+{ color:#fff !important;  -webkit-font-smoothing: antialiased; /*-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;*/ }
+#content .pane-service-overview .view-display-id-block_10 h3
+{ font-family: PFDinTextPro-Light; font-weight: normal; font-style: normal; font-size:24px; padding:0px 80px !important; margin:0px !important; text-transform:uppercase; letter-spacing:1px;}
+#content .pane-service-overview .view-display-id-block_10 p
+{ font-family: CenturyStd-Book; font-weight: normal; font-style: normal; padding:0px 80px 0px 80px !important; margin:0px !important; color: #BBBCC0 !important;
+font-size: 17px !important;}
+#content .view-id-services_branch { width:100% !important; }
+
+/* local links to buttons */
+.pane-service-overview-services .view-display-id-block_8 { padding:80px 0; background-color:#12203E; text-align:center; float:left; width:50%; height:260px; }
+.pane-service-overview-services .view-display-id-block_8 .service-icon { background:url('/sites/all/themes/sitedesign/images/interface/services/icon-pin.png') center top no-repeat; height:85px; }
+.pane-service-overview-services .view-display-id-block_8:hover .service-icon { background:url('/sites/all/themes/sitedesign/images/interface/services/icon-pin-over.png') center 10px no-repeat; /* TRANSISITION */
+-webkit-transition: background-image 0.9s ease-in-out, background-position 0.2s ease-in-out;
+-moz-transition: background-image 0.9s ease-in-out, background-position 0.2s ease-in-out;
+-ms-transition: background-image 0.9s ease-in-out, background-position 0.2s ease-in-out;
+-o-transition: background-image 0.9s ease-in-out, background-position 0.2s ease-in-out;
+transition: background-image 0.9s ease-in-out, background-position 0.2s ease-in-out;
+}
+.pane-service-overview-services .view-display-id-block_8 h3,
+.pane-service-overview-services .view-display-id-block_8 p 
+{ color:#fff !important;  -webkit-font-smoothing: antialiased; /*-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;*/ }
+#content .pane-service-overview-services .view-display-id-block_8 h3
+{ font-family: PFDinTextPro-Light; font-weight: normal; font-style: normal; font-size:24px; padding:0px 80px !important; margin:0px !important; text-transform:uppercase; letter-spacing:1px;}
+#content .pane-service-overview-services .view-display-id-block_8 p
+{ font-family: CenturyStd-Book; font-weight: normal; font-style: normal; padding:0px 80px 0px 80px !important; margin:0px !important; color: #BBBCC0 !important;
+font-size: 17px !important;}
+
+
+
+
+/* 403 PAGE */
+.node-type-03-site-page-no-submenu-with-sid #user-login-form { padding: 30px 30px 20px 30px; background-color: #E9E8E2; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -khtml-border-radius: 5px; position:relative; }
+.node-type-03-site-page-no-submenu-with-sid #user-login-form .form-item label { display: inline-block;width: 90px; }
+.node-type-03-site-page-no-submenu-with-sid #user-login-form .form-item input { margin-top: 0; width: 200px; }
+.node-type-03-site-page-no-submenu-with-sid #user-login-form .item-list ul { margin:0px; padding:0px; position:absolute; bottom:-30px; left:0px; }
+.node-type-03-site-page-no-submenu-with-sid #user-login-form .item-list li { display: inline-block; list-style:none; }
+.node-type-03-site-page-no-submenu-with-sid #user-login-form .item-list li a { color:#666; margin-right:30px; }
+.node-type-03-site-page-no-submenu-with-sid #user-login-form .item-list li.first { display:none; } /* hide reg */
+.node-type-03-site-page-no-submenu-with-sid #user-login-form .item-list li.last { display:none; } /* hide reg */
+.node-type-03-site-page-no-submenu-with-sid #user-login-form .form-actions { margin:0px; }
+
+/* fusion menu item
+ul.sf-menu li#menu-3069-1 a{ background-color: #B7CADB !important; color:#fff !important; } */

@@ -1,0 +1,14 @@
+/* css printing for pages */
+#header, .region-above-page, .view-in-page-footer, #footer-wrapper, .in-page-header, .branch-header, .pane-service-overview-services, .tabs, .pane-branch-single-page, .colorpicker-interface-wrapper, .view-branch-single-page, .pane-cs-employee-panel-pane-5, .action-links, #toolbar, .view-article-categories, .view-service-overview-services { display:none; }
+#page {padding-top: 0px;-moz-box-shadow: 0px 0px 0px 0px #fff;-webkit-box-shadow: 0px 0px 0px 0px #fff;box-shadow: 0px 0px 0px 0px #fff;}
+body {padding-top:0px!important;}
+
+/* news */
+.view-id-news_and_opinion_article_body .article_body { width:95%; }
+#content .view-id-news_and_opinion_article_body .view-footer,
+body.node-type-04-news-blog-article .pane-sharethis-sharethis-block,
+#content .new_article_back a,
+.ni-news-related { display:none; }
+#content .new_article_header_title h1 { font-size: 40px; }
+.feature_large_image img { display:none; }
+.feature_page .new_article_header_title { position:relative; bottom:auto;padding-top:0px; }

@@ -1,0 +1,712 @@
+/* branch back buttons */
+.branch-back-button { text-align: center;
+background-color: #14213D;
+padding: 9px 0px 7px;
+font-family: PFDinTextPro-Medium;
+text-transform: uppercase;
+font-weight: normal;
+font-style: normal;
+font-size: 14px;
+color: #fff; }
+.branch-back-button a { color:#fff; }
+.branch-back-button:hover { background-color: #DDE5F0; }
+.branch-back-button:hover a { color: #14213D; }
+
+/* table downloads */
+body.page-node-5240 table a { text-decoration: none; background-color: #DDE5F0 !important; padding: 2px 5px; }
+body.page-node-5240 table a:hover { text-decoration: none; background-color: #13203d!important; color:#fff!important; }
+
+/* form explorer homepage */
+.view-forms-literature-explorer.view-display-id-block_2 { position: absolute;z-index: 69;left: 578px;top: 200px;width: 402px;background-color:#fff; }
+.view-forms-literature-explorer.view-display-id-block_2 .views-submit-button { display:none; }
+.view-forms-literature-explorer.view-display-id-block_2 .view-header {background: url('/sites/www.charles-stanley.co.uk/files/intermediaries_bg.png') top left #14213d;height: 105px;}
+#content .view-forms-literature-explorer.view-display-id-block_2 .view-header h3 {color: #fff !important;font-family: CenturyStd-BookItalic;font-weight: normal;font-style: normal;font-size: 19px;padding: 30px 0 0 20px;line-height: 19px; margin-top:0px; }
+#content .view-forms-literature-explorer.view-display-id-block_2 .view-header h2 {color: #fff !important;font-family: PFDinTextPro-Light;font-weight: normal;font-style: normal;font-size: 28px;text-transform: uppercase;padding: 0px 0 0 20px;line-height: 30px;border: 0px;text-shadow: none;}
+.view-forms-literature-explorer.view-display-id-block_2 .views-exposed-widgets {height: 100px;position: relative;margin-bottom: 0px !important;}
+.view-forms-literature-explorer.view-display-id-block_2 .view-filters {width: auto;text-align: left;top: 0px;left: 0px;padding: 0px; background-color: #ecf1f7;}
+.view-forms-literature-explorer.view-display-id-block_2 .views-exposed-widgets .views-exposed-widget {padding: 20px;}
+.view-forms-literature-explorer.view-display-id-block_2 .views-exposed-widgets .views-exposed-widget label {font-family: PFDinTextPro-Regular;font-weight: normal;font-style: normal;font-size: 15px;color: #333 !important;text-transform:none;letter-spacing:0px;float:none;padding-top:0px;}
+.view-forms-literature-explorer.view-display-id-block_2 .view-footer .view-forms-literature-explorer { float:none; width:100%; padding-bottom:0px; }
+#content .view-forms-literature-explorer.view-display-id-block_2 .view-footer .view-forms-literature-explorer .views-row h3 { background-image:none!important; background-color: #ecf1f7!important; padding:0px 5.5% 0px 5.5%!important; }
+#content .view-forms-literature-explorer.view-display-id-block_2 .view-footer .view-forms-literature-explorer .views-row .link-wrapper { background-color: #ecf1f7!important; padding:0px 5.5% 0px 5.5%!important; }
+#content .view-forms-literature-explorer.view-display-id-block_2 .view-footer .view-forms-literature-explorer .views-row .link-wrapper a { background-color: #ecf1f7!important;
+font-family: PFDinTextPro-Regular;font-weight: normal;font-style: normal;font-size: 14px;display: block;padding: 5px 10px 3px 20px !important;background: url('/sites/www.charles-stanley.co.uk/files/smarrow.png') -1px center no-repeat!important;letter-spacing: 0px;color: #333 !important;-webkit-transition: all 0.2s ease-in-out;-moz-transition: all 0.2s ease-in-out;-ms-transition: all 0.2s ease-in-out;-o-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out; border:none!important; }
+#content .view-forms-literature-explorer.view-display-id-block_2 .view-footer .view-forms-literature-explorer .views-row .link-wrapper a:hover {background: url('/sites/www.charles-stanley.co.uk/files/smarrow.png') 3px center no-repeat #a6aeba!important;color: #ffffff !important;-webkit-transition: all 0.2s ease-in-out;-moz-transition: all 0.2s ease-in-out;-ms-transition: all 0.2s ease-in-out;-o-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;text-decoration: none;}
+.view-forms-literature-explorer.view-display-id-block_2 .view-footer .view-forms-literature-explorer .views-row .link-spacer{padding-bottom: 20px;background-color: #ecf1f7!important;}
+#content .view-forms-literature-explorer.view-display-id-block_2 .view-footer .view-forms-literature-explorer .views-row .link-spacer-under {background-color: #ecf1f7!important;}
+
+/* IHT AND COURT PROTECTION PAGES */
+body.page-node-4273 .view-forms-literature-explorer .views-row, body.page-node-4271 .view-forms-literature-explorer .views-row { background-color:#ECF1F7; }
+body.page-node-4273 .view-forms-literature-explorer .views-row  .views-field, body.page-node-4271 .view-forms-literature-explorer .views-row  .views-field { padding-bottom:40px; }
+body.page-node-4273 .view-forms-literature-explorer .views-row .views-field .link-wrapper, body.page-node-4271 .view-forms-literature-explorer .views-row .views-field .link-wrapper { text-align:left; }
+body.page-node-4273 #content .view-forms-literature-explorer .views-row h3, body.page-node-4271 #content .view-forms-literature-explorer .views-row h3 { color: #12203E; line-height: 165%;font-family: PFDinTextPro-Regular;font-weight: normal;font-style: normal;font-style: normal;font-size: 17px;text-transform: uppercase;padding-top: 40px;margin-top: 0px!important;background: url(/sites/www.charles-stanley.co.uk/files/shade-down.png) top right no-repeat !important;
+padding: 40px 16% 20px 8%; border-top:5px solid #fff;}
+body.page-node-4273 #content .view-forms-literature-explorer .views-row a, body.page-node-4271 #content .view-forms-literature-explorer .views-row a {padding: 10px 0px 10px 35px !important;margin: 0px 0px;background: url(/sites/www.charles-stanley.co.uk/files/small-doc_0.png) center left no-repeat !important;font-family: PFDinTextPro-Regular;font-weight: normal;font-style: normal;font-size: 15px;display: block;
+border-bottom: 1px solid #e5e5e5;}
+body.page-node-4273 #content .view-forms-literature-explorer .views-row .link-wrapper, body.page-node-4271 #content .view-forms-literature-explorer .views-row .link-wrapper { padding: 0px 16% 0px 8% !important; }
+body.page-node-4273 .field-name-body, body.page-node-4271 .field-name-body { border-bottom:0px !important; }
+
+/* form explorer */
+body.page-node-3994 .in-page-header.white .in-page-text-wrapper { padding: 25px 0px; }
+.view-forms-literature-explorer  {background-color: #F5F5F2;}
+.view-forms-literature-explorer .view-filters {width: auto;text-align: left;top: 0px;left: 0px;padding:30px 8% 20px;background: url('/sites/www.charles-stanley.co.uk/files/title-bg.png') bottom left no-repeat #12203E;}
+.node-type-05-news-homepage-new .view-forms-literature-explorer .view-filters { background-image:none; }
+.view-forms-literature-explorer .view-filters label {letter-spacing: 2px;font-family: CenturyStd-Book;font-weight: normal;font-style: normal;font-size: 16px;color: #fff !important;padding-bottom: 0px !important;text-transform: uppercase; float:left; padding-top:15px; }
+.view-forms-literature-explorer .selectWrapper { margin-top:0px; margin-left:30px; }
+.view-forms-literature-explorer .views-exposed-form .views-exposed-widget { padding:0px; float:none; }
+#content .view-forms-literature-explorer .views-row .forms-title h2 {font-family: PFDinTextPro-Light;font-weight: normal;font-style: normal;font-size: 40px;text-transform: uppercase;padding-bottom: 0px !important;margin: 0px;color: #12203E !important;}
+.view-forms-literature-explorer .views-row .forms-title { background-color:#ecebe6; padding:30px 8%;border-bottom:1px solid #fff;}
+.view-forms-literature-explorer .view-footer .forms-description { width:50%; float:left;background-color:#F5F5F2;}
+.view-forms-literature-explorer .view-footer .forms-description .desc-wrapper { padding:45px 10% 40px 16%; border-right:1px solid #fff; }
+.view-forms-literature-explorer .view-footer:after  { content:" "; clear:both; height:0px; display:block; overflow:hidden; }
+.view-forms-literature-explorer .view-footer .view-forms-literature-explorer { width:50%; float:left; padding-bottom:40px; }
+#content .view-forms-literature-explorer .view-footer .forms-description p {color: #2C2C2C;line-height: 165%;font-family: CenturyStd-Book;font-weight: normal;font-style: normal;font-size: 15px;}
+#content .view-forms-literature-explorer .view-footer .forms-description li {color: #2C2C2C;line-height: 165%;font-family: CenturyStd-Book;font-weight: normal;font-style: normal;font-size: 15px;}
+#content .view-forms-literature-explorer .view-footer .forms-description h3 {color: #12203E;line-height: 165%;font-family: PFDinTextPro-Light;font-weight: normal;font-style: normal;font-style: normal;font-size: 22px; margin-top:0px;}
+.view-forms-literature-explorer .view-footer .view-forms-literature-explorer .views-row { background-color:#fff; }
+#content .view-forms-literature-explorer .view-footer .view-forms-literature-explorer .views-row h3 { color: #12203E;line-height: 165%;font-family: PFDinTextPro-Regular;font-weight: normal;font-style: normal;font-style: normal;font-size: 17px;text-transform:uppercase; padding-top:40px;margin-top:0px!important;background: url(/sites/www.charles-stanley.co.uk/files/shade-down.png) top right no-repeat !important; padding:40px 16% 20px 10%; }
+
+#content .view-forms-literature-explorer .view-footer .view-forms-literature-explorer .views-row .link-wrapper { padding: 0px 16% 0px 10% !important; text-align:left;}
+
+#content .view-forms-literature-explorer .view-footer .view-forms-literature-explorer .views-row a { padding: 10px 0px 10px 35px !important;margin: 0px 0px;background: url(/sites/www.charles-stanley.co.uk/files/small-doc_0.png) center left #fff no-repeat !important;font-family: PFDinTextPro-Regular;
+font-weight: normal;font-style: normal;font-size: 15px;display: block; border-bottom:1px solid #e5e5e5; }
+
+.view-forms-literature-explorer .view-footer .view-forms-literature-explorer .views-row .link-spacer { padding-bottom:40px;background-color:#fff; }
+.view-forms-literature-explorer .view-footer .view-forms-literature-explorer .views-row-last .link-spacer-under { padding-bottom:40px;background-color:#fff; border-bottom:1px solid #fff; }
+
+#content .view-forms-literature-explorer .view-footer .view-forms-literature-explorer .views-row .type-brochure,
+#content .view-forms-literature-explorer .view-footer .view-forms-literature-explorer .views-row .type-brochure a,
+#content .view-forms-literature-explorer .view-footer .view-forms-literature-explorer .views-row .type-brochure h3 {background-color:#ECF1F7 !important;}
+#content .view-forms-literature-explorer .view-footer .view-forms-literature-explorer .views-row .type-website,
+#content .view-forms-literature-explorer .view-footer .view-forms-literature-explorer .views-row .type-website a,
+#content .view-forms-literature-explorer .view-footer .view-forms-literature-explorer .views-row .type-website h3 {background-color:#DDE5F0 !important;}
+
+
+/* pager */
+.item-list ul.pager { height: 90px; display:block; margin-left:10px; text-align:center; }
+#content .item-list ul.pager li a { padding:25px 0px; display:block; font-family: PFDinTextPro-Regular; font-size: 14px; text-decoration:none; }
+.item-list ul.pager li,
+.item-list ul.pager li:hover
+{ padding:0px !important; margin:0px -5px 0 0 !important; border:1px solid #DDDDDE; /*border-right:0px; float:left;*/ display:inline-block; width:70px; height:70px; overflow:hidden; text-align:center; background-image:none !important;
+-webkit-transition: background-color 0.2s ease-in-out;
+-moz-transition: background-color 0.2s ease-in-out;
+-ms-transition: background-color 0.2s ease-in-out;
+-o-transition: background-color 0.2s ease-in-out;
+transition: background-color 0.2s ease-in-out; }
+.item-list ul.pager li.pager-last { border-right:1px solid #DDDDDE; }
+.item-list ul.pager li.pager-current { background-color:#D7E4F3; padding-top: 25px!important;height: 45px;color: #13203d; }
+.item-list ul.pager li:hover { background-color:#D7E4F3; }
+
+body.node-type-11-new-site-page-mixed-content-p .view-intermediaries-platforms-documents.view-display-id-block_2 { display:block !important; position:relative !important;  top:0px !important; opacity: 1 !important;   filter: alpha(opacity=100) !important; height:auto !important;  } 
+
+
+/* in page article listing */
+body.node-type-12-new-branch-page .view-id-article_categories.view-display-id-block_2 { position:relative!important; display:block!important: top:0px!important; }
+.page-news .category-news-listing { padding-left:0px; }
+.view-article-categories .in-page-image { float:left; width:325px; height:285px; background:#DDE5F0; overflow:hidden; }
+.view-article-categories .views-row { height:285px; width:100%; overflow:hidden; border-bottom:1px solid #DDDDDE;}
+.view-article-categories .in-page-contact-text { margin-left: 305px; }
+#content .view-article-categories .in-page-contact-text-header { padding-bottom:25px; }
+#content .view-article-categories .in-page-contact-text-header h3 { font-family: PFDinTextPro-Medium; font-size: 13px;}
+#content .view-article-categories .in-page-contact-text-header h2 { font-size: 22px; }
+#content .view-article-categories .in-page-contact-text p{ padding:20px 50px; }
+#content .view-article-categories .in-page-contact-text p.read_more { padding:20px 0px; margin:0px 50px; border-top:1px solid #DDDDDE; font-family: PFDinTextPro-Medium; font-size: 13px; }
+#content .view-article-categories .in-page-contact-text p.read_more a { background: url('/sites/all/themes/sitedesign/images/interface/services/grey-arrow.png') center right no-repeat; padding-right:35px; }
+/* header */
+.in-page-header.none { display:none!important; }
+.view-header .view-article-categories .views-row { height:620px; width:50%; overflow:hidden; border-bottom:1px solid #DDDDDE; float:left; }
+.view-header .view-article-categories .in-page-image { float:none; width:100%; height:300px; overflow:hidden; }
+.view-header .view-article-categories .in-page-image img { width:100%; height:auto;  }
+.view-header .in-page-contact-text { margin-left:0px; }
+.view-header .views-row-1 .in-page-contact-text { border-right:1px solid #DDDDDE; height:320px; }
+.view-header .in-page-contact-text-header { background: url('/sites/www.charles-stanley.co.uk/files/latest-news.png') bottom right no-repeat #ECEBE6; height:68px; }
+
+
+/* in page contacts - new enquiries contacts */
+.view-id-in_page_board_members.view-display-id-block_3 { background-color:#ECF1F7; padding-bottom:80px; margin-top:40px; }
+.view-id-in_page_board_members.view-display-id-block_3 .in-page-contact { background-image:none; width:49%; float:left; padding:0px 1% 0 0; border:0px; background-color:transparent; background-color:#ECF1F7; }
+.view-id-in_page_board_members.view-display-id-block_3 .in-page-contact h4 { border-bottom: 1px solid #DCDBD9; }
+.view-id-in_page_board_members.view-display-id-block_3 .view-content:after { content:" "; clear:both; height:0px; display:block; overflow:hidden; }
+.view-id-in_page_board_members.view-display-id-block_3 .view-content { padding:0 80px; }
+#content .view-id-in_page_board_members.view-display-id-block_3 .in-page-contact h3 { color:#3E3F46; line-height: 100%; font-family: PFDinTextPro-Medium; font-weight: normal; font-style: normal; font-size: 15px; margin: 0px; padding: 20px 0 3px 0px;  }
+#content .view-id-in_page_board_members.view-display-id-block_3 .in-page-contact h4 { color:#3E3F46; line-height: 160%; font-family: PFDinTextPro-Light; font-weight: normal; font-style: normal; font-size: 15px; margin: 0px; padding: 0px 0 20px 0; }
+#content .view-id-in_page_board_members.view-display-id-block_3 .view-header h3 { font-size:17px; }
+#content .view-id-in_page_board_members.view-display-id-block_3 .view-header hr { background-color: #3E3F46;color: #3E3F46;border: 0px;height: 3px;overflow: hidden;border-bottom: 0px solid #3E3F46;width:20px;}
+#content .view-id-in_page_board_members.view-display-id-block_3 .in-page-contact h4 a { color:#3E3F46; line-height: 100%; font-family: PFDinTextPro-Medium; font-weight: normal; font-style: normal; font-size: 15px; margin: 0px;  }
+
+
+
+
+
+/* branch located via IP  */
+.regional_contact_and_map { width:100%; height:500px; overflow:hidden; }
+.regional_contact_and_map .map-details { width:66%; }
+.regional_contact_and_map .map-holder { width:34%; }
+#content .regional_contact_and_map h3 
+{ color:#fff; font-family: CenturyStd-Book; font-weight: normal; font-style: normal; font-size: 18px; letter-spacing: 3px; margin: 0px; padding: 0px; text-transform: uppercase;  }
+.regional_contact_and_map .map-header
+{ width:100%; text-align:left; top:0px; left:0px;  padding:25px 0; background:url('/sites/www.charles-stanley.co.uk/files/title-bg.png') bottom left no-repeat #12203E; position:relative; }
+#content .regional_contact_and_map a.scroll-button { position:absolute; top:20px; right:25px; padding: 5px 10px !important; height:20px; -webkit-font-smoothing: antialiased;
+-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+font-family: PFDinTextPro-Regular;
+font-weight: normal;
+font-style: normal;
+font-size: 15px;
+letter-spacing: 1px; 
+width: auto;
+background-color: #3A4959;
+moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border: 10px solid #3A4959;
+color: #ffffff !important;
+text-decoration: none;}
+#content .regional_contact_and_map .map-header p { color:#fff; font-family:  PFDinTextPro-Regular; font-weight: normal; font-style: normal; font-size: 16px; }
+#content .regional_contact_and_map .map-header h3,
+#content .regional_contact_and_map .map-header p { padding-left:40px; line-height:100%; }
+#content .regional_contact_and_map .map-header h3 { font-size:30px; padding-bottom:10px; }
+#content .regional_contact_and_map .map-header a { color:#9199A2; }
+#content .regional_contact_and_map .map-address p { font-size:15px; }
+#content .regional_contact_and_map .map-address { float:left; width:40%; min-height: 400px; }
+#content .regional_contact_and_map .map-managers { background-color:#F5F5F2;  float:right; width:50%; height:370px; padding-top:40px; }
+#content .regional_contact_and_map .manager { float:left; text-align:left; width: 35%; margin-left: 10%;}
+#content .regional_contact_and_map .manager img { width:110px; height:auto; margin-bottom:10px; }
+#content .regional_contact_and_map .manager p { line-height:100%; padding-bottom:5px; }
+#content .regional_contact_and_map .manager p em { color:#3E3F46 !important; line-height: 100%; font-family: CenturyStd-BookItalic; font-weight: normal; font-style: normal; font-size: 15px; }
+#content .regional_contact_and_map .manager p.manager-name { color:#3E3F46; font-family:  PFDinTextPro-Regular; font-weight: normal; font-style: normal; font-size: 18px; padding-bottom:25px;  }
+#content .regional_contact_and_map .manager p.manager-tel { color:#3E3F46; font-family:  PFDinTextPro-Regular; font-weight: normal; font-style: normal; font-size: 15px;  }
+
+
+/* map on a page: branch  */
+body.node-type-12-new-branch-page .map-header { display:none; }
+body.node-type-12-new-branch-page .page_contact_and_map { border-top: 1px solid #DCDBD9; }
+#content .view-id-in_page_contact_and_map h3,
+#content .page_contact_and_map h3 
+{ color:#fff; font-family: CenturyStd-Book; font-weight: normal; font-style: normal; font-size: 18px; letter-spacing: 3px; margin: 0px; padding: 0px; text-transform: uppercase;  }
+#content .view-id-in_page_contact_and_map hr,
+#content .page_contact_and_map hr 
+{ background-color: #fff;color: #fff;border: 0px;height: 3px;overflow: hidden;border-bottom: 0px solid #fff;margin: 20px auto 0px; width:30px; }
+.view-id-in_page_contact_and_map .map-header,
+.page_contact_and_map .map-header
+{ width:100%; text-align:center; top:0px; left:0px;  padding:35px 0; background:url('/sites/www.charles-stanley.co.uk/files/title-bg.png') bottom left no-repeat #12203E; }
+.map-holder { width:50%; height:500px; float:left; background-color:#e5e5e5; }
+.map-details { width:50%; height:500px; float:left; position:relative; }
+.map-address { padding:60px 0 0 60px; }
+body.page-node-3519 .map-address { padding:40px 0 0 40px; }
+.map-tel { padding:40px 0 20px 40px; background:url('/sites/www.charles-stanley.co.uk/files/map-contact-bg.jpg') top right no-repeat #F5F5F2; position:absolute; bottom:0px; left:0px; width:450px; }
+#content .map-address p { padding-bottom:50px; color:#1E2646; font-family:  PFDinTextPro-Regular; font-weight: normal; font-style: normal; font-size: 17px; letter-spacing: 0px;  }
+#content .map-address p strong { font-family:  PFDinTextPro-Medium;  }
+#content .map-address a { margin-left:0px; }
+#content .map-tel h4 { padding-bottom: 0px;color: #1E2646;font-family: PFDinTextPro-Light;font-weight: normal;font-style: normal;font-size: 42px;letter-spacing: 1px;margin: 0;line-height: 100%; }
+#content .map-tel p { padding-bottom:10px; color:#1E2646; font-family:  PFDinTextPro-Regular; font-weight: normal; font-style: normal; font-size: 17px; letter-spacing: 0px;  }
+#content .map-tel p a { color:#1E2646; padding:0px; background:none; font-size: 17px;  } 
+#content .map-tel a { color:#333; font-family:  PFDinTextPro-Regular; font-weight: normal; font-style: normal; font-size: 15px; padding-right:35px !important; background: url('/sites/all/themes/sitedesign/images/interface/services/grey-arrow.png') center right no-repeat;  } 
+#content .map-tel hr { background-color: #ccc;color: #ccc;border: 0px;height: 1px;overflow: hidden;border-bottom: 0px solid #ccc;margin: 0px 50px 10px 0px; width:auto; }
+.view-id-in_page_contact_and_map .views-row:after { content:" "; clear:both; height:0px; display:block; overflow:hidden; }
+#content .page_contact_and_map:after { content:" "; clear:both; height:0px; display:block; overflow:hidden; }
+
+
+/* update to styled selectboxes */
+#content .selectWrapper span { left: 15px; width: 193px; height: 30px; }
+
+
+/* browse by region module */
+.browse-by-region { text-align:center; border-top:1px solid #DCDBD9; clear:both; }
+#content .browse-by-region h3 { color:#2C2C2C; font-family: CenturyStd-Book; font-weight: normal; font-style: normal; font-size: 22px; letter-spacing: 2px; margin: 0px; padding: 40px; text-transform: uppercase;  }
+.browse-by-region .region { float:left; text-align:left; width:50%; height:450px; }
+.browse-by-region .region.south { background:url('/sites/www.charles-stanley.co.uk/files/South.jpg') top left no-repeat; }
+.browse-by-region .region.south-west { background:url('/sites/www.charles-stanley.co.uk/files/South West.jpg') top left no-repeat; }
+.browse-by-region .region.north { background:url('/sites/www.charles-stanley.co.uk/files/North.jpg') top left no-repeat; }
+.browse-by-region .region.midlands { background:url('/sites/www.charles-stanley.co.uk/files/Midlands.jpg') top left no-repeat; }
+
+#content .browse-by-region h4 { color:#1E2646; font-family:  PFDinTextPro-Regular; font-weight: normal; font-style: normal; font-size: 16px; letter-spacing: 0px; margin-left: 162px; padding: 10px 20px; background-color:#F5F5F2;  }
+#content .browse-by-region ul { color:#1E2646; font-family:  PFDinTextPro-Regular; font-weight: normal; font-style: normal; font-size: 13px; letter-spacing: 0px; margin-left: 162px; padding: 10px 20px; background-color:#fff; list-style:none;  }
+#content .browse-by-region ul li { margin:0px;  }
+.browse-by-region:after { content:" "; clear:both; height:0px; display:block; overflow:hidden; }
+
+#content .browse-by-region ul li a{
+font-family: PFDinTextPro-Regular;
+font-weight: normal;
+font-style: normal;
+font-size: 14px;
+display: block;
+border-bottom: 1px solid #e5e5e5;
+padding: 7px 10px 6px 35px !important;
+background: url('/sites/all/themes/sitedesign/images/interface/services/grey-arrow.png') center left no-repeat;
+letter-spacing: 0px;
+color: #333 !important;
+-webkit-transition: background-position 0.2s ease-in-out;
+-moz-transition: background-position 0.2s ease-in-out;
+-ms-transition: background-position 0.2s ease-in-out;
+-o-transition: background-position 0.2s ease-in-out;
+transition: background-position 0.2s ease-in-out;}
+#content .browse-by-region ul li a:hover{
+background: url('/sites/all/themes/sitedesign/images/interface/services/grey-arrow.png') 8px center no-repeat #FAFAF8;
+-webkit-transition: background-position 0.2s ease-in-out;
+-moz-transition: background-position 0.2s ease-in-out;
+-ms-transition: background-position 0.2s ease-in-out;
+-o-transition: background-position 0.2s ease-in-out;
+transition: background-position 0.2s ease-in-out;}
+
+
+
+
+/* team module */
+.view-content-block-managment .cs-contact,
+.view-content-block-managment .emplyee-wrapper { /*width: 100%; float: none;*/ border-bottom:1px solid #DCDBD9; background:url('/sites/www.charles-stanley.co.uk/files/contact-bg-left.jpg') bottom left no-repeat; } 
+.view-content-block-managment .cs-contact .cs-contact-image img {width: 167px;height: auto;}
+.view-content-block-managment .cs-contact-details { float:left; width: 813px; }
+.view-content-block-managment .cs-contact .cs-contact-image { height: auto; margin:0px; }
+#content .view-content-block-managment .cs-contact h4 { color:#3E3F46 !important; line-height: 90%; font-family: CenturyStd-BookItalic; font-weight: normal; font-style: normal; font-size: 16px; margin: 0px; padding: 0px 50px 40px; display:block; background:url('/sites/www.charles-stanley.co.uk/files/contact-bg.png') bottom right no-repeat #ECEBE6; }
+#content .view-content-block-managment .cs-contact h3 { color:#3E3F46; font-family: PFDinTextPro-Light; font-weight: normal; font-style: normal; font-size: 30px; margin: 0px; padding: 30px 50px 0px; display:block; background-color: #ECEBE6; }
+#content .view-content-block-managment .cs-contact .cs-contact-details p { color:#3E3F46!important; font-family: CenturyStd-Light; font-weight: normal; font-style: normal; font-size: 30px; margin: 0px 50px; padding: 30px 0px; border-bottom:1px solid #DCDBD9; }
+.view-content-block-managment .vcard-link a { width:50px; height:60px; overflow:hidden; display:block; text-indent: -1000px; background: url(/sites/www.charles-stanley.co.uk/files/vcard-ico.png) top left no-repeat; }
+.view-content-block-managment .vcard-link { position:absolute; top: 40px; left:auto; right:160px; }
+.view-content-block-managment .linkedin-link a { width:50px; height:60px; overflow:hidden;  display:block; text-indent: -1000px; background: url(/sites/www.charles-stanley.co.uk/files/in-ico.png) top left no-repeat;}
+.view-content-block-managment .linkedin-link { position:absolute; top: 40px; left:auto; right:100px }
+.view-content-block-managment .email-link a { width:50px; height:60px; overflow:hidden;  display:block; text-indent: -1000px; background: url(/sites/www.charles-stanley.co.uk/files/email-ico.png) top left no-repeat;}
+.view-content-block-managment .email-link { position:absolute; top: 40px; left:auto; right:40px; }
+.view-content-block-managment .email-link.nolinkedin { left:auto; right:100px; }
+.view-content-block-managment .biog-wrapper { margin-left:217px; width:auto; }
+.view-content-block-managment .biog-control { border-top: 0px; text-align: left; padding-bottom: 10px; }
+#content .view-content-block-managment .cs-contact .biog-wrapper p { color:#666 !important; font-family: CenturyStd-Book; font-weight: normal; font-style: normal; font-size: 15px; }
+#content .view-content-block-managment .cs-contact .biog-control a {color: #444; background-color: transparent; padding: 10px 20px 20px 0; font-family: PFDinTextPro-Regular; font-weight: normal; font-style: normal; font-size: 16px; background: url(/sites/www.charles-stanley.co.uk/files/arrow-open.png) right 12px no-repeat;}
+#content .view-content-block-managment .cs-contact .cs-contact-full .biog-control a {  background: url(/sites/www.charles-stanley.co.uk/files/arrow-close.png) right 12px no-repeat; }
+.view-content-block-managment .vcard-link a,
+.view-content-block-managment .email-link a,
+.view-content-block-managment .linkedin-link a,
+#content .view-content-block-managment .cs-contact .biog-control a
+{
+-webkit-transition: background-position 0.2s ease-in-out;
+-moz-transition: background-position 0.2s ease-in-out;
+-ms-transition: background-position 0.2s ease-in-out;
+-o-transition: background-position 0.2s ease-in-out;
+transition: background-position 0.2s ease-in-out;
+}
+.view-content-block-managment .vcard-link a:hover,
+.view-content-block-managment .email-link a:hover,
+.view-content-block-managment .linkedin-link a:hover
+{
+background-position: left 7px;
+-webkit-transition: background-position 0.2s ease-in-out;
+-moz-transition: background-position 0.2s ease-in-out;
+-ms-transition: background-position 0.2s ease-in-out;
+-o-transition: background-position 0.2s ease-in-out;
+transition: background-position 0.2s ease-in-out;
+}
+#content .view-content-block-managment .cs-contact .biog-control a:hover
+{
+background-position: right 20px;
+-webkit-transition: background-position 0.2s ease-in-out;
+-moz-transition: background-position 0.2s ease-in-out;
+-ms-transition: background-position 0.2s ease-in-out;
+-o-transition: background-position 0.2s ease-in-out;
+transition: background-position 0.2s ease-in-out;
+}
+#content .view-content-block-managment .cs-contact .cs-contact-full .biog-control a:hover
+{
+background-position: right 7px;
+}
+/* new team style 50% wide
+.view-content-block-managment .view-cs-employee .view-content:after { content:" "; clear:both; height:0px; display:block; overflow:hidden; }
+.view-content-block-managment .cs-contact {  background-image:none;  }
+.view-content-block-managment .emplyee-wrapper { width:50%; float:left; background-image:none; background:#fff; }
+.view-content-block-managment .cs-contact-details { width: 323px; }
+#content .view-content-block-managment .cs-contact h3 { font-size: 23px; padding: 15px 5px 0px 20px; }
+#content .view-content-block-managment .cs-contact h4 { padding: 0px 20px 20px; }
+#content .view-content-block-managment .cs-contact .cs-contact-details p { font-family: PFDinTextPro-Regular; font-size: 16px; margin: 0px 20px; padding: 15px 0px; }
+.view-content-block-managment .biog-wrapper { margin-left:20px; }
+#content .view-content-block-managment .cs-contact .biog-wrapper .cs-contact-teaser p { display:none !important; } */
+
+
+/* contact database */
+.node-type-11-new-site-page-mixed-content-p #employeedb-filter-wrapper form { padding-top: 40px; padding-bottom:80px; }
+.node-type-11-new-site-page-mixed-content-p #businessarea_options { margin-left:90px;}
+.node-type-11-new-site-page-mixed-content-p #content #employeedb-filter-wrapper .selectWrapper { background: url('/sites/all/themes/sitedesign/images/interface/services/dd-bg2.png') top left no-repeat; margin-top:5px;  }
+.node-type-11-new-site-page-mixed-content-p #content #employeedb-filter-wrapper form label { font-family: PFDinTextPro-Regular; font-weight: normal; font-style: normal; font-size: 14px; color: #333;  }
+.node-type-11-new-site-page-mixed-content-p #employeedb-filter-wrapper .form-item-businessarea, .node-type-11-new-site-page-mixed-content-p #employeedb-filter-wrapper .form-item-location, .node-type-11-new-site-page-mixed-content-p #employeedb-filter-wrapper .form-item-employee { border:0px; }
+.node-type-11-new-site-page-mixed-content-p #employeedb-filter-wrapper .form-item-businessarea, .node-type-11-new-site-page-mixed-content-p #employeedb-filter-form .form-item-location, .node-type-11-new-site-page-mixed-content-p #employeedb-filter-wrapper .form-item-employee { width: 265px!important; padding-right:0px; }
+.node-type-11-new-site-page-mixed-content-p #businessarea_options, .node-type-11-new-site-page-mixed-content-p #location_options, .node-type-11-new-site-page-mixed-content-p #employee_options { width: 265px!important; float:left; }
+.node-type-11-new-site-page-mixed-content-p #content .contact_message p { padding-left:90px; font-family: PFDinTextPro-Regular; font-weight: normal; font-style: normal; font-size: 16px; color: #333; padding-top:40px; }
+.node-type-11-new-site-page-mixed-content-p #employeedb-filter-wrapper .ajax-progress  { display:none!important; }
+.node-type-11-new-site-page-mixed-content-p #employeedb-filter-wrapper .info_container { border-bottom: 1px solid #DCDBD9; border-right: 1px solid #DCDBD9; width: 489px; margin:0px; height:205px; margin:0px; }
+.node-type-11-new-site-page-mixed-content-p #employeedb-filter-wrapper .image_container { height:205px; }
+.node-type-11-new-site-page-mixed-content-p #employeedb-filter-wrapper .info_container .info_container { border-bottom: 0px solid #DCDBD9; border-right: 0px solid #DCDBD9; width: auto; width: 319px; margin-top: 0; padding-top: 0;}
+.node-type-11-new-site-page-mixed-content-p div.image_container img { width: 190px; height: auto; }
+.node-type-11-new-site-page-mixed-content-p #employeedb-filter-wrapper .image_container { width: 170px; }
+.node-type-11-new-site-page-mixed-content-p #content #employeedb-filter-wrapper p.position { color:#3E3F46 !important; line-height: 90%; font-family: CenturyStd-BookItalic; font-weight: normal; font-style: normal; font-size: 15px; margin: 0px 0 20px 0; padding: 0px 20px 20px; display:block; background:url('/sites/www.charles-stanley.co.uk/files/contact-bg.png') bottom right no-repeat #ECEBE6; }
+.node-type-11-new-site-page-mixed-content-p #content #employeedb-filter-wrapper p.name { color:#3E3F46; font-family: PFDinTextPro-Light; font-weight: normal; font-style: normal; font-size: 20px; margin: 0px 0 0px 0; padding: 15px 20px 0px; display:block; background-color: #ECEBE6; }
+
+.node-type-11-new-site-page-mixed-content-p #content #employeedb-filter-wrapper p.telephone,
+.node-type-11-new-site-page-mixed-content-p #content #employeedb-filter-wrapper p.email,
+.node-type-11-new-site-page-mixed-content-p #content #employeedb-filter-wrapper p.address { color:#3E3F46; font-family: PFDinTextPro-Regular; font-weight: normal; font-style: normal; font-size: 14px; margin: 0px; padding: 5px 20px 0px; }
+
+
+
+
+
+
+
+
+/* in page contacts */
+.view-id-in_page_board_members { margin-bottom:40px; }
+.view-id-in_page_board_members .view-header { text-align:center; padding:50px; }
+#content .view-id-in_page_board_members .view-header h3 { color:#3E3F46; font-family: CenturyStd-Book; font-weight: normal; font-style: normal; font-size: 20px; letter-spacing: 3px; margin: 0px; padding: 0px; text-transform: uppercase;  }
+#content .view-id-in_page_board_members .view-header hr { background-color: #E0E0E0;color: #E0E0E0;border: 0px;height: 1px;overflow: hidden;border-bottom: 0px solid #E0E0E0;margin: 20px auto 0px; width:60px; }
+.in-page-contact { border-bottom:1px solid #DCDBD9; background:url('/sites/www.charles-stanley.co.uk/files/contact-bg-left.jpg') bottom left no-repeat; }
+.in-page-contact-image { width:167px; float:left; }
+.in-page-contact-text-header { background:url('/sites/www.charles-stanley.co.uk/files/contact-bg.png') bottom right no-repeat #ECEBE6; padding:30px 50px; }
+.in-page-contact-text { margin-left:167px; }
+#content .in-page-contact-text p { padding:40px 50px; color:#565656; line-height: 160%; font-family: CenturyStd-Book; font-weight: normal; font-style: normal; font-size: 16px; }
+#content .in-page-contact-text-header h3 { color:#3E3F46; line-height: 90%; font-family: CenturyStd-BookItalic; font-weight: normal; font-style: normal; font-size: 16px; margin: 0px; padding: 0px; }
+#content .in-page-contact-text-header h2 { color:#3E3F46; font-family: PFDinTextPro-Light; font-weight: normal; font-style: normal; font-size: 30px; margin: 0px; padding: 0px; }
+
+
+
+/* forms */
+.view-id-in_page_webform { padding: 60px 200px; }
+.view-id-in_page_webform .meta { display:none; }
+.view-id-in_page_webform .selectWrapper { background: url('/sites/all/themes/sitedesign/images/interface/services/dd-bg2.png') top left no-repeat; margin-top:5px;  }
+.view-id-in_page_webform .webform-client-form input, .view-id-in_page_webform .webform-client-form .webform-component-textarea textarea 
+{border: 1px solid #ccc; font-family: PFDinTextPro-Light; font-weight: normal; font-style: normal; font-size: 13px;  moz-border-radius: 4px; -webkit-border-radius: 4px; color:#333 !important; }
+.view-id-in_page_webform .webform-client-form input { height:20px;}
+.view-id-in_page_webform .webform-client-form label { font-family: PFDinTextPro-Regular; font-weight: normal; font-style: normal; font-size: 13px; }
+.view-id-in_page_webform .form-type-checkbox label { font-size: 13px !important;margin-top: 2px; }
+.view-id-in_page_webform #webform-component-area-of-interest { border-top: 1px solid #dedcd4; border-bottom: 1px solid #dedcd4; padding:20px 0; margin:30px 0;}
+.view-id-in_page_webform #edit-submitted-how-much-would-you-like-to-invest { width:30%; }
+.view-id-in_page_webform #webform-component-how-much-would-you-like-to-invest label { width:63.5%; }
+.view-id-in_page_webform .form-actions { border-top: 1px solid #dedcd4; border-bottom: 1px solid #dedcd4; margin-top:30px; padding:30px 0 20px; text-align:center; }
+#content .view-id-in_page_webform #edit-submit { height: auto;
+background-color: #B7CADB; moz-border-radius: 5px; -webkit-border-radius: 5px; border: 10px solid #B7CADB; padding: 5px 20px; color: #12203E !important; font-family: PFDinTextPro-Regular; 
+-webkit-transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+-moz-transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+-ms-transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+-o-transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out; }
+#content .view-id-in_page_webform #edit-submit:hover {
+border: 15px solid #12203E; background-color: #12203E; color: #ffffff !important; text-decoration: none;
+-webkit-transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+-moz-transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+-ms-transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+-o-transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out; }
+
+
+/* quicklinks */
+.view-id-in_page_quicklinks p a { text-decoration:underline; }
+
+
+/* in page report and accounts */
+.view-in-page-report-and-accounts { width:100%; text-align:center; top:0px; left:0px;  padding:50px 0; background:url('/sites/www.charles-stanley.co.uk/files/randacc_bg.png') bottom left no-repeat #12203E; }
+#content .view-in-page-report-and-accounts h2 { color:#fff; font-family: PFDinTextPro-Light; font-weight: normal; font-style: normal; font-size: 37px; letter-spacing:1px; margin: 0px; padding: 0px; text-transform: uppercase; }
+#content .view-in-page-report-and-accounts h3 { color:#fff; line-height: 100%; font-family: CenturyStd-BookItalic; font-weight: normal; font-style: normal; font-size: 19px; margin: 0px; padding: 0px; }
+.view-in-page-report-and-accounts .report { background: url('/sites/www.charles-stanley.co.uk/files/report-icon.png') center top no-repeat; width: 109px; height:75px; text-decoration: none !important; display: inline-block; margin:15px 0 0; }
+
+
+/* in page rns */
+.view-in-page-rns .view-header { width:100%; text-align:center; top:0px; left:0px;  padding:35px 0; background:url('/sites/www.charles-stanley.co.uk/files/title-bg.png') bottom left no-repeat #12203E;  }
+#content .view-in-page-rns h2 { color:#fff; font-family: PFDinTextPro-Light; font-weight: normal; font-style: normal; font-size: 37px; letter-spacing:1px; margin: 0px; padding: 0px; text-transform: uppercase; }
+.view-in-page-rns .view-filters { text-align:center; padding:30px; text-align:center; background:url('/sites/www.charles-stanley.co.uk/files/blue-arrow-down.png') top center no-repeat #ECEBE6; } 
+.view-in-page-rns .view-filters .views-exposed-widgets div { float:none; display:inline-block; padding:0px; }
+.view-in-page-rns .views-field-field-file { border-bottom:1px solid #DCDBD9;}
+.view-in-page-rns .item-list ul li { list-style: none;border-bottom: 1px solid #e5e5e5;width: 335px;display: inline-block;height: 35px;vertical-align: top;padding: 15px 0 20px 50px;margin: 0px 10px;background: url('/sites/www.charles-stanley.co.uk/files/doc.png') 10px 19px no-repeat; 
+background-color: #fff;
+-webkit-transition: background-color 0.4s ease-in-out;
+-moz-transition: background-color 0.4s ease-in-out;
+-ms-transition: background-color 0.4s ease-in-out;
+-o-transition: background-color 0.4s ease-in-out;
+transition: background-color 0.4s ease-in-out; }
+.view-in-page-rns .item-list ul li img { display:none; }
+.view-in-page-rns .item-list ul li a { font-family: PFDinTextPro-Regular;font-weight: normal;font-style: normal;font-size: 14px; color: #3E3F46!important; padding:0;  display:block; overflow:hidden; margin-right:20px;}
+.view-in-page-rns .item-list ul li:hover { text-decoration:none; background-color: #F5F5F2;
+-webkit-transition: background-color 0.4s ease-in-out;
+-moz-transition: background-color 0.4s ease-in-out;
+-ms-transition: background-color 0.4s ease-in-out;
+-o-transition: background-color 0.4s ease-in-out;
+transition: background-color 0.4s ease-in-out; }
+#content .view-in-page-rns .item-list ul { padding:40px 80px; }
+#content .view-in-page-rns .item-list ul:after { content:" "; clear:both; height:0px; display:block; overflow:hidden; }
+#content .view-in-page-rns .views-field-title { text-align:center; padding:40px 0; border-bottom:1px solid #DCDBD9; }
+#content .view-in-page-rns .views-field-title a,
+#content .view-in-page-rns .views-field-title span 
+{ color:#3E3F46; font-family: CenturyStd-Book; font-weight: normal; font-style: normal; font-size: 20px; letter-spacing: 3px; margin: 0px; padding: 0px 0 0 0; text-transform: uppercase; text-align:center; }
+#edit-field-doc-category-tid-wrapper label { color:#3E3F46; font-family: CenturyStd-Book; font-weight: normal; font-style: normal; font-size: 17px; letter-spacing: 2px; margin: 0px; padding: 0px 0 0 0; text-transform: uppercase; text-align:center; }
+#content .view-in-page-rns .selectWrapper { background: url('/sites/all/themes/sitedesign/images/interface/services/dd-bg2.png') top left no-repeat; }
+#content .view-in-page-rns .view-empty { text-align:center; padding:20px; border-bottom:1px solid #DCDBD9; background:url('/sites/www.charles-stanley.co.uk/files/title-bg.png') bottom left no-repeat #12203E; }
+#content .view-in-page-rns .view-empty p { color:#fff; font-family: PFDinTextPro-Regular; font-weight: normal; font-style: normal; font-size: 17px; letter-spacing:0px; margin: 0px; padding: 0px; }
+
+#content .view-in-page-rns .item-list.column-list { width:405px; float:left; }
+#content .view-in-page-rns .item-list.column-list ul li { display:block; height:auto; min-height:42px; }
+#content .view-in-page-rns .views-field-field-file:after { content:" "; clear:both; height:0px; display:block; overflow:hidden; }
+
+
+/* big tables */
+.view-in-page-text thead th,
+.view-in-page-text tr th
+{ background-color:#ECEBE6; }
+.view-in-page-text thead th,
+.view-in-page-text tr th  
+{ color:#3E3F46; padding:10px; }
+#content .view-in-page-text th,  
+#content .view-in-page-text td
+{ color:#3E4146; font-family: PFDinTextPro-Regular; font-weight: normal; font-style: normal; font-size: 14px!important; letter-spacing:0px; margin: 0px; padding: 30px 15px; line-height:110%; }
+#content .view-in-page-text th strong  { font-size: 23px !important; font-family: PFDinTextPro-Light;  }
+.view-in-page-text tr td { border: 1px solid #EBEBEC; }
+.view-in-page-text tr, .tablefield tr.even { background-color:#fff; }
+#content .view-in-page-text td  { padding: 25px 16px; font-size: 14px!important;  }
+
+.view-in-page-text .sticky-header tr th { background-color:#ECEBE6;}
+#content table.sticky-header  { color:#3E4146; font-family: PFDinTextPro-Regular; font-weight: normal; font-style: normal; font-size: 15px!important; letter-spacing:0px; margin: 0px; padding: 30px 10px; line-height:110%; }
+#content table.sticky-header .col_0  { padding-left:70px !important; }
+#content table.sticky-header th.row_0.col_0  { font-size: 30px !important; padding: 20px 10px; font-family: PFDinTextPro-Light;  }
+
+
+
+/* light blue big button */
+.big-button.light-blue{	color: #55555C !important;	border: 10px solid #d9e4f1;background-color: #d9e4f1;-webkit-text-shadow: rgba(255,255,255,.01) 0 0 1px;}
+.big-button.light-blue:hover{ border: 15px solid #d9e4f1; background-color: #d9e4f1;}
+
+
+
+/* in page text */
+.view-in-page-text { padding:60px 80px 40px 80px; border-bottom:1px solid #DDDDDE; }
+.view-in-page-text .col_left, .view-in-page-text .col_right { width:50%; float:left; }
+.view-in-page-text .col_left_inner { padding-right:40px; }
+.view-in-page-text .col_right_inner { padding-left:40px; }
+.view-in-page-text .view-content:after { content:" "; clear:both; height:0px; display:block; overflow:hidden; }
+#content .view-in-page-text p { color: #333;line-height: 165%;font-family: CenturyStd-Book;font-weight: normal;font-style: normal;font-size: 16px; padding-bottom:20px; }
+#content .view-in-page-text li { color: #333;line-height: 165%;font-family: CenturyStd-Book;font-weight: normal;font-style: normal;font-size: 16px; }
+#content .view-in-page-text .big-button { margin:50px 0; }
+#content .view-in-page-text h3 { color:#3E3F46; font-family: CenturyStd-Light; font-weight: normal; font-style: normal; font-size: 25px; letter-spacing: 3px; margin: 0px; padding: 0px; text-transform: uppercase;  }
+
+#content .view-in-page-text hr { background-color: #DDDDDE;color: #DDDDDE;border: 0px;height: 1px;overflow: hidden;border-bottom: 0px solid #DDDDDE;margin: 20px auto 40px; width:60px; }
+#content .view-in-page-text .full_top h3, #content .view-in-page-text .full_bottom h3,
+#content .view-in-page-text .full_top hr, #content .view-in-page-text .full_bottom hr { text-align:center; }
+#content .view-in-page-text p em { font-family: CenturyStd-BookItalic; }
+#content .view-in-page-text .full_top h3, #content .view-in-page-text .full_bottom h3 { padding-bottom:20px;text-align:center;  } 
+#content .view-in-page-text .full_bottom {  clear:both; }
+#content .view-in-page-text .box-out {margin-left: -80px;padding-left: 80px;margin-right: -80px;padding-right: 80px;background-color: #dddbd1;padding-top: 40px;margin-bottom: -40px;}
+#content .view-in-page-text .full_bottom .box-out-midflow {margin-left: -80px;padding-left: 80px;margin-right: -80px;padding-right: 80px;background-color: #dddbd1;padding-top: 40px;}
+
+/* body */
+.node-type-11-new-site-page-mixed-content-p .field-name-body { padding:40px 80px 20px 80px; border-bottom:1px solid #DDDDDE; /*background-color: #ecebe6;*/ }
+.node-type-11-new-site-page-mixed-content-p #content .field-name-body p { color: #333;line-height: 165%;font-family: CenturyStd-Book;font-weight: normal;font-style: normal;font-size: 16px; padding-bottom:20px; }
+.node-type-11-new-site-page-mixed-content-p #content .field-name-body hr { border-bottom: 1px solid #ccc; margin: 50px -80px 70px -80px;}
+.node-type-11-new-site-page-mixed-content-p #content .field-name-body h4 { color: #263246;line-height: 165%;font-family: PFDinTextPro-Regular;font-weight: normal;font-style: normal;font-size: 18px; padding-bottom:30px; }
+.node-type-11-new-site-page-mixed-content-p #content .field-name-body h4 strong { font-family: PFDinTextPro-Light;font-weight: normal;font-style: normal;font-size: 40px;margin-right: 20px;border-bottom: 1px solid #e5e5e5;padding-bottom: 5px; }
+
+
+/* cps factsheets archive */
+.view-intermediaries-platforms-direct-strategies { background-color: #ECEBE6; text-align:center; padding:0px 0 0 0; }
+#content .view-intermediaries-platforms-direct-strategies h3 { color:#2C2C2C; line-height: 100%; font-family: CenturyStd-Light; font-weight: normal; font-style: normal; font-size: 22px; margin: 0px; padding: 50px 0px 20px 0; letter-spacing:2px; text-transform:uppercase; }
+#content .view-intermediaries-platforms-direct-strategies p { color: #333;line-height: 165%;font-family: CenturyStd-Book;font-weight: normal;font-style: normal;font-size: 16px; padding:0 9% 40px 9%; }
+.view-intermediaries-platforms-direct-strategies .views-field-php:after { content:" "; clear:both; height:0px; display:table; overflow:hidden; }
+.view-intermediaries-platforms-direct-strategies .views-field-php { background-color: #ffffff;  width:100%; padding-bottom:60px; }
+.node-type-11-new-site-page-mixed-content-p #content .view-intermediaries-platforms-direct-strategies .view-intermediaries-platforms-documents h3 { font-size: 19px; border-bottom: 1px solid #e5e5e5; padding-bottom:20px; }
+.node-type-11-new-site-page-mixed-content-p .view-intermediaries-platforms-direct-strategies .view-intermediaries-platforms-documents { background-color: transparent; width:80%; margin:0 auto; }
+.view-intermediaries-platforms-direct-strategies .strategies-wrapper { background: url('/sites/all/themes/sitedesign/images/interface/services/intro-point-down.png') center top no-repeat;  width: 100%; height: 20px;}
+.node-type-11-new-site-page-mixed-content-p .view-intermediaries-platforms-direct-strategies .view-intermediaries-platforms-documents { float:left; width:34%; padding:10px 8% 0; text-align:left; }
+.node-type-11-new-site-page-mixed-content-p .view-intermediaries-platforms-direct-strategies .view-intermediaries-platforms-documents .views-row { width: 100%; float: none; text-align:left; }
+.node-type-11-new-site-page-mixed-content-p .view-intermediaries-platforms-direct-strategies .view-intermediaries-platforms-documents a { padding: 10px 0px 10px 35px !important; margin:0px 0px; border-bottom: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; background:url(/sites/www.charles-stanley.co.uk/files/small-doc_0.png) center left #fff no-repeat !important; text-align:left; }
+.node-type-11-new-site-page-mixed-content-p .view-intermediaries-platforms-direct-strategies .view-intermediaries-platforms-documents a:hover { color:#666!important;  }
+
+
+/* cps factsheets */
+.node-type-11-new-site-page-mixed-content-p .view-intermediaries-platforms-documents { text-align:center; background-color: #ecf1f7; padding:0px 80px 30px; }
+.node-type-11-new-site-page-mixed-content-p .view-intermediaries-platforms-documents .views-row { width:50%; float:left; }
+.page-node-4042.node-type-11-new-site-page-mixed-content-p .view-intermediaries-platforms-documents .views-row { width:33%; }
+
+.node-type-11-new-site-page-mixed-content-p .view-intermediaries-platforms-documents .views-row .views-field-php { padding: 0px; text-align: center; border-bottom: 1px solid #fff; }
+.node-type-11-new-site-page-mixed-content-p .view-intermediaries-platforms-documents .views-row .views-field-php:hover {  }
+.node-type-11-new-site-page-mixed-content-p .view-intermediaries-platforms-documents .view-content:after { content:" "; clear:both; height:0px; display:block; overflow:hidden; }
+.node-type-11-new-site-page-mixed-content-p .view-intermediaries-platforms-documents a { background:url('/sites/www.charles-stanley.co.uk/files/small-doc.png') center 35px no-repeat;
+font-family: PFDinTextPro-Regular;
+font-weight: normal;
+font-style: normal;
+font-size: 15px;
+display: block;
+padding: 80px 10px 40px 10px !important;
+letter-spacing: 0px;
+color: #333 !important;
+-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out; }
+.node-type-11-new-site-page-mixed-content-p .view-intermediaries-platforms-documents a:hover { background:url('/sites/www.charles-stanley.co.uk/files/small-doc.png') center 25px no-repeat;
+color: #ffffff !important;
+background-color:#a6aeba;
+-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+text-decoration: none; }
+
+
+/* in_page_blue_block */
+#content .in-page-blue-block h3 { color:#3E4146; line-height: 100%; font-family: CenturyStd-BookItalic; font-weight: normal; font-style: normal; font-size: 19px; margin: 0px; padding: 0px 0 0px 0; }
+.view-in-page-blocks .views-field-field-video { margin-bottom:10px; margin-top:0px; }
+.view-in-page-blocks { background-color:#DDE5F0; }
+.view-in-page-blocks .views-row { background-color:#DDE5F0; width:490px; height:440px; display:block; float:left;  text-align:center; overflow:hidden; }
+.in-page-blue-block img { margin-top:70px; margin-bottom:10px; }
+#content .in-page-blue-block h2 { color:#3E4146; font-family: PFDinTextPro-Light; font-weight: normal; font-style: normal; font-size: 35px; letter-spacing:1px; margin: 0px; padding: 0px 60px 40px 60px; text-transform: uppercase; line-height:110%; }
+.view-in-page-blocks .views-row-even { border-left:1px solid #fff; width: 489px; }
+.view-in-page-blocks .view-content:after { content:" "; clear:both; height:0px; display:block; overflow:hidden; }
+
+
+
+/* in page highlights */
+.view-id-in_page_highlights { border-bottom:1px solid #DDDDDE; text-align:center; padding: 40px 0 80px; }
+.view-id-in_page_highlights .big-button { background-color: #D8E4F2; border: 10px solid #D8E4F2; color:#1E2A51 !important; }
+.view-id-in_page_highlights .big-button:hover { border: 15px solid #D8E4F2;  }
+#content .view-id-in_page_highlights  h2 { color:#3E3F46; font-family: PFDinTextPro-Light; font-weight: normal; font-style: normal; font-size: 30px; letter-spacing:1px; margin: 0px; padding: 0px; text-transform: uppercase; }
+#content .view-id-in_page_highlights h3 { color:#3E3F46; line-height: 100%; font-family: CenturyStd-BookItalic; font-weight: normal; font-style: normal; font-size: 17px; margin: 0px; padding: 0px; }
+#content .view-id-in_page_highlights  h5 { color:#1A2752; font-family: PFDinTextPro-Light; font-weight: normal; font-style: normal; font-size: 60px; letter-spacing:0px; margin: 0px; padding: 0px; line-height: 80%; }
+#content .view-id-in_page_highlights .fh_total h5 { font-size: 120px; }
+#content .view-id-in_page_highlights  p { color:#3E4046; font-family: PFDinTextPro-Regular; font-weight: normal; font-style: normal; font-size: 14px; margin: 0px 0 5px 0px; padding: 0px; }
+.fh_wrapper { width:50%; margin:0px auto;  }
+.fh_total, .fh_profit, .fh_div { text-align:left; padding:40px 0px;}
+.fh_profit, .fh_div { display:inline-block; width:49%; float:left;  border-bottom:1px solid #DDDDDE; border-top:1px solid #DDDDDE;   }
+.fh_total { border-top:1px solid #DDDDDE; margin-top:40px; }
+.fh_profit {border-right:1px solid #DDDDDE; width:50%;  }
+#content .view-id-in_page_highlights .fh_div p,
+#content .view-id-in_page_highlights .fh_div h5
+{ padding-left:50px; }
+.fh_second_row:after { content:" "; clear:both; height:50px; display:block; overflow:hidden; }
+
+
+/* in page latest price */
+.view-in-page-cs-market-price-data { border-bottom:1px solid #DDDDDE;  }
+.view-in-page-cs-market-price-data .view-header { text-align:center; padding:40px; border-bottom:1px solid #DDDDDE;  }
+#content .view-in-page-cs-market-price-data .view-header h2 { color:#3E4046; font-family: PFDinTextPro-Light; font-weight: normal; font-style: normal; font-size: 37px; letter-spacing:1px; margin: 0px; padding: 0px; text-transform: uppercase; }
+#content .view-in-page-cs-market-price-data .view-header h3 { color:#1B2437; line-height: 100%; font-family: CenturyStd-BookItalic; font-weight: normal; font-style: normal; font-size: 19px; margin: 0px; padding: 0px; }
+.box-50 { width:490px; float:left; height:375px; }
+.box-50.box-left { width:489px; border-right:1px solid #DDDDDE; }
+.view-in-page-cs-market-price-data .box-50 img { margin:50px 25px; float:right; }
+#content .view-in-page-cs-market-price-data p { color:#3E4046; font-family: PFDinTextPro-Regular; font-weight: normal; font-style: normal; font-size: 15px; margin: 0px 0 10px 70px; padding: 0px; }
+#content .view-in-page-cs-market-price-data p strong { color:#3E4046; font-family: PFDinTextPro-Medium; font-weight: normal; font-style: normal; margin-top:50px; display:block; }
+#content .view-in-page-cs-market-price-data p.p-no-pad { margin-bottom:0px; line-height:100%; }
+#content .view-in-page-cs-market-price-data .big-button,
+#content .view-in-page-cs-market-price-data h5 { margin-left:70px; }
+#content .view-in-page-cs-market-price-data h5 { color:#1B2852; font-family: PFDinTextPro-Regular; font-weight: normal; font-style: normal; font-size: 37px; padding: 0px;  line-height:100%; margin-bottom:25px;}
+#content .view-in-page-cs-market-price-data h5.red { color:#990000; padding-left:25px; background:url('/sites/www.charles-stanley.co.uk/files/red-arrow.png') left 7px no-repeat; }
+#content .view-in-page-cs-market-price-data h5.green { color:#108504; padding-left:25px; background:url('/sites/www.charles-stanley.co.uk/files/green-arrow.png') left 6px no-repeat;}
+#content .view-in-page-cs-market-price-data .view-content:after { content:" "; clear:both; height:0px; display:block; overflow:hidden; }
+#content .view-in-page-cs-market-price-data .big-button { margin-top:15px; }
+.view-in-page-cs-market-price-data .big-button { background-color: #D8E4F2; border: 10px solid #D8E4F2; color:#1E2A51 !important; }
+.view-in-page-cs-market-price-data .big-button:hover { border: 15px solid #D8E4F2;  }
+
+
+/* in page video */
+.view-in-page-video .video-header { width:100%; text-align:center; top:0px; left:0px;  padding:35px 0; background:url('/sites/www.charles-stanley.co.uk/files/title-bg.png') bottom left no-repeat #12203E; }
+#content .view-in-page-video h2 { color:#fff; font-family: PFDinTextPro-Light; font-weight: normal; font-style: normal; font-size: 37px; letter-spacing:1px; margin: 0px; padding: 0px; text-transform: uppercase; }
+#content .view-in-page-video h3 { color:#fff; line-height: 100%; font-family: CenturyStd-BookItalic; font-weight: normal; font-style: normal; font-size: 19px; margin: 0px; padding: 0px; }
+
+
+
+
+/* in page contacts - ltd members */
+.view-id-in_page_board_members.view-display-id-block_1 { background-color:#ECF1F7; padding-bottom:80px; }
+.view-id-in_page_board_members.view-display-id-block_1 .in-page-contact { background-image:none; width:49%; float:left; padding:0px 1% 0 0; border:0px; background-color:transparent; background-color:#ECF1F7; }
+.view-id-in_page_board_members.view-display-id-block_1 .in-page-contact h4 { border-bottom: 1px solid #DCDBD9; }
+.view-id-in_page_board_members.view-display-id-block_1 .view-content:after { content:" "; clear:both; height:0px; display:block; overflow:hidden; }
+.view-id-in_page_board_members.view-display-id-block_1 .view-content { padding:0 80px; }
+#content .view-id-in_page_board_members.view-display-id-block_1 .in-page-contact h3 { color:#3E3F46; line-height: 100%; font-family: PFDinTextPro-Medium; font-weight: normal; font-style: normal; font-size: 15px; margin: 0px; padding: 20px 0 3px 0px;  }
+#content .view-id-in_page_board_members.view-display-id-block_1 .in-page-contact h4 { color:#3E3F46; line-height: 100%; font-family: PFDinTextPro-Light; font-weight: normal; font-style: normal; font-size: 15px; margin: 0px; padding: 0px 0 20px 0; }
+#content .view-id-in_page_board_members.view-display-id-block_1 .view-header h3 { font-size:17px; }
+#content .view-id-in_page_board_members.view-display-id-block_1 .view-header hr { background-color: #3E3F46;color: #3E3F46;border: 0px;height: 3px;overflow: hidden;border-bottom: 0px solid #3E3F46;width:20px;}
+
+
+/* in page footer */
+.view-in-page-footer { padding: 50px 80px 50px 80px; background-color: #12203E; text-align:center; }
+#content .view-in-page-footer h2 { letter-spacing:2px; font-family: CenturyStd-Book;font-weight: normal;font-style: normal;font-size: 41px;color: #fff !important;padding-bottom: 20px !important;text-transform: uppercase; -webkit-font-smoothing: antialiased;}
+#content .view-in-page-footer h3 { letter-spacing:2px; font-family: CenturyStd-Book;font-weight: normal;font-style: normal;font-size: 19px;color: #fff !important;padding-bottom: 20px !important;text-transform: uppercase; -webkit-font-smoothing: antialiased;}
+#content .view-in-page-footer p {font-family: PFDinTextPro-Regular;font-weight: normal;font-style: normal;font-size: 16px;color: #fff !important;padding-bottom: 50px;width: 570px;margin: 0 auto; -webkit-font-smoothing: antialiased;}
+#content .view-in-page-footer hr { background-color: #5A6377;color: #5A6377;border: 0px;height: 1px;overflow: hidden;border-bottom: 0px solid #5A6377;margin: 0px auto 20px;width: 100px; }
+.view-in-page-footer .service-icon { background: url('/sites/all/themes/sitedesign/images/interface/services/icon-tel.png') center top no-repeat; }
+
+
+/*in page header area*/
+.in-page-header { position:relative; width:100%; overflow:hidden; }
+.in-page-header.medium { height:314px; }
+.in-page-header.small { height:238px; }
+.in-page-header img { position:absolute; top:0px; left:0px; }
+.in-page-header .in-page-text-wrapper { position:absolute; top:80px; left:80px; /*width:500px;*/ width:570px; z-index:100; }
+.in-page-header.small  .in-page-text-wrapper { }
+.in-page-header.no-image  .in-page-text-wrapper { position:relative; width:100%; text-align:center; top:0px; left:0px;  background-color: #12203E; padding:45px 0;
+background-image:url('/sites/www.charles-stanley.co.uk/files/header-bg.jpg') ; background-position:bottom left; background-repeat:no-repeat; }
+#content .in-page-header h3.subtitle_below { display:none; }
+#content .in-page-header h1,
+#content .in-page-header h3 { color:#fff !important; }
+#content .in-page-header h3 { line-height:80%;
+font-family: CenturyStd-BookItalic;
+font-weight: normal;
+font-style: normal;
+font-size: 19px;
+margin:0px; padding:0px;
+-webkit-font-smoothing: antialiased;
+}
+#content .in-page-header h1 {
+font-family: PFDinTextPro-Light;
+font-weight: normal;
+font-style: normal;
+font-size: 45px;
+text-transform: uppercase;
+padding-bottom: 0px !important;
+margin:0px;
+-webkit-font-smoothing: antialiased;
+}
+#content .in-page-header.medium h1 { /*font-size:65px;*/ font-size:59px;line-height: 100%;margin-top: 10px; }
+.in-page-header.white .in-page-text-wrapper { position:relative; width:100%; text-align:center; top:0px; left:0px;  background-color: #fff; padding:45px 0px; }
+#content .in-page-header.white h1{ color:#12203E !important; padding:0 80px 20px !important; }
+#content .in-page-header.white h3 { color:#565656 !important; padding:10px 180px 0px !important; line-height: 130%; font-family: CenturyStd-Book; font-size: 16px;  }
+#content .in-page-header.white h3.subtitle_above { display:none; }
+#content .in-page-header.white h3.subtitle_below { display:block; }
+
+body.page-node-3471 #content .in-page-header h1 { font-size:60px !important; }
+
+#content .pane-service-overview .view-display-id-block_1 .views-row p em { font-family: CenturyStd-BookItalic; font-size: 16px; }
+
+#content .webform-client-form input, #content .webform-component-textarea textarea { font-size: 100%; width: 86%; height: 25px; padding: 15px; box-shadow: none; border-color: #B4B2B4; }
+#content .webform-client-form input, #content .webform-component-textarea textarea {
+    font-size: 100%;
+    width: 86%;
+    height: 55px;
+    padding: 15px;
+    box-shadow: none;
+    border-color: #B4B2B4;
+    width: auto;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+.panel-2col-stacked .panel-col-first {
+    box-sizing: border-box;
+    padding: 60px 80px;
+}
+
+.panel-2col-stacked .panel-col-last {
+    box-sizing: border-box;
+    padding: 60px 80px;
+}
+
+.panel-2col-stacked .panel-col-last .view-id-in_page_webform {
+    padding: 0;
+}
+
+#content .webform-client-form label {
+width: 100% !important;
+}
+#content .webform-client-form .form-item-submitted-contact-preferences-1 label {
+    float: right !important;
+    width: 80% !important;
+}
+
+#content .view-id-in_page_webform #edit-submit {
+    height: 60px;
+    width: 100%;
+    display: block;
+    width: 300px !important;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}

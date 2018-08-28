@@ -1,0 +1,37 @@
+{
+  "name": "OptyChatBot",
+  "productName": "Optus ChatBot",
+  "version": "2.0.0",
+  "main": "webhook.js",
+  "scripts": {
+    "start": "node webhook.js",
+    "test": "forever start -a -o ./out.log -e ./err.log --uid 'opty-chatbot-dev' webhook.js",
+    "stop": "forever stop opty-chatbot-dev"
+  },
+  "dependencies": {
+    "@microsoft/microsoft-graph-client": "^1.2.0",
+    "adal-node": "^0.1.28",
+    "add-subtract-date": "^1.0.13",
+    "body-parser": "^1.18.3",
+    "crypto": "*",
+    "express": "^4.15.4",
+    "express-session": "1.15.6",
+    "mongoose": "^5.1.6",
+    "passport": "0.4.0",
+    "passport-twitter": "1.0.4",
+    "promise": "^8.0.1",
+    "redis": "^2.8.0",
+    "request": "^2.88.0"
+  },
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AshwinG-41741/optyChatbot"
+  },
+  "author": "CEXT Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AshwinG-41741/optyChatbot/issues"
+  },
+  "homepage": ""
+}

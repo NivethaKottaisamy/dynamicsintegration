@@ -1,0 +1,114 @@
+﻿#cookie-bar {
+  background: #f9f9f9; 
+  height: auto; 
+  line-height:28px; 
+  color:#eeeeee; 
+  text-align: left; 
+  padding: 10px 30px;
+  z-index:700!important;
+  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+  -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  #cookie-bar:before,
+  #cookie-bar:after {
+    content: '';
+    display: table;
+  }
+
+  #cookie-bar:after {
+    clear: both;
+  }
+
+  /* Probably shouldn't implement this, might get told off although some cool animation could go here. */
+  #cookie-bar.konami {
+
+  }
+
+  .fixed {
+    position:fixed; 
+    top:0; 
+    left:0; 
+    width:100%;
+    z-index: 100000;  
+  }
+
+  #cookie-bar.fixed {
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+  }
+
+    .fixed.bottom {
+      bottom: 0;
+      top: auto;
+    }
+
+  .cookie-inner {
+    margin: 0 auto;
+    max-width: 1250px;
+  }
+
+    .cookie-inner p {
+      display: inline-block;
+      margin-bottom: 20px;
+      width: 100%;
+      color:#667187 !important;
+      font-size:20px;
+      box-shadow: none!important
+    }
+
+      @media screen and (min-width: 768px) {
+        .cookie-inner p {
+          margin-bottom: 0;
+          width: 80%;
+        }
+      }
+    
+    .cookie-inner a {
+      display:inline-block; 
+    }
+
+    .cookie-inner .cb-enable, .cookie-inner .cb-disable {
+      background-color: #56aeaf;
+      border: 0px !important;
+      moz-border-radius: 2px;
+      webkit-border-radius: 2px;
+      border-radius: 2px;
+      font-size: 20px;
+      padding: 10px 30px !important;
+      font-family: "MrEavesBold";
+      color: #fff!important;
+    }
+
+    @media screen and (min-width: 768px) {
+      .cookie-inner .cb-enable, .cookie-inner .cb-disable {
+        display:inline-block;
+        float: right;
+        margin-top: 20px;
+        width: auto;
+        width: initial;
+      }
+    }
+
+    @media screen and (min-width: 960px) {
+      .cookie-inner .cb-enable, .cookie-inner .cb-disable {
+        margin-top: 10px;
+      }
+    }
+
+    @media screen and (min-width: 1300px) {
+      .cookie-inner .cb-enable, .cookie-inner .cb-disable {
+        margin-top: 5px;
+      }
+    }
+
+  
+
+
+
+
+
+
+
+    

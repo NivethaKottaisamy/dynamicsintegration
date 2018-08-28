@@ -1,0 +1,9 @@
+#content .pane-service-overview .view-display-id-block_1 .views-row h2 { line-height:100%; font-size: 32px; letter-spacing: 1px; }
+#content .pane-service-overview .view-display-id-block_1 .views-row p { font-size: 16px !important; padding-bottom:25px !important; }
+#content .pane-service-overview .view-display-id-block_1 .views-row p em { font-family: CenturyStd-BookItalic; font-size:16px; }
+#content .pane-service-overview-services .view-display-id-block_1 .view-header h3, #content .pane-service-overview-services .view-display-id-block_5 .view-header h3 {  letter-spacing: 1px; color:#2C2C2C !important; }
+.counter-text { width: 460px; }
+#content .pane-service-overview-services .view-display-id-block_4 .view-header h3 { width: 530px; display: inline-block; line-height: 120%; }
+.pane-service-overview-services .view-display-id-block_4 { padding-top:50px; }
+.pane-service-overview-services .view-display-id-block_6 .service-icon { padding-bottom:10px; }
+#content .pane-service-overview-services .view-display-id-block_6 .view-header p, #content .pane-service-overview .view-display-id-block_7 .views-row p { color:#BBBCC0 !important; font-size: 17px !important; }

@@ -1,0 +1,9 @@
+@import url("../../../../../../sites/all/themes/sitedesign/css/cs_rebrand.css"); 
+
+.node-03-site-page-no-submenu-with-sid .field-name-body p { font-size: 17px!important; }
+#content .view-id-news_and_opinion_article_body .article_body p { color: #696969; }
+#content .ir-banner-right .inner-wrapper h5 { color: #4f4f4f; }
+
+
+.node-type-15-landing-page-new .webform-client-form .webform-component-textarea textarea { width: 100% !important; border: none !important; border-radius: 6px !important; background-color: #B87FAE !important; box-shadow: none !important; color: #FFFFFF !important; font-size: 14px !important; outline: none !important; }
+.node-type-15-landing-page-new .webform-client-form .webform-component-textarea { width: 100% !important; }

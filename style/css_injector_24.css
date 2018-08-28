@@ -1,0 +1,128 @@
+/* platforms update */
+.view-intermediaries-platforms-taxonomy.view-display-id-block_1 .views-row { width:12.5%; }
+body.page-node-7572.node-type-11-new-site-page-mixed-content-p .view-intermediaries-platforms-documents .views-row { width:33%; }
+
+/* print map button */
+.map-details .map-address a.big-button.light-blue {   display: inline-block; height: auto; padding: 2px 20px!important; }
+
+/*footer */
+#dotmailer-branch-form-wrapper.article_scrolled img { display:none; }
+
+/* PRODUCT DETAIL PAGES */
+.beige { background-color: #ecebe6;  padding: 10px 0px 20px!important;  display: block; }
+.light-blue { background-color: #dde5f0;  padding: 10px 0px 20px!important;  display: block; }
+.node-type-09-site-page-services-detail-pag .view-cs-employee { max-width: 1190px;   margin: 0 auto; padding-bottom:40px; }
+/* matterley new fund page */
+body.page-node-6227 .pane-service-overview .view-display-id-block {  max-height: 533px; }
+
+
+.region-header a.client-login {margin-right: 20px;  padding: 7px 15px 7px 15px !important;  background-color: #494D65 !important;  -webkit-font-smoothing: antialiased;  font-family: PFDinTextPro-Medium;  font-weight: normal;  font-style: normal;  webkit-transition: background-color 0.3s ease-in-out;  -moz-transition: background-color 0.3s ease-in-out;  -ms-transition: background-color 0.3s ease-in-out;  -o-transition: background-color 0.3s ease-in-out;  transition: background-color 0.3s ease-in-out;  font-size: 14.5px;  margin-left: 20px; }
+.region-header a.client-login:hover { webkit-transition: background-color 0.3s ease-in-out;  -moz-transition: background-color 0.3s ease-in-out; -ms-transition: background-color 0.3s ease-in-out;  -o-transition: background-color 0.3s ease-in-out;  transition: background-color 0.3s ease-in-out;  background-color: #cc0000!important;  text-decoration: none; }
+
+
+#content .view-in-page-rns .view-empty {
+text-align: left;
+padding: 0px;
+border-bottom: 0px solid #DCDBD9;
+background: none!important;
+}
+
+.pane-service-overview .view-display-id-block_4 .col-full { clear:both; }
+
+body.node-type-09-site-page-services-detail-pag #content .col-full p.risk-warning-primary-colour,
+body.node-type-08-site-page-services-overview-p #content .col-full p.risk-warning-primary-colour { width:auto!important; }
+
+
+
+.webform-component-markup {
+  border-bottom: 1px solid #dedcd4;
+  padding: 20px 0;
+  margin: 30px 0;
+
+}
+.webform-text {
+  width: 64%;
+  display: inline-block;
+  float:right;
+}
+.webform-component-markup .webform-text:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+@media only screen and (max-width: 560px){
+.webform-text {
+  width: 90%;
+  display: inline-block;
+  float:none;
+}
+}
+
+
+.menu-menu-regional-intermediarie.sf-menu li a { color: #fff!important;
+  -webkit-font-smoothing: antialiased;
+  font-family: PFDinTextPro-Medium;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14.5px;
+  padding: 22px 15px 20px 15px !important; border:0px!important; }
+.menu-menu-regional-intermediarie.sf-menu li a:hover
+{ background-color: #283f58!important; }
+.menu-menu-regional-intermediarie li:after {
+  content: "|";
+  float: left;
+  display: inline-block;
+  color: #494D65;
+  position: absolute;
+  top: 22px;
+  right: -2px;
+  font-family: PFDinTextPro-Medium;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14.5px; border:0px!important;
+}
+
+
+
+
+body.page-node-6018 #content .view-homepage-2015-header h1 { font-size: 70px; }
+@media only screen and (max-width : 800px) {
+   body.page-node-6018 #content .view-homepage-2015-header h1 { font-size: 50px; }
+}
+body.node-type-13-homepage-2015- #content .pane-custom .pane-content p { padding-bottom:15px!important; }
+
+body.node-type-13-homepage-2015- .view-forms-literature-explorer .view-filters { padding: 0px; background-image:none!important; }
+body.node-type-13-homepage-2015- .view-forms-literature-explorer .selectWrapper { margin-top: 20px;margin-left: 0px; }
+body.node-type-13-homepage-2015-.IE .pane-forms-literature-explorer .view-forms-literature-explorer { position:relative; margin-top:-67px; top:67px; }
+@media only screen and (max-width : 1150px) {
+body.node-type-13-homepage-2015-.IE .pane-forms-literature-explorer .view-forms-literature-explorer { position:relative; margin-top:0px; top:auto; }
+}
+body.node-type-13-homepage-2015-.IE-8 #content .view-intermediaries-platforms-taxonomy .view-header h2,
+body.node-type-13-homepage-2015-.IE-8 #content .view-forms-literature-explorer .view-header h2
+{ font-size: 19px; }
+body.node-type-13-homepage-2015-.IE-8 #content .view-intermediaries-platforms-taxonomy .view-header h3,
+body.node-type-13-homepage-2015-.IE-8 #content .view-forms-literature-explorer .view-header h3
+{ font-size: 15px; }
+
+
+body .pane-service-overview .view-display-id-block .views-row img {top:auto; bottom:0px;}
+#content .pane-service-overview .view-display-id-block .views-row .header-text h1 { max-width:740px; }
+body.node-type-13-homepage-2015- .view-homepage-2015-header img { max-width: 1540px; }
+/*#footer-wrapper p a:last-child { display:none; } *//* hide last social media link */
+#content .view-id-news_and_opinion_article_body .article_body h2 { padding-bottom:5px!important; font-family: PFDinTextPro-Light;
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px!important; }
+#content .view-id-news_and_opinion_article_body .article_body p { padding-bottom:15px!important; }
+
+
+/* CONTACT THE FINANCIAL PLANNING TEAM */
+body.page-node-6072 #content .view-in-page-text  h3 {  font-size: 20px; margin-bottom:10px; }
+body.page-node-6072 #content .view-in-page-text  p strong {  font-size: 18px;  color: #1E2A3F; margin-top:10px; display:inline-block;  }
+body.page-node-6072 #content .view-in-page-text  p em { color: #999; }
+body.page-node-6072 #content .view-in-page-text  p a { text-decoration:underline; }
+body.page-node-6072 #content .view-in-page-text .col_right,
+body.page-node-6072 #content .view-in-page-text .col_left { text-align:center !important; }

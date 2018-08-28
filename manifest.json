@@ -1,0 +1,15 @@
+{
+
+  "short_name": "OPTUS APP",
+  "name": "OPTUS APP",
+  "icons": [
+    {
+      "src": "/avatar/bot-logo-image.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "fullscreen",
+  "orientation": "portrait"
+}

@@ -1,0 +1,16 @@
+/* Add css below */
+
+/* drop down */
+ul.sf-menu li ul li a { font-style: normal; }
+
+/* Play button on latest NWITM*/
+.latest-video .play-btn { 
+background-color: none; background: none; }
+
+/*Regional Homepages */
+
+.homepage-slider .views-row .slide-item .text-wrapper {  position:absolute; background: none !important; padding:30px; }
+#content .homepage-slider .views-row .slide-item.text-Dark h2 {color: #5f5f5f;}
+
+
+iframe[id^='twitter-widget-']{ width:100% !important;}
