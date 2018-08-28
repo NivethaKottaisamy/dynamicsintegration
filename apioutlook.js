@@ -5,8 +5,8 @@ var AuthenticationContext = require('adal-node').AuthenticationContext;
 var MicrosoftGraph = require("@microsoft/microsoft-graph-client");
 var oResource = 'https://graph.microsoft.com';
 var oAuthorityURL = 'https://login.microsoftonline.com/hexawareonline.onmicrosoft.com';
-var oClientId = '0e765b70-b50e-4014-b7b0-7ff1ce3438c7';
-var oClientSecret = 'gtiiHUHPRZ17;_ongK067^~';
+var oClientId = 'd69fa207-b0bd-41ff-aa0f-f9178ee309d4';
+var oClientSecret = 'dLqi9Z/gmrsGLhgdnmW4CDqUUhTMwBzP/c0hr5LBFmo=';
 var MicrosoftGraphClient = MicrosoftGraph.Client;
 var meId = "me";
 var supportedVersions = ['beta', 'v1.0'];
@@ -43,8 +43,9 @@ apiGateway().then(async function (resp) {
             done(null, resp); //first parameter takes an error if you can't get an access token
         }
     });
+    console.log(client);
     await client
-        .api('/users')
+        .api('/me')
         .get((err, res) => {
             console.log(err); // prints info about authenticated user
             console.log(res);
