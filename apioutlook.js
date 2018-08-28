@@ -55,12 +55,6 @@ apiGateway().then(async function (resp) {
 
 
 
-var searchMeeting = function () {
-    return new Promise(function (resolve, reject) {
-        var r = {};
-
-    });
-}
 // var CreateMeeting = function (subjectMeeting, meetingPlace, startdate, session) {
 //     return new Promise(function (resolve, reject) {
 //         var r = {};
@@ -255,8 +249,3 @@ function correctTimeZone(meetingStartTime, meetingEndTime, session) {
 }
 module.exports.searchMeeting = searchMeeting;
 
-// searchMeeting().then(function (params) {
-//     console.log(params);
-// }).then(function(err){
-//     console.log(err);
-// })

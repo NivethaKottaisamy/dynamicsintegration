@@ -6,6 +6,7 @@ var express = require('express'),
   // TwitterStrategy = require('passport-twitter').Strategy,
   session  = require('express-session');
 const crypto = require('crypto');
+const apioutlook=require('./apioutlook');
 
 // Passport session setup.
 passport.serializeUser(function(user, done) {
