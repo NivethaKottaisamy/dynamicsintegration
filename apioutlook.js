@@ -247,5 +247,5 @@ function correctTimeZone(meetingStartTime, meetingEndTime, session) {
 
     return meetingTimeArray;
 }
-module.exports.searchMeeting = searchMeeting;
+// module.exports.searchMeeting = searchMeeting;
 
