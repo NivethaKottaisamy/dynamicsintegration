@@ -7,7 +7,7 @@ var express = require('express'),
   session = require('express-session');
 const crypto = require('crypto');
 var router = express.Router();
-app.set('view engine', 'ejs');
+
 // const apioutlook=require('./apioutlook');
 var MicrosoftGraph = require("@microsoft/microsoft-graph-client");
 
