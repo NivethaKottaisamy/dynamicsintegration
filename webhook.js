@@ -4,16 +4,20 @@ var express = require('express'),
   httpServer = http.Server(app),
   passport = require('passport'),
   // TwitterStrategy = require('passport-twitter').Strategy,
-  session  = require('express-session');
+  session = require('express-session');
 const crypto = require('crypto');
-const apioutlook=require('./apioutlook');
+var router = express.Router();
+app.set('view engine', 'ejs');
+// const apioutlook=require('./apioutlook');
+var MicrosoftGraph = require("@microsoft/microsoft-graph-client");
 
+var authHelper = require('./helper');
 // Passport session setup.
-passport.serializeUser(function(user, done) {
+passport.serializeUser(function (user, done) {
   done(null, user);
 });
 
-passport.deserializeUser(function(obj, done) {
+passport.deserializeUser(function (obj, done) {
   done(null, obj);
 });
 
@@ -34,7 +38,10 @@ var bodyParser = require('body-parser');
 var fs = require('fs');
 const requestAPI = require('request');
 app.use(bodyParser.json());
-app.use(session({ secret: 'login', key: 'opty'}));
+app.use(session({
+  secret: 'login',
+  key: 'opty'
+}));
 app.use(express.static(__dirname));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -57,7 +64,47 @@ var jsonIncompleteTran = [];
 app.get('/', function (req, res) {
   res.send("/richowebsites");
 });
+app.post('/outlook', async function (req, res) {
+  console.log('----Srini----');
+  var client = MicrosoftGraph.Client.init({
+    authProvider: (done) => {
+      done(null, req.body.params); //first parameter takes an error if you can't get an access token
+    }
+  });
+  try{
+  const result = await client
+    .api('https://graph.microsoft.com/v1.0/me/calendarView?StartDateTime=2018-08-28 00:00:00&EndDateTime=2018-08-28 16:00:00')
+    .get();
+    console.log(result);
+    res.send(result);
+  }
+  catch(e){
+    res.send(e)
+  }
+  
+})
+app.get('/auth', function (req, res) {
+  let parms = {};
+  parms.signInUrl = authHelper.getAuthUrl();
+  res.redirect(parms.signInUrl);
+});
+app.get('/authorize', async function (req, res, next) {
+  const code = req.query.code;
+  if (code) {
+    let token;
+    try {
+      token = await authHelper.getTokenFromCode(code);
+      res.redirect('chatwindow?token='+token);
+    } catch (error) {
+      res.send('error', JSON.stringify({
+        error: error
+      }));
+    }
+  } else {
+    res.send('Authorization failed');
+  }
 
+});
 app.post('/callPhone', function (req, res) {
   callServiceNowApi("https://dev64379.service-now.com/api/now/table/u_servicerequest?sysparm_limit=1&sysparm_query=ORDERBYDESCsys_created_on&u_string3=9876543210&u_choice_1=in%20progress", null, "GET", function (err, data) {
     res.send(data);
@@ -95,18 +142,18 @@ app.get('/getIncompleteStatus', function (req, res) {
   console.log('Chat ID', JSON.stringify(req.query.ChatId));
   let chatId = req.query.ChatId;
   var hasTran = false;
-    if (jsonIncompleteTran.length > 0) {
-      var jsonArr = jsonIncompleteTran;
-      jsonArr.forEach(function (arrayItem, arrayIndex) {
-        if (jsonArr[arrayIndex].ChatSession === chatId && jsonArr[arrayIndex].IsTransactionComplete == true) {
-          // jsonArr[arrayIndex].Conversation = req.body.Conversation;
-          hasTran = true;          
-        }
-      });
-      res.send(hasTran);
-    } else {
-      res.send(hasTran);
-    }
+  if (jsonIncompleteTran.length > 0) {
+    var jsonArr = jsonIncompleteTran;
+    jsonArr.forEach(function (arrayItem, arrayIndex) {
+      if (jsonArr[arrayIndex].ChatSession === chatId && jsonArr[arrayIndex].IsTransactionComplete == true) {
+        // jsonArr[arrayIndex].Conversation = req.body.Conversation;
+        hasTran = true;
+      }
+    });
+    res.send(hasTran);
+  } else {
+    res.send(hasTran);
+  }
 });
 
 app.get('/generateId', function (req, res) {
@@ -189,11 +236,11 @@ app.post('/writeIncompleteTran', function (req, res) {
         hasElement = true;
         jsonArr[arrayIndex].IsTransactionComplete = false;
         hasIncompleteTran = true;
-      }else if (jsonArr[arrayIndex].ChatSession === req.body.ChatSession && jsonArr[arrayIndex].IsTransactionComplete == false) {
+      } else if (jsonArr[arrayIndex].ChatSession === req.body.ChatSession && jsonArr[arrayIndex].IsTransactionComplete == false) {
         console.log('B');
         hasElement = true;
         jsonArr[arrayIndex].IsTransactionComplete = true;
-        hasIncompleteTran = false;          
+        hasIncompleteTran = false;
       }
     });
     console.log('After For each');
