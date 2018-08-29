@@ -939,9 +939,9 @@
 <script data-main="/js/require-setup" src="require.js"></script>
 
   <script>
-	require(['jquery'], function ($) {
+	require(['lib/jquery.min'], function ($) {
 	
-		require(['bootstrap', 'apiService', 'utils', 'settings', 'moment', 'jqueryscoped', 'Cookies'], function (bootstrap, apiService, utils, settings, moment, jqueryscoped, Cookies) {
+		require(['lib/bootstrap', 'src/apiService', 'src/utils', 'settings', 'lib/moment', 'lib/jquery.scoped', 'lib/Cookies'], function (bootstrap, apiService, utils, settings, moment, jqueryscoped, Cookies) {
 				$.scoped();
 			var today = Math.round((new Date()).getTime() / 1000);
 			var chatTranscript = [];
