@@ -7,7 +7,7 @@ This file is part of the Innovation LAB - Offline Bot.
 
 
 requirejs.config({
-    baseUrl: 'js/',
+    baseUrl: '/js',
     waitSeconds: 0,
     paths: {
         jquery: [
