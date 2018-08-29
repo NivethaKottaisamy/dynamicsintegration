@@ -211,45 +211,6 @@
 <!-- Section : Mobile Navigation : end -->
 
 
-<script type="text/javascript">
-(function($) { 
-  $(document).ready(function() {
-
-    //
-    // add header links not in the menu system
-    if($(".region-header").length > 0 && $("#mobmenu").length > 0){
-      $('.region-header a').each(function (i, el) {
-          $("#mobmenu ul").append("<li>"+this.outerHTML+"</li>");
-      });
-    } 
-
-
-    if($("#mobmenu").length){
-      $("#mobmenu").mmenu({
-       // options
-      }, {
-         // configuration
-      });
-      $("#mobmenuopen").click(function(event) {
-        $("#mobmenu").trigger("open.mm");
-        $("#page-wrapper").addClass('page-close');
-        $(".mob_burger").toggleClass('close');
-        $(".mob_burger a span").addClass('icon-cross');
-        $(".mob_burger a span").removeClass('icon-list');
-        //event.preventDefault();
-        return false;
-      });
-      $("#mobmenu").on( "closed.mm", function() {
-         $(".mob_burger").toggleClass('close');
-         $(".mob_burger a span").removeClass('icon-cross');
-         $(".mob_burger a span").addClass('icon-list');   
-         $("#page-wrapper").removeClass('page-close');          
-      })
-    }    
-
-  });
-})(jQuery);
-</script>
   <!-- End Mobile Menu Manager -->
 
     <div id="header-background"></div>
