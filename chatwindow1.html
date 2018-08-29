@@ -1002,8 +1002,8 @@
 </div>
   <script data-main="js/require-setup" src="require.js"></script>
   <script>
-	define(['jquery'], function ($) {
-		define(['bootstrap', 'apiService', 'utils', 'settings', 'moment', 'jqueryscoped', 'Cookies'], function (bootstrap, apiService, utils, settings, moment, jqueryscoped, Cookies) {
+	require(['jquery'], function ($) {
+		require(['bootstrap', 'apiService', 'utils', 'settings', 'moment', 'jqueryscoped', 'Cookies'], function (bootstrap, apiService, utils, settings, moment, jqueryscoped, Cookies) {
 			
 			$.scoped();
 			var today = Math.round((new Date()).getTime() / 1000);
