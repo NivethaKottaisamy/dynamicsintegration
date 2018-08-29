@@ -53,10 +53,15 @@
         }
         var host = window.location.origin;
 						//console.log(host);
-        if (host == "http://localhost:9000")
+        if (host == "http://localhost:9000"){
             $("div[role='navigation'] a").attr("data-content", `<iframe onload="doIt()" id='iChatPopup' src='http://localhost:9000/?popup=1&search=${params}' height='530' width='300' style='border:none'></iframe>`)
-        else
+        }
+        else if(host == "https://charleswealthbot.herokuapp.com"){
+            $("div[role='navigation'] a").attr("data-content", `<iframe onload="doIt()" id='iChatPopup' src='https://charleswealthbot.herokuapp.com/?popup=1&search=${params}' height='530' width='300' style='border:none'></iframe>`)
+        }
+        else{
             $("div[role='navigation'] a").attr("data-content", `<iframe onload="doIt()" id='iChatPopup' src='http://ec2-18-232-207-49.compute-1.amazonaws.com:9000/?popup=1&search=${params}' height='530' width='300' style='border:none'></iframe>`)
+        }
     }
     // function triggerPopupHTML() {
     //     let popupHTML = $(value.contentDocument).find('body div.chat-body ul#msg_container');
@@ -92,10 +97,15 @@
             if (!clickstatus) {
                 var host = window.location.origin;
 						//console.log(host);
-                if (host == "http://localhost:9000")
-                    $("div[role='navigation'] a").attr("data-content", `<iframe id='iChatPopup' src='http://localhost:9000/?popup=1&search=${params}' height='530' width='300' style='border:none'></iframe>`)
-                else 
-                    $("div[role='navigation'] a").attr("data-content", `<iframe id='iChatPopup' src='http://ec2-18-232-207-49.compute-1.amazonaws.com:9000/?popup=1&search=${params}' height='530' width='300' style='border:none'></iframe>`)
+                        if (host == "http://localhost:9000"){
+            $("div[role='navigation'] a").attr("data-content", `<iframe onload="doIt()" id='iChatPopup' src='http://localhost:9000/?popup=1&search=${params}' height='530' width='300' style='border:none'></iframe>`)
+        }
+        else if(host == "https://charleswealthbot.herokuapp.com"){
+            $("div[role='navigation'] a").attr("data-content", `<iframe onload="doIt()" id='iChatPopup' src='https://charleswealthbot.herokuapp.com/?popup=1&search=${params}' height='530' width='300' style='border:none'></iframe>`)
+        }
+        else{
+            $("div[role='navigation'] a").attr("data-content", `<iframe onload="doIt()" id='iChatPopup' src='http://ec2-18-232-207-49.compute-1.amazonaws.com:9000/?popup=1&search=${params}' height='530' width='300' style='border:none'></iframe>`)
+        }
                 clickstatus = true;
             } else {
                 captureTranscript();
