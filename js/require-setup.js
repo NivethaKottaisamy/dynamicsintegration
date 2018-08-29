@@ -1,4 +1,4 @@
-
+'use strict';
 
 /* -------------------------------------------------------------------
 Copyright (c) 2017-2017 Hexaware Technologies
@@ -7,7 +7,7 @@ This file is part of the Innovation LAB - Offline Bot.
 
 
 requirejs.config({
-    baseUrl: 'https://charleswealthbot.herokuapp.com/js',
+    baseUrl: 'js',
     waitSeconds: 0,
     paths: {
         jquery: [
@@ -43,7 +43,7 @@ requirejs.config({
         propeller: {
             deps: ['jquery', 'bootstrap']
         }
-    },waitSeconds: 7
+    }
 });
 
 requirejs(['src/app']);
