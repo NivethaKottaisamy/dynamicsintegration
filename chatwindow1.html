@@ -1113,76 +1113,76 @@
 
 			})
 
-			function captureTranscript() {
-				var iframe = document.getElementById('iChatPopup');
-				var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-				innerDoc.getElementById('msg_container');
-				var dataList = innerDoc.getElementById('msg_container').getElementsByTagName("li");
-				var botObj = [];
-				var userObj = [];
-				var cardMsg = 'Card';
-				var objArr = { "Bot": "", "User": "" };
+			// function captureTranscript() {
+			// 	var iframe = document.getElementById('iChatPopup');
+			// 	var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+			// 	innerDoc.getElementById('msg_container');
+			// 	var dataList = innerDoc.getElementById('msg_container').getElementsByTagName("li");
+			// 	var botObj = [];
+			// 	var userObj = [];
+			// 	var cardMsg = 'Card';
+			// 	var objArr = { "Bot": "", "User": "" };
 
-				for (var index = 0; index < dataList.length; index++) {
-					if (dataList[index].getElementsByClassName("list-group-item-text-user")[0] == undefined) {
-						if (dataList[index].getElementsByClassName("list-group-item-text-bot")[0] != undefined) {
-							botObj = dataList[index].getElementsByClassName("list-group-item-text-bot");
-						} else if (dataList[index].getElementsByClassName("card-body")[0] != undefined) {
-							botObj = cardMsg;
-						} else if (dataList[index].getElementsByClassName("list-group-item-quick-reply-space")[0] != undefined) {
-							botObj = dataList[index].getElementsByClassName("list-group-item-quick-reply-space");
-						} else {
-							botObj[0] = undefined;
-						}
-					}
-					userObj = dataList[index].getElementsByClassName("list-group-item-text-user");
+			// 	for (var index = 0; index < dataList.length; index++) {
+			// 		if (dataList[index].getElementsByClassName("list-group-item-text-user")[0] == undefined) {
+			// 			if (dataList[index].getElementsByClassName("list-group-item-text-bot")[0] != undefined) {
+			// 				botObj = dataList[index].getElementsByClassName("list-group-item-text-bot");
+			// 			} else if (dataList[index].getElementsByClassName("card-body")[0] != undefined) {
+			// 				botObj = cardMsg;
+			// 			} else if (dataList[index].getElementsByClassName("list-group-item-quick-reply-space")[0] != undefined) {
+			// 				botObj = dataList[index].getElementsByClassName("list-group-item-quick-reply-space");
+			// 			} else {
+			// 				botObj[0] = undefined;
+			// 			}
+			// 		}
+			// 		userObj = dataList[index].getElementsByClassName("list-group-item-text-user");
 
-					if (dataList[index].getElementsByClassName("list-group-item-text-bot")[0] != undefined || dataList[index].getElementsByClassName("list-group-item-quick-reply-space")[0] != undefined || typeof botObj === 'string') {
-						objArr = { "Bot": "", "User": "" };
-						if (typeof botObj === 'string') {
-							console.log("----Bot", index);
-							objArr.Bot = $.trim(botObj);
-							botObj = [];
-						} else {
-							console.log(botObj[0].innerHTML);
-							console.log("----Bot", index);
-							objArr.Bot = $.trim(botObj[0].innerHTML);
-						}
-						chatTranscript.push(objArr);
+			// 		if (dataList[index].getElementsByClassName("list-group-item-text-bot")[0] != undefined || dataList[index].getElementsByClassName("list-group-item-quick-reply-space")[0] != undefined || typeof botObj === 'string') {
+			// 			objArr = { "Bot": "", "User": "" };
+			// 			if (typeof botObj === 'string') {
+			// 				console.log("----Bot", index);
+			// 				objArr.Bot = $.trim(botObj);
+			// 				botObj = [];
+			// 			} else {
+			// 				console.log(botObj[0].innerHTML);
+			// 				console.log("----Bot", index);
+			// 				objArr.Bot = $.trim(botObj[0].innerHTML);
+			// 			}
+			// 			chatTranscript.push(objArr);
 
-					} else {
-						console.log(userObj[0].innerHTML);
-						console.log("-----User", index);
-						objArr.User = $.trim(userObj[0].innerHTML);
-						if (chatTranscript.length == 0) {
-							chatTranscript.push(objArr);
-						}
-					}
-				}
-				console.log(chatTranscript);
-				let jsonData = {
-					"ChatSession": localStorage.getItem("hashUser"),
-					"ChatLESession":localStorage.getItem("chatLESession"),
-					"UserName": "Charlotte",
-					"ChatPage": "PostLogin",
-					"Conversation": chatTranscript
-				};
+			// 		} else {
+			// 			console.log(userObj[0].innerHTML);
+			// 			console.log("-----User", index);
+			// 			objArr.User = $.trim(userObj[0].innerHTML);
+			// 			if (chatTranscript.length == 0) {
+			// 				chatTranscript.push(objArr);
+			// 			}
+			// 		}
+			// 	}
+			// 	console.log(chatTranscript);
+			// 	let jsonData = {
+			// 		"ChatSession": localStorage.getItem("hashUser"),
+			// 		"ChatLESession":localStorage.getItem("chatLESession"),
+			// 		"UserName": "Charlotte",
+			// 		"ChatPage": "PostLogin",
+			// 		"Conversation": chatTranscript
+			// 	};
 
-				console.log(jsonData);
-				utils.initiateAjax("/writeFile", "POST", jsonData, function (data, err) {
-					chatTranscript = [];
-					console.log('Writing files...')
-				});
-			}
+			// 	console.log(jsonData);
+			// 	utils.initiateAjax("/writeFile", "POST", jsonData, function (data, err) {
+			// 		chatTranscript = [];
+			// 		console.log('Writing files...')
+			// 	});
+			// }
 
-			window.onbeforeunload = function (event) {
-				event = event || window.event;
-				if (chatTranscript.length > 0) {
-					captureTranscript();
-				}
-				// alert(chat);
-				return chat;
-			}
+			// window.onbeforeunload = function (event) {
+			// 	event = event || window.event;
+			// 	if (chatTranscript.length > 0) {
+			// 		captureTranscript();
+			// 	}
+			// 	// alert(chat);
+			// 	return chat;
+			// }
 		})
 
 
