@@ -941,7 +941,7 @@
   <script>
 	require(['lib/jquery.min'], function ($) {
 	
-		require(['lib/bootstrap', 'src/apiService', 'src/utils', 'settings', 'lib/moment', 'lib/jquery.scoped', 'lib/Cookies'], function (bootstrap, apiService, utils, settings, moment, jqueryscoped, Cookies) {
+		require(['lib/bootstrap.min', 'src/apiService', 'src/utils', 'settings', 'lib/moment', 'lib/jquery.scoped', 'lib/Cookies'], function (bootstrap, apiService, utils, settings, moment, jqueryscoped, Cookies) {
 				$.scoped();
 			var today = Math.round((new Date()).getTime() / 1000);
 			var chatTranscript = [];
