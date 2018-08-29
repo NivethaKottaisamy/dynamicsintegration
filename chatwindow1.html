@@ -89,7 +89,28 @@
 </style>
   
   <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRScAMh1d4jDaQkqgKaBzHMGbgAunEdQo&sensor=false" type="text/javascript"></script> -->
- 
+  <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.once.js"></script>
+<script type="text/javascript" src="js/drupal.js"></script>
+<script type="text/javascript" src="js/BrightcoveExperiences.js"></script>
+<script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
+<script type="text/javascript" src="js/colorbox.js"></script>
+<script type="text/javascript" src="js/colorbox_style.js"></script>
+<script type="text/javascript" src="js/colorbox_load.js"></script>
+<script type="text/javascript" src="js/jquery.hoverIntent.minified.js"></script>
+
+<script type="text/javascript" src="js/superfish.js"></script>
+<script type="text/javascript" src="js/supersubs.js"></script>
+<script type="text/javascript" src="js/supposition.js"></script>
+<script type="text/javascript" src="js/sftouchscreen.js"></script>
+<script type="text/javascript" src="js/views_slideshow.js"></script>
+
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/menu_minipanels.callbacks.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+<script type="text/javascript" src="js/jquery.matchHeight-min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/cookie-policy.js"></script>
 
   
     <script>var rt_var = 'class=""';</script> 
@@ -1040,29 +1061,6 @@
 
 				}
 				else {
-					captureTranscript();
-
-					function get(url) {
-						return new Promise((resolve, reject) => {
-							const req = new XMLHttpRequest();
-							req.responseType = 'json';
-							req.open('GET', url);
-							req.onload = () => req.status === 200 ? resolve(req.response) : reject(Error(req.statusText));
-							req.onerror = (e) => reject(Error(`Network Error: ${e}`));
-							req.send();
-						});
-					}
-
-					get('/generateId')
-					.then((result) => {
-						localStorage.setItem('hashUser', result.hash);
-						localStorage.setItem('chatLESession', '');
-						console.log('hashuser ',result.hash);
-					})
-					.catch((err) => {
-						console.log(err);
-					});
-
 					return false;
 				}
 
@@ -1079,11 +1077,11 @@
 				if(paramsOutlook){
 					localStorage.setItem('token',paramsOutlook);
 				}
-				if(localStorage.getItem('token')){
-				utils.initiateAjax("/outlook", "POST", { params: localStorage.getItem('token')}, function (data, err) {
-					alert(JSON.stringify(data));
-				});
-			}
+				// if(localStorage.getItem('token')){
+				// utils.initiateAjax("/outlook", "POST", { params: localStorage.getItem('token')}, function (data, err) {
+				// 	alert(JSON.stringify(data));
+				// });
+			    // }
 			
 	           if(params){
 				utils.initiateAjax("/updateSessionState", "POST", { params: params, sessionId: localStorage.getItem('uuid') }, function (data, err) {
@@ -1173,26 +1171,4 @@
 
 
 </body>
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/jquery.once.js"></script>
-<script type="text/javascript" src="js/drupal.js"></script>
-<script type="text/javascript" src="js/BrightcoveExperiences.js"></script>
-<script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
-<script type="text/javascript" src="js/colorbox.js"></script>
-<script type="text/javascript" src="js/colorbox_style.js"></script>
-<script type="text/javascript" src="js/colorbox_load.js"></script>
-<script type="text/javascript" src="js/jquery.hoverIntent.minified.js"></script>
-
-<script type="text/javascript" src="js/superfish.js"></script>
-<script type="text/javascript" src="js/supersubs.js"></script>
-<script type="text/javascript" src="js/supposition.js"></script>
-<script type="text/javascript" src="js/sftouchscreen.js"></script>
-<script type="text/javascript" src="js/views_slideshow.js"></script>
-
-<script type="text/javascript" src="js/jquery.validate.js"></script>
-<script type="text/javascript" src="js/menu_minipanels.callbacks.js"></script>
-<script type="text/javascript" src="js/plugins.js"></script>
-<script type="text/javascript" src="js/jquery.matchHeight-min.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
-<script type="text/javascript" src="js/cookie-policy.js"></script>
 </html>
