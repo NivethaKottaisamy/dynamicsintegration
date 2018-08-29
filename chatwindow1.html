@@ -90,8 +90,7 @@
 </style>
   
   <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRScAMh1d4jDaQkqgKaBzHMGbgAunEdQo&sensor=false" type="text/javascript"></script> -->
-  <script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/jquery.once.js"></script>
+
 
 
 
@@ -107,7 +106,7 @@
   </div>
 
   <!-- Start Mobile Menu Manager  -->
-  <script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script>
+
 <link href="style/jquery.mmenu.css" type="text/css" rel="stylesheet" />
 <link href="style/ico.style.css" type="text/css" rel="stylesheet" />
 <div class="header-mobile-wrapper">
@@ -625,9 +624,7 @@
 
 </div></div> <!-- /#page, /#page-wrapper -->
 
-<script>
-        jQuery("input").attr("autocomplete","off");
-</script>
+
     <div class="region region-page-bottom">
     <div class="menu-minipanels menu-minipanel-1256">
 <div class="panel-display panel-3col-33 clearfix" id="mini-panel-mm_investment_serv">
@@ -939,9 +936,8 @@
 <script data-main="/js/require-setup" src="require.js"></script>
 
   <script>
-	require(['lib/jquery.min'], function ($) {
-	
-		require(['lib/bootstrap.min', 'src/apiService', 'src/utils', 'settings', 'lib/moment', 'lib/jquery.scoped', 'lib/Cookies'], function (bootstrap, apiService, utils, settings, moment, jqueryscoped, Cookies) {
+	require(['jquery'], function ($) {
+		require(['bootstrap.min', 'apiService', 'utils', 'settings', 'moment', 'jqueryscoped', 'Cookies'], function (bootstrap, apiService, utils, settings, moment, jqueryscoped, Cookies) {
 				$.scoped();
 			var today = Math.round((new Date()).getTime() / 1000);
 			var chatTranscript = [];
