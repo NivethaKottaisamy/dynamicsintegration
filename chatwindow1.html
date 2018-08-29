@@ -1000,10 +1000,10 @@
 	</div>
 
 </div>
-  <script data-main="/js/require-setup" src="require.js"></script>
+  <script data-main="js/require-setup" src="require.js"></script>
   <script>
-	require(['jquery'], function ($) {
-		require(['bootstrap', 'apiService', 'utils', 'settings', 'moment', 'jqueryscoped', 'Cookies'], function (bootstrap, apiService, utils, settings, moment, jqueryscoped, Cookies) {
+	define(['jquery'], function ($) {
+		define(['bootstrap', 'apiService', 'utils', 'settings', 'moment', 'jqueryscoped', 'Cookies'], function (bootstrap, apiService, utils, settings, moment, jqueryscoped, Cookies) {
 			
 			$.scoped();
 			var today = Math.round((new Date()).getTime() / 1000);
