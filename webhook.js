@@ -7,7 +7,9 @@ var express = require('express'),
   session = require('express-session');
 const crypto = require('crypto');
 var router = express.Router();
-
+var moment = require('moment');
+var momentTz      = require('moment-timezone');
+console.log(momentTz().tz("Asia/Kolkata").format("HH"));
 // const apioutlook=require('./apioutlook');
 var MicrosoftGraph = require("@microsoft/microsoft-graph-client");
 
@@ -72,9 +74,13 @@ app.post('/outlook', async function (req, res) {
     }
   });
   try{
+    var dateUTC=moment().utc().format()
+    let startdate=dateUTC;
+    let enddate=moment().add(15, 'minutes').utc().format();
   const result = await client
-    .api('https://graph.microsoft.com/v1.0/me/calendarView?StartDateTime=2018-08-28 00:00:00&EndDateTime=2018-08-28 16:00:00')
+    .api(`https://graph.microsoft.com/v1.0/me/calendarView?StartDateTime=${startdate}&EndDateTime=${enddate}`)
     .get();
+    let data=result.value;
     console.log(result);
     res.send(result);
   }
