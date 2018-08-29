@@ -43,7 +43,7 @@ requirejs.config({
         propeller: {
             deps: ['jquery', 'bootstrap']
         }
-    }
+    },waitSeconds: 7
 });
 
 requirejs(['src/app']);
