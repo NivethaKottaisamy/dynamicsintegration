@@ -1059,13 +1059,13 @@
 						localStorage.setItem('meetingsdecl',JSON.stringify([]))
 				}
 				let meetingdecl=JSON.parse(localStorage.getItem('meetingsdecl'))
-                if(meetingdecl.indexOf(data.value[0].id)==-1){
+               
 				if(paramsOutlook){
 					localStorage.setItem('token',paramsOutlook);
 				}
 				if(localStorage.getItem('token')){
 				utils.initiateAjax("/outlook", "POST", { params: localStorage.getItem('token')}, function (data, err) {
-					
+					 if(meetingdecl.indexOf(data.value[0].id)==-1){
 					if(data.statusCode==401 && data.hasOwnProperty("code") && data.code=="InvalidAuthenticationToken"){
 						alert('Token Expired!!! Redirecting you. Please Wait...')
 						window.location.href="https://charleswealthbot.herokuapp.com/auth";
@@ -1077,9 +1077,9 @@
 						$("a#btn-send-message").trigger('click', data);
 					}
 				    }
-
-				});
 				}
+				});
+				
 			}
 			},10000)
 	           if(params){
