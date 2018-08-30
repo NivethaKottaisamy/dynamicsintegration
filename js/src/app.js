@@ -139,12 +139,15 @@ define(['jquery', 'settings', 'apiService', 'utils'], function ($, config, apiSe
                 sendMessage($("#btn-input"), e);
         });
         $("button.meeting-decline").click(function(e){
+
             if(localStorage.getItem('meetingsdecl')==undefined){
                 localStorage.setItem('meetingsdecl',JSON.stringify([]))
             }
             else{
                 let meetingdata=JSON.parse(localStorage.getItem('meetingsdecl'));
                 meetingdata.push($(this).data('decline'));
+                localStorage.setItem('meetingsdecl',JSON.stringify(meetingdata));
+                alert('meeting declined');
 
             }
         });
