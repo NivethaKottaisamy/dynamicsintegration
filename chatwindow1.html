@@ -1003,12 +1003,15 @@
 				var today = Math.round((new Date()).getTime() / 1000);
 				$('[data-toggle="popover"]').popover();
 
-		        $("a#btn-send-message").click(function(){
+		        $("a#btn-send-message").click(function(e,data){
+					let bodypreview=data.value[0].bodyPreview;
+					let onlinemeetingurl=data.value[0].onlineMeetingUrl;
+					let starttime=utils.getDateFormat("Asia/Kolkata",data.value[0].start.dateTime);
+					let finalStartTime=starttime.split('+')[0];
 					let msg_container = $("iframe").contents().find('body div.chat-body');
-					if(!msg_container || msg_container==undefined){
+					let popover = $("div.popover");
+					if(!popover || popover==undefined){
 					setInterval(()=>{
-					
-						
 					msg_container.find("h1").addClass('hidden');
 					msg_container.find("div.chat-text-para").addClass('hidden');
 					msg_container.find(".header-text-logo").removeClass('hidden');
@@ -1057,14 +1060,9 @@
 					}
 					if(data.value && data.value.length>0 && data.value[0].hasOwnProperty('subject') && data.value[0].subject)
 					{
-					let bodypreview=data.value[0].bodyPreview;
-					let onlinemeetingurl=data.value[0].onlineMeetingUrl;
-					let starttime=utils.getDateFormat("Asia/Kolkata",data.value[0].start.dateTime);
-					let finalStartTime=starttime.split('+')[0];
-					let msg_container = $("iframe").contents().find('body div.chat-body');
-					 alert(msg_container);
+					let msg_container = $("div.popover");
 					if(!msg_container || msg_container==undefined){
-						$("a#btn-send-message").trigger('click', [{somedata:true}]);
+						$("a#btn-send-message").trigger('click', [{data:data}]);
 					}
 				    }
 
