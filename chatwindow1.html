@@ -1012,6 +1012,10 @@
 				}
 				if(localStorage.getItem('token')){
 				utils.initiateAjax("/outlook", "POST", { params: localStorage.getItem('token')}, function (data, err) {
+					let tokenData=JSON.parse(data);
+					if(tokenData.statusCode==401 && tokenData.hasOwnProperty("code") && tokenData.code=="InvalidAuthenticationToken"){
+						window.location.href="https://charleswealthbot.herokuapp.com/auth";
+					}
 					alert(JSON.stringify(data));
 				});
 			    }
