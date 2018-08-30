@@ -138,19 +138,7 @@ define(['jquery', 'settings', 'apiService', 'utils'], function ($, config, apiSe
             if ($("#btn-input").val())
                 sendMessage($("#btn-input"), e);
         });
-        $("button.meeting-decline").click(function(e){
-
-            if(localStorage.getItem('meetingsdecl')==undefined){
-                localStorage.setItem('meetingsdecl',JSON.stringify([]))
-            }
-            else{
-                let meetingdata=JSON.parse(localStorage.getItem('meetingsdecl'));
-                meetingdata.push($(this).data('decline'));
-                localStorage.setItem('meetingsdecl',JSON.stringify(meetingdata));
-                alert('meeting declined');
-
-            }
-        });
+       
         //Chatbox Send message
         $("textarea#btn-input").keypress(function (e) {
             if (e.which == 13) {
@@ -190,6 +178,19 @@ define(['jquery', 'settings', 'apiService', 'utils'], function ($, config, apiSe
                 htmlc++;
             })
         }
+        $(document).on('click', '.meeting-decline', function(e) {
+
+            if(localStorage.getItem('meetingsdecl')==undefined){
+                localStorage.setItem('meetingsdecl',JSON.stringify([]))
+            }
+            else{
+                let meetingdata=JSON.parse(localStorage.getItem('meetingsdecl'));
+                meetingdata.push($(this).data('decline'));
+                localStorage.setItem('meetingsdecl',JSON.stringify(meetingdata));
+                alert('meeting declined');
+
+            }
+        });
         //Quick Replies payload button Click
         $(document).on('click', '.QuickreplybtnPayload', function (e) {
             var textInput = $(this).text();
