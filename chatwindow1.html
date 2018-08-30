@@ -1062,8 +1062,9 @@
 					let starttime=utils.getDateFormat("Asia/Kolkata",data.value[0].start.dateTime);
 					let finalStartTime=starttime.split('+')[0];
 					let msg_container = $("iframe").contents().find('body div.chat-body');
+					 alert(msg_container);
 					if(!msg_container || msg_container==undefined){
-						$("a#btn-send-message").click();
+						$("a#btn-send-message").trigger('click', [{somedata:true}]);
 					}
 				    }
 
