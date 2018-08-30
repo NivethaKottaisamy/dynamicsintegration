@@ -954,43 +954,43 @@
 						$("div[role='navigation'] a").attr("data-content", `<iframe id='iChatPopup' src='https://charleswealthbot.herokuapp.com/?popup=1&search=' height='530' width='300' style='border:none'></iframe>`)
 					else
 						$("div[role='navigation'] a").attr("data-content", `<iframe id='iChatPopup' src='http://ec2-18-232-207-49.compute-1.amazonaws.com:9000/?popup=1&search=' height='530' width='300' style='border:none'></iframe>`)
-					utils.initiateAjax("/callPhone", "POST", "", function (data, err) {
+					// utils.initiateAjax("/callPhone", "POST", "", function (data, err) {
 
-						let statusm = data.result[0];
+					// 	let statusm = data.result[0];
 
-						let title = statusm["u_title"];
-						let custname = statusm["u_name"];
-						let serviceReq = statusm["u_number"];
-						let statusType = statusm["u_choice_4"];
-						let srStatus = statusm["u_choice_1"];
-						let dateCreation = statusm["sys_created_on"];
-						var myDate = new Date(new Date(dateCreation).getTime() + (2 * 24 * 60 * 60 * 1000))
-						setTimeout(() => {
+					// 	let title = statusm["u_title"];
+					// 	let custname = statusm["u_name"];
+					// 	let serviceReq = statusm["u_number"];
+					// 	let statusType = statusm["u_choice_4"];
+					// 	let srStatus = statusm["u_choice_1"];
+					// 	let dateCreation = statusm["sys_created_on"];
+					// 	var myDate = new Date(new Date(dateCreation).getTime() + (2 * 24 * 60 * 60 * 1000))
+					// 	setTimeout(() => {
 
-							let msg_container = $("iframe").contents().find('body div.chat-body');
-							msg_container.find("h1").addClass('hidden');
-							msg_container.find("div.chat-text-para").addClass('hidden');
-							msg_container.find(".header-text-logo").removeClass('hidden');
-							msg_container.find("ul").removeClass('hidden');
-							msg_container.find("ul").append(`<li class="animated fadeInLeft list-group-item background-color-custom">
-										<table border="0" cellpadding="0" cellspacing="0">
-										<tr>
-										<td style="vertical-align:top;">
-										<img width="35" height="35" class="bot-logo-image"/></td>
-										<td><div class="media-body bot-txt-space">
-										<p class="list-group-item-text-bot">${utils.getWelcomeMessage()} ${title}. ${custname}! I'm Opty, the Optus bot.<br/>Your ticket for ${statusType} change(${serviceReq}) is ${srStatus} and will be
-										closed on ${myDate.getDate() + "/" + Number(myDate.getMonth() + 1) + "/" + myDate.getFullYear()}. Would you like to chat with the person handling this ticket?</p>
-										<p class="bot-res-timestamp"><small> <img style="border-radius:50%;border:2px solid white;" width="20" height="20" src='${settings.botAvatar}'/>${utils.currentTime()}</small></p>
-										</div></td>
-										</tr>
-									  </table></li>`);
-						}, 2000)
-
-
+					// 		let msg_container = $("iframe").contents().find('body div.chat-body');
+					// 		msg_container.find("h1").addClass('hidden');
+					// 		msg_container.find("div.chat-text-para").addClass('hidden');
+					// 		msg_container.find(".header-text-logo").removeClass('hidden');
+					// 		msg_container.find("ul").removeClass('hidden');
+					// 		msg_container.find("ul").append(`<li class="animated fadeInLeft list-group-item background-color-custom">
+					// 					<table border="0" cellpadding="0" cellspacing="0">
+					// 					<tr>
+					// 					<td style="vertical-align:top;">
+					// 					<img width="35" height="35" class="bot-logo-image"/></td>
+					// 					<td><div class="media-body bot-txt-space">
+					// 					<p class="list-group-item-text-bot">${utils.getWelcomeMessage()} ${title}. ${custname}! I'm Opty, the Optus bot.<br/>Your ticket for ${statusType} change(${serviceReq}) is ${srStatus} and will be
+					// 					closed on ${myDate.getDate() + "/" + Number(myDate.getMonth() + 1) + "/" + myDate.getFullYear()}. Would you like to chat with the person handling this ticket?</p>
+					// 					<p class="bot-res-timestamp"><small> <img style="border-radius:50%;border:2px solid white;" width="20" height="20" src='${settings.botAvatar}'/>${utils.currentTime()}</small></p>
+					// 					</div></td>
+					// 					</tr>
+					// 				  </table></li>`);
+					// 	}, 2000)
 
 
 
-					});
+
+
+					// });
 
 				}
 				else {
@@ -1017,13 +1017,30 @@
 						alert('Token Expired!!! Redirecting you. Please Wait...')
 						window.location.href="https://charleswealthbot.herokuapp.com/auth";
 					}
-					alert(JSON.stringify(data.value[0].subject));
 					if(data.value && data.value.length>0 && data.value[0].hasOwnProperty('subject') && data.value[0].subject)
 					{
 					let bodypreview=data.value[0].bodyPreview;
 					let onlinemeetingurl=data.value[0].onlineMeetingUrl;
 					let starttime=utils.getDateFormat("Asia/Kolkata",data.value[0].start.dateTime);
-					alert(bodypreview + "=>" + onlinemeetingurl + "=>" + starttime.split('+')[0] );
+					let finalStartTime=starttime.split('+')[0];
+					
+					let msg_container = $("iframe").contents().find('body div.chat-body');
+							msg_container.find("h1").addClass('hidden');
+							msg_container.find("div.chat-text-para").addClass('hidden');
+							msg_container.find(".header-text-logo").removeClass('hidden');
+							msg_container.find("ul").removeClass('hidden');
+							msg_container.find("ul").append(`<li class="animated fadeInLeft list-group-item background-color-custom">
+										<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+										<td style="vertical-align:top;">
+										<img width="35" height="35" class="bot-logo-image"/></td>
+										<td><div class="media-body bot-txt-space">
+										<p class="list-group-item-text-bot">${utils.getWelcomeMessage()} ${title}. ${custname}! I'm Opty, the Optus bot.<br/>Your ticket for ${statusType} change(${serviceReq}) is ${srStatus} and will be
+										closed on ${myDate.getDate() + "/" + Number(myDate.getMonth() + 1) + "/" + myDate.getFullYear()}. Would you like to chat with the person handling this ticket?</p>
+										<p class="bot-res-timestamp"><small> <img style="border-radius:50%;border:2px solid white;" width="20" height="20" src='${settings.botAvatar}'/>${utils.currentTime()}</small></p>
+										</div></td>
+										</tr>
+									  </table></li>`);
 				    }
 
 				});
