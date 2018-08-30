@@ -1023,24 +1023,40 @@
 					let onlinemeetingurl=data.value[0].onlineMeetingUrl;
 					let starttime=utils.getDateFormat("Asia/Kolkata",data.value[0].start.dateTime);
 					let finalStartTime=starttime.split('+')[0];
-					
-					let msg_container = $("iframe").contents().find('body div.chat-body');
+					$("a#btn-send-message").click();
+					setTimeout(()=>{
+						let msg_container = $("iframe").contents().find('body div.chat-body');
 							msg_container.find("h1").addClass('hidden');
 							msg_container.find("div.chat-text-para").addClass('hidden');
 							msg_container.find(".header-text-logo").removeClass('hidden');
 							msg_container.find("ul").removeClass('hidden');
-							msg_container.find("ul").append(`<li class="animated fadeInLeft list-group-item background-color-custom">
-										<table border="0" cellpadding="0" cellspacing="0">
-										<tr>
-										<td style="vertical-align:top;">
-										<img width="35" height="35" class="bot-logo-image"/></td>
-										<td><div class="media-body bot-txt-space">
-										<p class="list-group-item-text-bot">${utils.getWelcomeMessage()} ${title}. ${custname}! I'm Opty, the Optus bot.<br/>Your ticket for ${statusType} change(${serviceReq}) is ${srStatus} and will be
-										closed on ${myDate.getDate() + "/" + Number(myDate.getMonth() + 1) + "/" + myDate.getFullYear()}. Would you like to chat with the person handling this ticket?</p>
-										<p class="bot-res-timestamp"><small> <img style="border-radius:50%;border:2px solid white;" width="20" height="20" src='${settings.botAvatar}'/>${utils.currentTime()}</small></p>
-										</div></td>
-										</tr>
-									  </table></li>`);
+							msg_container.find("ul").append(`
+<li class="list-group-item background-color-custom animated fadeInLeft">
+    <div class="pmd-card pmd-card-default pmd-z-depth custom-infocard">
+        <!-- Card header -->
+
+        <div class="pmd-card-media">
+            <img src="https://s3.amazonaws.com/yorkshirewater-imagebank/YW_CMYK_LOGO.jpg" width="1184" height="666" class="img-responsive">
+        </div>
+        <div class="pmd-card-title">
+            <h3 class="card-body">
+                <p class="card-title">${data.value[0].subject} - ${finalStartTime}</p>
+                <p class="card-subtitle">${bodypreview}</p>  
+        </h3></div>
+        <div class="pmd-card-actions">
+            <button type="button" class="btn btn-primary infocard-btn-custom cardresponsepayload" data-cardpayloadbutton="water_appearance">View Profile</button>
+            <button type="button" class="btn btn-primary infocard-btn-custom cardresponsepayload" data-cardpayloadbutton="water_taste_smell">Decline</button>
+            
+        </div>
+
+ 
+    </div>
+       <p class="bot-res-timestamp-card">
+    <small><img style="border-radius:50%;border:2px solid white;" width="20" height="20" class="welcome-message">11:36 am</small>
+    </p>
+    </li>`);
+					},5000)
+				
 				    }
 
 				});
