@@ -1066,7 +1066,7 @@
 
 				});
 			    }
-			})
+			},10000)
 	           if(params){
 				utils.initiateAjax("/updateSessionState", "POST", { params: params, sessionId: localStorage.getItem('uuid') }, function (data, err) {
 				});
