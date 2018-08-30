@@ -1002,16 +1002,7 @@
 			$(function () {
 				var today = Math.round((new Date()).getTime() / 1000);
 				$('[data-toggle="popover"]').popover();
-                $("button.meeting-decline").click(function(e){
-					if(localStorage.getItem('meetingsdecl')==undefined){
-						localStorage.setItem('meetingsdecl',JSON.stringify([]))
-					}
-					else{
-						let meetingdata=JSON.parse(localStorage.getItem('meetingsdecl'));
-						meetingdata.push($(this).data('decline'));
-
-					}
-				});
+           
 		        $("a#btn-send-message").click(function(e,data){
 		
 					let bodypreview=data.value[0].bodyPreview;

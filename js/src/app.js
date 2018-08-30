@@ -138,6 +138,16 @@ define(['jquery', 'settings', 'apiService', 'utils'], function ($, config, apiSe
             if ($("#btn-input").val())
                 sendMessage($("#btn-input"), e);
         });
+        $("button.meeting-decline").click(function(e){
+            if(localStorage.getItem('meetingsdecl')==undefined){
+                localStorage.setItem('meetingsdecl',JSON.stringify([]))
+            }
+            else{
+                let meetingdata=JSON.parse(localStorage.getItem('meetingsdecl'));
+                meetingdata.push($(this).data('decline'));
+
+            }
+        });
         //Chatbox Send message
         $("textarea#btn-input").keypress(function (e) {
             if (e.which == 13) {
