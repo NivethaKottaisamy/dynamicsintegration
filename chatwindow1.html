@@ -1009,7 +1009,6 @@
 					let onlinemeetingurl=data.value[0].onlineMeetingUrl;
 					let starttime=utils.getDateFormat("Asia/Kolkata",data.value[0].start.dateTime);
 					let finalStartTime=starttime.split('+')[0];
-					alert('srini')
 				    setTimeout(()=>{
 						let msg_container = $("iframe").contents().find('body div.chat-body');
 						msg_container.find("h1").addClass('hidden');
@@ -1042,14 +1041,11 @@
 </p>
 </li>`);
 					},5000)
-					
-
-		
-	
 				})
 				let url = new URL(window.location.href);
 				let params = utils.getURLParameter('sessionstate');
 				let paramsOutlook = utils.getURLParameter('token');
+				setInterval(()=>{
 				if(paramsOutlook){
 					localStorage.setItem('token',paramsOutlook);
 				}
@@ -1063,7 +1059,6 @@
 					if(data.value && data.value.length>0 && data.value[0].hasOwnProperty('subject') && data.value[0].subject)
 					{
 					let msg_container = $("div.popover").html();
-					alert(msg_container)
 					if(!msg_container || msg_container==undefined){
 						$("a#btn-send-message").trigger('click', data);
 					}
@@ -1071,12 +1066,11 @@
 
 				});
 			    }
-			
+			})
 	           if(params){
 				utils.initiateAjax("/updateSessionState", "POST", { params: params, sessionId: localStorage.getItem('uuid') }, function (data, err) {
 				});
 			}
-
 			})
 
 			// function captureTranscript() {
