@@ -1004,14 +1004,12 @@
 				$('[data-toggle="popover"]').popover();
 
 		        $("a#btn-send-message").click(function(e,data){
-					alert(JSON.stringify(data));
+		
 					let bodypreview=data.value[0].bodyPreview;
 					let onlinemeetingurl=data.value[0].onlineMeetingUrl;
 					let starttime=utils.getDateFormat("Asia/Kolkata",data.value[0].start.dateTime);
 					let finalStartTime=starttime.split('+')[0];
 					let msg_container = $("iframe").contents().find('body div.chat-body');
-					let popover = $("div.popover");
-					if(!popover || popover==undefined){
 					setInterval(()=>{
 					msg_container.find("h1").addClass('hidden');
 					msg_container.find("div.chat-text-para").addClass('hidden');
@@ -1044,7 +1042,7 @@
 </li>`);
 
 			},5000)
-		}
+	
 				})
 				let url = new URL(window.location.href);
 				let params = utils.getURLParameter('sessionstate');
