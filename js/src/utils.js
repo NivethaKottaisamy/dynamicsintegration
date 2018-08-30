@@ -51,7 +51,7 @@ define(['navigation', 'jquery', 'moment', 'momenttimzone','momentdata'], functio
         return navigation.data[element];
     };
     methods.getDateFormat = (zone,date) => {
-        let curHr = momentd().utc(date).tz("Asia/Kolkata").format();
+        let curHr = momentd(date).tz("Asia/Kolkata").format();
         return curHr;
     };
     methods.getWelcomeMessage = () => {
