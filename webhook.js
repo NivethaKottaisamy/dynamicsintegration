@@ -35,7 +35,11 @@ passport.deserializeUser(function (obj, done) {
 //     });
 //   }
 // ));
-
+var dateUTC=moment().utc().format()
+let startdate=dateUTC;
+let enddate=moment().add(15, 'minutes').utc().format();
+console.log(startdate);
+console.log(enddate);
 var bodyParser = require('body-parser');
 var fs = require('fs');
 const requestAPI = require('request');
@@ -77,6 +81,8 @@ app.post('/outlook', async function (req, res) {
     var dateUTC=moment().utc().format()
     let startdate=dateUTC;
     let enddate=moment().add(15, 'minutes').utc().format();
+    console.log(startdate);
+    console.log(enddate);
   const result = await client
     .api(`https://graph.microsoft.com/v1.0/me/calendarView?StartDateTime=${startdate}&EndDateTime=${enddate}`)
     .get();
