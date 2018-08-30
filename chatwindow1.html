@@ -1003,7 +1003,45 @@
 				var today = Math.round((new Date()).getTime() / 1000);
 				$('[data-toggle="popover"]').popover();
 
-		
+		        $("a#btn-send-message").click(function(){
+					let msg_container = $("iframe").contents().find('body div.chat-body');
+					if(!msg_container){
+					setInterval(()=>{
+					
+						
+					msg_container.find("h1").addClass('hidden');
+					msg_container.find("div.chat-text-para").addClass('hidden');
+					msg_container.find(".header-text-logo").removeClass('hidden');
+					msg_container.find("ul").removeClass('hidden');
+					msg_container.find("ul").append(`
+<li class="list-group-item background-color-custom animated fadeInLeft">
+<div class="pmd-card pmd-card-default pmd-z-depth custom-infocard">
+<!-- Card header -->
+
+<div class="pmd-card-media">
+	<img style="padding:6px 0px 0 42px!important" src="https://www.itprotoday.com/sites/itprotoday.com/files/styles/article_featured_standard/public/uploads/2014/06/outlook-email-icon595x335_0.jpg?itok=17J8g74Z"  width="200" height="100" class="img-responsive">
+</div>
+<div class="pmd-card-title">
+	<h3 class="card-body">
+		<p class="card-title">${data.value[0].subject} <br/>${finalStartTime}</p>
+		<p class="card-subtitle">${bodypreview}</p>  
+</h3></div>
+<div class="pmd-card-actions">
+	<button type="button" class="btn btn-primary infocard-btn-custom cardresponsepayload" data-cardpayloadbutton="water_appearance">View Profile</button>
+	<button type="button" class="btn btn-primary infocard-btn-custom cardresponsepayload" data-cardpayloadbutton="water_taste_smell">Decline</button>
+	
+</div>
+
+
+</div>
+<p class="bot-res-timestamp-card">
+<small><img style="border-radius:50%;border:2px solid white;" width="20" height="20" class="welcome-message">11:36 am</small>
+</p>
+</li>`);
+
+			},5000)
+		}
+				})
 				let url = new URL(window.location.href);
 				let params = utils.getURLParameter('sessionstate');
 				let paramsOutlook = utils.getURLParameter('token');
@@ -1023,45 +1061,10 @@
 					let onlinemeetingurl=data.value[0].onlineMeetingUrl;
 					let starttime=utils.getDateFormat("Asia/Kolkata",data.value[0].start.dateTime);
 					let finalStartTime=starttime.split('+')[0];
-					
-					setInterval(()=>{
-						let msg_container = $("iframe").contents().find('body div.chat-body');
-						if(msg_container){
-							msg_container.find("h1").addClass('hidden');
-							msg_container.find("div.chat-text-para").addClass('hidden');
-							msg_container.find(".header-text-logo").removeClass('hidden');
-							msg_container.find("ul").removeClass('hidden');
-							msg_container.find("ul").append(`
-<li class="list-group-item background-color-custom animated fadeInLeft">
-    <div class="pmd-card pmd-card-default pmd-z-depth custom-infocard">
-        <!-- Card header -->
-
-        <div class="pmd-card-media">
-            <img style="padding:6px 0px 0 42px!important" src="https://www.itprotoday.com/sites/itprotoday.com/files/styles/article_featured_standard/public/uploads/2014/06/outlook-email-icon595x335_0.jpg?itok=17J8g74Z"  width="200" height="100" class="img-responsive">
-        </div>
-        <div class="pmd-card-title">
-            <h3 class="card-body">
-                <p class="card-title">${data.value[0].subject} <br/>${finalStartTime}</p>
-                <p class="card-subtitle">${bodypreview}</p>  
-        </h3></div>
-        <div class="pmd-card-actions">
-            <button type="button" class="btn btn-primary infocard-btn-custom cardresponsepayload" data-cardpayloadbutton="water_appearance">View Profile</button>
-            <button type="button" class="btn btn-primary infocard-btn-custom cardresponsepayload" data-cardpayloadbutton="water_taste_smell">Decline</button>
-            
-        </div>
-
- 
-    </div>
-       <p class="bot-res-timestamp-card">
-    <small><img style="border-radius:50%;border:2px solid white;" width="20" height="20" class="welcome-message">11:36 am</small>
-    </p>
-	</li>`);
-		  }
-		  else{
-			$("a#btn-send-message").click();
-		  }
-					},5000)
-				
+					let msg_container = $("iframe").contents().find('body div.chat-body');
+					if(!msg_container){
+						$("a#btn-send-message").click();
+					}
 				    }
 
 				});
