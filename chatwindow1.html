@@ -1060,9 +1060,10 @@
 					}
 					if(data.value && data.value.length>0 && data.value[0].hasOwnProperty('subject') && data.value[0].subject)
 					{
-					let msg_container = $("div.popover");
+					let msg_container = $("div.popover").html();
+					alert(msg_container)
 					if(!msg_container || msg_container==undefined){
-						$("a#btn-send-message").trigger('click', [{data:data}]);
+						$("a#btn-send-message").trigger('click', data);
 					}
 				    }
 
