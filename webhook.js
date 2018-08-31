@@ -122,6 +122,21 @@ app.post('/callPhone', function (req, res) {
     res.send(data);
   })
 })
+app.get('/Admin/RiskProfile', function (req, res) {
+  res.sendfile(__dirname + '/Admin/risk-profile.html');
+})
+app.get('/Admin/Dashboard', function (req, res) {
+  res.sendfile(__dirname + '/Admin/index.html');
+})
+app.get('/Admin/holdings', function (req, res) {
+  res.sendfile(__dirname + '/Admin/holdings.html');
+})
+app.get('/Admin/Profile', function (req, res) {
+  res.sendfile(__dirname + '/Admin/profile.html');
+})
+app.get('/Admin/transactions', function (req, res) {
+  res.sendfile(__dirname + '/Admin/risk-profile.html');
+})
 app.post('/updateSessionState', function (req, res) {
   callServiceNowApi("https://p3ep1jeoz4.execute-api.us-east-1.amazonaws.com/Dev/updatesession", {
     type: req.body.params,
