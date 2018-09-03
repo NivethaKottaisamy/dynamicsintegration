@@ -2,26 +2,26 @@ var express = require('express'),
   app = express(),
   http = require('http'),
   httpServer = http.Server(app),
-  passport = require('passport'),
+  // passport = require('passport'),
   // TwitterStrategy = require('passport-twitter').Strategy,
   session = require('express-session');
 const crypto = require('crypto');
 var router = express.Router();
+// Moment JS
 var moment = require('moment');
-var momentTz      = require('moment-timezone');
-console.log(momentTz().tz("Asia/Kolkata").format("HH"));
-// const apioutlook=require('./apioutlook');
+var momentTz = require('moment-timezone');
+var dbs=require('./db');
+// Microsoft Graph client
 var MicrosoftGraph = require("@microsoft/microsoft-graph-client");
-
 var authHelper = require('./helper');
 // Passport session setup.
-passport.serializeUser(function (user, done) {
-  done(null, user);
-});
+// passport.serializeUser(function (user, done) {
+//   done(null, user);
+// });
 
-passport.deserializeUser(function (obj, done) {
-  done(null, obj);
-});
+// passport.deserializeUser(function (obj, done) {
+//   done(null, obj);
+// });
 
 // passport.use(new TwitterStrategy({
 //     consumerKey: process.env.consumer_key,
@@ -49,8 +49,8 @@ app.use(session({
   key: 'opty'
 }));
 app.use(express.static(__dirname));
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.initialize());
+// app.use(passport.session());
 app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
   extended: true
 }));
