@@ -1,6 +1,6 @@
 //Mongoose Connection
 const mongoose = require('mongoose');
-var mongoXlsx = require('mongo-xlsx');
+// var mongoXlsx = require('mongo-xlsx');
 
 mongoose.connect('mongodb://admin:admin123@ds141902.mlab.com:41902/charlesbot');
 var db=mongoose.connection;
