@@ -18,7 +18,17 @@ var clientRiskSchema=new Schema({
     To:String,
     Active:String
 })
-
+var productSchema=new Schema({
+    ProductID:String,
+    Name:String,
+    Type:String,
+    ExternalIdentifier:String,
+    ExternalIdentifierType:String,
+    Sector:String,
+    SectorName:String,
+    RiskType:String
+})
+var product =mongoose.model("product",productSchema);
 var clientriskprofile =mongoose.model("clientriskprofile",clientRiskSchema);
 let ClientRiskProfileGet=function(obje){
     return clientriskprofile.find(obje);
@@ -26,7 +36,26 @@ let ClientRiskProfileGet=function(obje){
 let clientRiskProfileUpdate=function(clientID,obje){
     clientriskprofile.where({ ClientID: clientID }).update({ $set: obje})
 }
-
+let giveFundDetails=function(clientID,RiskType){
+   return product.aggregate([ { $project : {
+        ProductIDStatus:{ $ne: [ "$ProductID", clientID] },
+        ProductID : 1,
+        Name : 1 ,
+        RiskType : 1,
+        Type:1
+    }},{ $match : { RiskType : RiskType } },{$lookup:{
+        from:"holdings",
+        localField:"ProductID",
+        foreignField:"ProductID",
+        as: "productHoldings"
+        }},
+    { $unwind: { path: "$productHoldings", preserveNullAndEmptyArrays: true }}
+]);
+}
+giveFundDetails("P1123","NA").then(function(data){
+console.log(data);
+})
+module.exports.giveFundDetails=giveFundDetails;
 module.exports.ClientRiskProfileGet=ClientRiskProfileGet;
 module.exports.clientRiskProfileUpdate=clientRiskProfileUpdate;
 

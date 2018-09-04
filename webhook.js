@@ -11,9 +11,9 @@ var router = express.Router();
 var moment = require('moment');
 var momentTz = require('moment-timezone');
 var dbs=require('./db');
-dbs.ClientRiskProfileGet({Active:'Y',ClientID:'C10112'}).then(function(data){
-console.log(data)
-})
+// dbs.ClientRiskProfileGet({Active:'Y',ClientID:'C10112'}).then(function(data){
+// console.log(data)
+// })
 // Microsoft Graph client
 var MicrosoftGraph = require("@microsoft/microsoft-graph-client");
 var authHelper = require('./helper');
