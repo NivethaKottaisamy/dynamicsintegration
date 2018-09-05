@@ -42,6 +42,26 @@ var holdingSchema=new Schema({
     CurrentPrice:String,
     MarketValue:String
 })
+// Transactions
+var Schema=mongoose.Schema;
+var transactionSchema=new Schema({
+    CustomerID:String,
+    ProductID:String,
+    Quantity:String,
+    Price:String,
+    Action:String,
+    Date:String
+})
+var productperformSchema=new Schema({
+    ProductID:String,
+    Currentprice:String,
+    Previousday:String,
+    Daychange:String,
+    PercentageChange:String,
+    Performance:String
+})
+var productperformance =mongoose.model("productperformance",productperformSchema);
+var transactions =mongoose.model("transactions",transactionSchema);
 var holdings =mongoose.model("holdings",holdingSchema);
 var clientProfile =mongoose.model("clientProfile",clientSchema);
 var product =mongoose.model("product",productSchema);
@@ -52,14 +72,32 @@ let ClientRiskProfileGet=function(obje){
 let ClientProfileGet=function(obje){
     return clientProfile.find(obje);
 }
+let transactionsGet=function(obje){
+    return transactions.find(obje);
+}
 let holdingsProfileGet=function(obje){
     return holdings.find(obje);
 }
 let clientRiskProfileUpdate=function(clientID,obje){
     clientriskprofile.where({ ClientID: clientID }).update({ $set: obje})
 }
-
-
+let productPeformance=function(){
+    return productperformance.aggregate([ { $project : {
+        ProductID : 1,
+        Currentprice : 1 ,
+        Previousday : 1,
+        Daychange:1,
+        PercentageChange:1,
+        Performance: 1
+    }},{$lookup:{
+        from:"products",
+        localField:"ProductID",
+        foreignField:"ProductID",
+        as: "productsname"
+        }},
+    { $unwind: { path: "$productsname", preserveNullAndEmptyArrays: true }}
+]);
+}
 let giveFundDetails=function(clientID,RiskType){
    return product.aggregate([ { $project : {
         ProductIDStatus:{ $ne: [ "$ProductID", clientID] },
@@ -81,6 +119,8 @@ module.exports.giveFundDetails=giveFundDetails;
 module.exports.ClientRiskProfileGet=ClientRiskProfileGet;
 module.exports.clientRiskProfileUpdate=clientRiskProfileUpdate;
 module.exports.ClientProfileGet=ClientProfileGet;
+module.exports.transactionsGet=transactionsGet;
+module.exports.productPeformance=productPeformance;
 
 
 

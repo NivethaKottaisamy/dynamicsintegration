@@ -29,7 +29,33 @@ $(function () {
         last_part = parts[parts.length - 1],
         final_url = last_part.split('?');
         let queryprofileid = querystring.split('=')[1];
-    if (final_url[0] == "RiskProfile") {
+        if (final_url[0] == "ProductPerformance") {
+            initiateAjax("/viewProductPerformance", "POST", {
+                params: queryprofileid
+            }, function (data, err) {
+                var dt = $('.risk-profile-table').dataTable().api();
+                let resultdata='';
+                $.each(data,function(index,value){
+                dt.row.add($(`<tr><td>${value.ProductID}</td><td>${value.productsname.Name}</td><td>${value.Currentprice}</td><td>${value.Previousday}</td><td>${value.Daychange}</td><td>${value.PercentageChange}</td><td>${value.Performance}</td></tr>`));
+                dt.draw();
+                })
+      
+            });
+        }
+        else if (final_url[0] == "transactions") {
+            initiateAjax("/viewTransactions", "POST", {
+                params: queryprofileid
+            }, function (data, err) {
+                var dt = $('.risk-profile-table').dataTable().api();
+                let resultdata='';
+                $.each(data,function(index,value){
+                dt.row.add($(`<tr><td>${value.CustomerID}</td><td>${value.ProductID}</td><td>${value.Quantity}</td><td>${value.Price}</td><td>${value.Action}</td><td>${value.Date}</td></tr>`));
+                dt.draw();
+                })
+      
+            });
+        }
+    else if (final_url[0] == "RiskProfile") {
         initiateAjax("/viewRiskProfile", "POST", {
             params: queryprofileid
         }, function (data, err) {

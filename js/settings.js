@@ -8,7 +8,7 @@ This file is part of the Innovation LAB - Offline Bot.
 
 define({
     accessToken: 'ee3683b183ec498ea5a1f277a85974fd',
-    chatServerURL : "https://api.dialogflow.com/v1/",
+    chatServerURL : "https://api.dialogflow.com/v1/query?v=20150910",
     applicationTitle: "Chat Assistant",
     userTitle : "Me",
     botTitle : "Opty Assistant",

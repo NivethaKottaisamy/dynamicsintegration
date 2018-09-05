@@ -1030,7 +1030,7 @@
 		<p class="card-subtitle">${bodypreview}</p>  
 </h3></div>
 <div class="pmd-card-actions">
-	<button type="button" class="btn btn-primary infocard-btn-custom">View Profile</button>
+	<button type="button" class="btn btn-primary infocard-btn-custom" onclick="document.location.href='https://charleswealthbot.herokuapp.com/Admin/Profile?CustomerID=${data.value[0].subject}'">View Profile</button>
 	<button type="button" data-decline="${data.value[0].id}" class="btn btn-primary infocard-btn-custom meeting-decline">Decline</button>
 	
 </div>

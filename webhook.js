@@ -140,6 +140,9 @@ app.post('/callPhone', function (req, res) {
 app.get('/Admin/RiskProfile', function (req, res) {
   res.sendfile(__dirname + '/Admin/risk-profile.html');
 })
+app.get('/Admin/ProductPerformance', function (req, res) {
+  res.sendfile(__dirname + '/Admin/product-performance.html');
+})
 app.get('/Admin/Dashboard', function (req, res) {
   res.sendfile(__dirname + '/Admin/index.html');
 })
@@ -150,7 +153,7 @@ app.get('/Admin/Profile', function (req, res) {
   res.sendfile(__dirname + '/Admin/profile.html');
 })
 app.get('/Admin/transactions', function (req, res) {
-  res.sendfile(__dirname + '/Admin/risk-profile.html');
+  res.sendfile(__dirname + '/Admin/transactions.html');
 })
 app.post('/updateSessionState', function (req, res) {
   callServiceNowApi("https://p3ep1jeoz4.execute-api.us-east-1.amazonaws.com/Dev/updatesession", {
@@ -186,6 +189,24 @@ app.post("/viewProfile", async function (req, res) {
   await dbs.ClientProfileGet({
     ClientId: custid
   }).then(function (data) {
+    res.send(data);
+  })
+ 
+})
+app.post("/viewTransactions", async function (req, res) {
+  let custid = req.body.params;
+  await dbs.transactionsGet({
+    CustomerID: custid
+  }).then(function (data) {
+    console.log(data);
+    res.send(data);
+  })
+ 
+})
+app.post("/viewProductPerformance", async function (req, res) {
+  let custid = req.body.params;
+  await dbs.productPeformance().then(function (data) {
+    console.log(data);
     res.send(data);
   })
  
