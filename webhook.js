@@ -58,6 +58,18 @@ app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
   extended: true
 }));
 
+app.post("/webhook",async (req,res)=>{
+  var options = {
+    url: "https://api.dialogflow.com/v1/query?v=20150910",
+    method: "POST",
+    headers: { 'Authorization': 'Bearer ' + 'ee3683b183ec498ea5a1f277a85974fd', 'Content-Type': 'application/json'},
+    body: req.body,
+    json: true
+  };
+  await requestAPI(options, function (error, response, body) {
+   res.send(body);
+  });
+})
 // app.get('/auth/twitter', passport.authenticate('twitter'));
 
 // app.get('/auth/twitter/callback',

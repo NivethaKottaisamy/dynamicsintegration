@@ -39,12 +39,9 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
 
                 $.ajax({
                     type: "POST",
-                    url: config.chatServerURL + "query?v=20150910",
+                    url: "/webhook",
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
-                    headers: {
-                        "Authorization": "Bearer " + config.accessToken
-                    },
                     beforeSend: function () {
                         msg_container.parent().append(`<img class="loading-gif-typing"src="/images/ellipsis.gif"  style="text-align:left;"  />`)
                     },
