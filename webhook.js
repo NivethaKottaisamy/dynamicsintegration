@@ -10,7 +10,7 @@ var router = express.Router();
 // Moment JS
 var moment = require('moment');
 var momentTz = require('moment-timezone');
-var dbs=require('./db');
+var dbs = require('./db');
 // dbs.ClientRiskProfileGet({Active:'Y',ClientID:'C10112'}).then(function(data){
 // console.log(data)
 // })
@@ -38,9 +38,9 @@ var authHelper = require('./helper');
 //     });
 //   }
 // ));
-var dateUTC=moment().utc().format()
-let startdate=dateUTC;
-let enddate=moment().add(15, 'minutes').utc().format();
+var dateUTC = moment().utc().format()
+let startdate = dateUTC;
+let enddate = moment().add(15, 'minutes').utc().format();
 console.log(startdate);
 console.log(enddate);
 var bodyParser = require('body-parser');
@@ -73,6 +73,7 @@ var jsonIncompleteTran = [];
 app.get('/', function (req, res) {
   res.send("/richowebsites");
 });
+
 app.post('/outlook', async function (req, res) {
 
   var client = MicrosoftGraph.Client.init({
@@ -80,23 +81,22 @@ app.post('/outlook', async function (req, res) {
       done(null, req.body.params); //first parameter takes an error if you can't get an access token
     }
   });
-  try{
-    var dateUTC=moment().utc().format()
-    let startdate=dateUTC;
-    let enddate=moment().add(15, 'minutes').utc().format();
+  try {
+    var dateUTC = moment().utc().format()
+    let startdate = dateUTC;
+    let enddate = moment().add(15, 'minutes').utc().format();
     console.log(startdate);
     console.log(enddate);
-  const result = await client
-    .api(`https://graph.microsoft.com/v1.0/me/calendarView?StartDateTime=${startdate}&EndDateTime=${enddate}`)
-    .get();
-    let data=result.value;
+    const result = await client
+      .api(`https://graph.microsoft.com/v1.0/me/calendarView?StartDateTime=${startdate}&EndDateTime=${enddate}`)
+      .get();
+    let data = result.value;
     console.log(result);
     res.send(result);
-  }
-  catch(e){
+  } catch (e) {
     res.send(e)
   }
-  
+
 })
 app.get('/auth', function (req, res) {
   let parms = {};
@@ -109,7 +109,7 @@ app.get('/authorize', async function (req, res, next) {
     let token;
     try {
       token = await authHelper.getTokenFromCode(code);
-      res.redirect('chatwindow?token='+token);
+      res.redirect('chatwindow?token=' + token);
     } catch (error) {
       res.send('error', JSON.stringify({
         error: error
@@ -168,6 +168,38 @@ app.get('/roaming', function (req, res) {
 app.get('/chat', function (req, res) {
   res.sendfile(__dirname + '/index.html');
 });
+app.post("/viewProfile", async function (req, res) {
+  let custid = req.body.params;
+  console.log(custid);
+  await dbs.ClientProfileGet({
+    ClientId: custid
+  }).then(function (data) {
+    res.send(data);
+  })
+ 
+})
+app.post("/viewRiskProfile", async function (req, res) {
+  let custid = req.body.params;
+  console.log(custid);
+  await dbs.ClientRiskProfileGet({
+    ClientID: custid
+  }).then(function (data) {
+    console.log(data);
+    res.send(data);
+  })
+ 
+})
+app.post("/viewHoldingProfile", async function (req, res) {
+  let custid = req.body.params;
+  console.log(custid);
+  await dbs.holdingsProfileGet({
+    CustomerID: custid
+  }).then(function (data) {
+    console.log(data);
+    res.send(data);
+  })
+ 
+})
 app.get('/getIncompleteStatus', function (req, res) {
   console.log('Chat ID', JSON.stringify(req.query.ChatId));
   let chatId = req.query.ChatId;

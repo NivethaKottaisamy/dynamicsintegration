@@ -1004,7 +1004,8 @@
 				$('[data-toggle="popover"]').popover();
            
 		        $("a#btn-send-message").click(function(e,data){
-		
+         if(data.hasOwnProperty('value') && data.value.length>0)
+         {
 					let bodypreview=data.value[0].bodyPreview;
 					let onlinemeetingurl=data.value[0].onlineMeetingUrl;
 					let starttime=utils.getDateFormat("Asia/Kolkata",data.value[0].start.dateTime);
@@ -1040,7 +1041,8 @@
 <small><img style="border-radius:50%;border:2px solid white;" width="20" height="20" class="welcome-message">11:36 am</small>
 </p>
 </li>`);
-					},5000)
+          },5000)
+        }
 				})
 				let url = new URL(window.location.href);
 				let params = utils.getURLParameter('sessionstate');
