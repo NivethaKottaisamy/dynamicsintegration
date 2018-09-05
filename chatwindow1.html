@@ -1004,7 +1004,7 @@
 				$('[data-toggle="popover"]').popover();
            
 		        $("a#btn-send-message").click(function(e,data){
-         if(data.hasOwnProperty('value') && data.value.length>0)
+         if(data && data.hasOwnProperty('value') && data.value.length>0)
          {
 					let bodypreview=data.value[0].bodyPreview;
 					let onlinemeetingurl=data.value[0].onlineMeetingUrl;
