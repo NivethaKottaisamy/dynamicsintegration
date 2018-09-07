@@ -13,7 +13,7 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
         class ApiHandler {
 
             constructor() {
-                let uuid = localStorage.getItem('token');
+                let uuid = !localStorage.getItem('uuid') ? localStorage.setItem('uuid', uuidv1()) : localStorage.getItem('uuid');
 
                 this.options = {
                     sessionId: uuid,
@@ -35,13 +35,12 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
             askBot(userInput, userText, callback) {
                 this.userSays(userText, callback);
                 var msg_container = $("ul#msg_container");
-                this.options.query = userInput + localStorage.getItem('clientid');;
+                this.options.query = userInput;
 
                 $.ajax({
                     type: "POST",
                     url: "/webhook",
                     contentType: "application/json; charset=utf-8",
-                    data:{token:localStorage.getItem('token')},
                     dataType: "json",
                     beforeSend: function () {
                         msg_container.parent().append(`<img class="loading-gif-typing"src="/images/ellipsis.gif"  style="text-align:left;"  />`)
