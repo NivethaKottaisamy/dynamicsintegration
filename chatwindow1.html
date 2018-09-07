@@ -1015,7 +1015,8 @@
 						msg_container.find("h1").addClass('hidden');
 					msg_container.find("div.chat-text-para").addClass('hidden');
 					msg_container.find(".header-text-logo").removeClass('hidden');
-					msg_container.find("ul").removeClass('hidden');
+          msg_container.find("ul").removeClass('hidden');
+          localStorage.setItem("clientid",data.value[0].subject);
 					msg_container.find("ul").append(`
 <li class="list-group-item background-color-custom animated fadeInLeft">
 <div class="pmd-card pmd-card-default pmd-z-depth custom-infocard">
