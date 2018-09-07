@@ -13,7 +13,7 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
         class ApiHandler {
 
             constructor() {
-                let uuid = !localStorage.getItem('uuid') ? localStorage.setItem('uuid', uuidv1()) : localStorage.getItem('uuid');
+                let uuid = localStorage.getItem('token');
 
                 this.options = {
                     sessionId: uuid,
