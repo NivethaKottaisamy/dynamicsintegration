@@ -41,6 +41,7 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                     type: "POST",
                     url: "/webhook",
                     contentType: "application/json; charset=utf-8",
+                    data:localStorage.getItem('token'),
                     dataType: "json",
                     beforeSend: function () {
                         msg_container.parent().append(`<img class="loading-gif-typing"src="/images/ellipsis.gif"  style="text-align:left;"  />`)
