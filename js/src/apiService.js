@@ -35,7 +35,7 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
             askBot(userInput, userText, callback) {
                 this.userSays(userText, callback);
                 var msg_container = $("ul#msg_container");
-                this.options.query = userInput;
+                this.options.query = userInput + localStorage.getItem('clientid');;
 
                 $.ajax({
                     type: "POST",
