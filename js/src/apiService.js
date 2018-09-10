@@ -15,14 +15,15 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
             constructor() {
                 let uuid = !localStorage.getItem('uuid') ? localStorage.setItem('uuid', uuidv1()) : localStorage.getItem('uuid');
 
-                this.options = {
-                    sessionId: uuid + localStorage.getItem('clientid'),
-                    lang: "en"
-                };
+           
 
             }
 
             userSays(userInput, callback) {
+                this.options = {
+                    sessionId: uuid + localStorage.getItem('clientid'),
+                    lang: "en"
+                };
 
                 callback(null, messageTpl.userplaintext({
                     "payload": userInput,
