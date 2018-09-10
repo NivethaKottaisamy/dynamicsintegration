@@ -1,7 +1,7 @@
 //Mongoose Connection
 const mongoose = require('mongoose');
 // var mongoXlsx = require('mongo-xlsx');
-// xlsxj = require("xlsx-to-json");
+xlsxj = require("xlsx-to-json");
 
 mongoose.connect('mongodb://admin:admin123@ds141902.mlab.com:41902/charlesbot');
 var db=mongoose.connection;
@@ -10,7 +10,7 @@ db.once("open",function(callback){
   console.log('Connection Succeeded');
 })
 
-// Client Risk Profile
+// // Client Risk Profile
 var Schema=mongoose.Schema;
 var clientRiskSchema=new Schema({
     ClientID:String,
@@ -81,6 +81,7 @@ let holdingsProfileGet=function(obje){
 let clientRiskProfileUpdate=function(clientID,obje){
     clientriskprofile.where({ ClientID: clientID }).update({ $set: obje})
 }
+
 let productPeformance=function(){
     return productperformance.aggregate([ { $project : {
         ProductID : 1,
@@ -261,7 +262,13 @@ module.exports.productPeformance=productPeformance;
 //     MarketValue:String
 // })
 // var holdings =mongoose.model("holdings",holdingSchema);
-// mongoXlsx.xlsx2MongoData("./Book1.xlsx", holdingSchema, function(err, mongoData) {
+// xlsxj({
+//     input: "./Book2.xlsx", 
+//     output: "./output.json"
+//   }, function(err, mongoData) {
+//     if(err) {
+//       console.error(err);
+//     }else {
 //     // console.log(mongoData[0].From.toString());
 //     mongoData.forEach(element => {
         
@@ -280,6 +287,7 @@ module.exports.productPeformance=productPeformance;
         
 //         })
 //     });
+// }
 // });
 
 

@@ -16,7 +16,7 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                 let uuid = !localStorage.getItem('uuid') ? localStorage.setItem('uuid', uuidv1()) : localStorage.getItem('uuid');
 
                 this.options = {
-                    sessionId: uuid,
+                    sessionId: uuid + localStorage.getItem('clientid'),
                     lang: "en"
                 };
 
@@ -35,7 +35,7 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
             askBot(userInput, userText, callback) {
                 this.userSays(userText, callback);
                 var msg_container = $("ul#msg_container");
-                this.options.query = userInput +" -"+ localStorage.getItem('clientid');
+                this.options.query = userInput;
 
                 $.ajax({
                     type: "POST",
