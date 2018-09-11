@@ -118,12 +118,16 @@ app.post('/sendEmail', async function (req, res) {
             };
 
   try {
-    await client.api('/me/sendmail').post(mailBody,
-      (err) => {
-        return done(err);
+    await client.api('/me/sendmail').post(mailBody, (err, res) => {
+      if(err){
+        res.send(err)
       }
-    );
-    res.send("Email Send")
+      else{
+        res.send(res)
+      }
+      
+  })
+ 
   }
   catch(e){
     res.send("Error"+e)
