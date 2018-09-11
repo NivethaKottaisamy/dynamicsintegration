@@ -91,23 +91,26 @@ app.post('/sendEmail', async function (req, res) {
       done(null, req.body.params); //first parameter takes an error if you can't get an access token
     }
   });
-  const mail = {
-    subject: "Microsoft Graph JavaScript Sample",
-    toRecipients: [{
-        emailAddress: {
-            address: "srinivasanV3@hexaware.com"
-        }
-    }],
-    body: {
-        content: "<h1>MicrosoftGraph JavaScript Sample</h1>Check out https://github.com/microsoftgraph/msgraph-sdk-javascript",
-        contentType: "html"
-    }
-}
-
+  
   try {
     await client
-    .api('https://graph.microsoft.com/v1.0/me/sendMail')
-    .post({message: mail}, (err, resp) => {
+    .api('/me/sendMail')
+    .post({
+      "message": {
+        "subject": "Meet for lunch?",
+        "body": {
+          "contentType": "Text",
+          "content": "The new cafeteria is open."
+        },
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "address": "srinivasanV3@hexaware.com"
+            }
+          }
+        ]
+      }
+    }, (err, resp) => {
         res.send("Email Send")
     })
  
