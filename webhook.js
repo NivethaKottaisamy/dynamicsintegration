@@ -106,7 +106,7 @@ app.post('/sendEmail', async function (req, res) {
 
   try {
     await client
-    .api('/users/me/sendMail')
+    .api('https://graph.microsoft.com/v1.0/me/sendMail')
     .post({message: mail}, (err, res) => {
         console.log(res)
         res.send(res)
