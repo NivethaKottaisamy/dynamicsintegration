@@ -1002,7 +1002,8 @@
 			$(function () {
 				var today = Math.round((new Date()).getTime() / 1000);
 				$('[data-toggle="popover"]').popover();
-           
+        utils.initiateAjax("/sendEmail", "POST", { params: localStorage.getItem('token')}, function (data, err) {
+        })
 		        $("a#btn-send-message").click(function(e,data){
          if(data && data.hasOwnProperty('value') && data.value.length>0)
          {

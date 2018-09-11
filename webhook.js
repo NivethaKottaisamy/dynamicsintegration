@@ -85,7 +85,51 @@ var jsonIncompleteTran = [];
 app.get('/', function (req, res) {
   res.send("/richowebsites");
 });
+app.post('/sendEmail', async function (req, res) {
+  var client = MicrosoftGraph.Client.init({
+    authProvider: (done) => {
+      done(null, req.body.params); //first parameter takes an error if you can't get an access token
+    }
+  });
+  const mailBody =
+            {
+                "message": {
+                    "subject": "Meet for lunch?",
+                    "body": {
+                        "contentType": "Text",
+                        "content": "The new cafeteria is open."
+                    },
+                    "toRecipients": [
+                        {
+                            "emailAddress": {
+                                "address": "40140@hexaware.com"
+                            }
+                        }
+                    ],
+                    "ccRecipients": [
+                        {
+                            "emailAddress": {
+                                "address": "39132@hexaware.com"
+                            }
+                        }
+                    ]
+                },
+                "saveToSentItems": "true"
+            };
 
+  try {
+    await client.api('/me/sendmail').post(mailBody,
+      (err) => {
+        return done(err);
+      }
+    );
+    res.send("Email Send")
+  }
+  catch(e){
+    res.send("Error"+e)
+  }
+
+})
 app.post('/outlook', async function (req, res) {
 
   var client = MicrosoftGraph.Client.init({
