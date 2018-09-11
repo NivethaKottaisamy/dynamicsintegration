@@ -86,6 +86,7 @@ app.get('/', function (req, res) {
   res.send("/richowebsites");
 });
 app.post('/sendEmail', async function (req, res) {
+  console.log(req.body.params);
   var client = MicrosoftGraph.Client.init({
     authProvider: (done) => {
       done(null, req.body.params); //first parameter takes an error if you can't get an access token
