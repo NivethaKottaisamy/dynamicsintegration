@@ -116,6 +116,7 @@ app.post('/sendEmail', async function (req, res) {
   catch(e){
     res.send("Error"+e)
   }
+  res.send('Send Success');
 
 })
 app.post('/outlook', async function (req, res) {
