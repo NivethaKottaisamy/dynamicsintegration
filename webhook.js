@@ -108,8 +108,7 @@ app.post('/sendEmail', async function (req, res) {
     await client
     .api('https://graph.microsoft.com/v1.0/me/sendMail')
     .post({message: mail}, (err, resp) => {
-        console.log(resp)
-        res.send(res)
+        res.send("Email Send")
     })
  
   }
