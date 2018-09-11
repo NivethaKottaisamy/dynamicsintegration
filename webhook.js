@@ -118,7 +118,7 @@ app.post('/sendEmail', async function (req, res) {
             };
 
   try {
-    await client.api('/me/sendmail').post(mailBody, (err, res) => {
+    await client.api('/me/sendMail').post(mailBody, (err, res) => {
       if(err){
         res.send(err)
       }
