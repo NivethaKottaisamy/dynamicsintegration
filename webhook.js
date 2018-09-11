@@ -94,7 +94,7 @@ app.post('/sendEmail', async function (req, res) {
   
   try {
     await client
-    .api('/me/sendMail')
+    .api('https://graph.microsoft.com/v1.0/me/sendMail')
     .post({
       "message": {
         "subject": "Meet for lunch?",
