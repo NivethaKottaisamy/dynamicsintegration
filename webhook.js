@@ -113,6 +113,7 @@ app.post('/sendEmail', async function (req, res) {
       }
     }, (err, resp) => {
       console.log(resp);
+      console.log(err);
         res.send("Email Send")
     })
  
