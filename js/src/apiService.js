@@ -44,7 +44,7 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                         msg_container.parent().append(`<img class="loading-gif-typing"src="/images/ellipsis.gif"  style="text-align:left;"  />`)
                     },
                     data: JSON.stringify(this.options),
-                    success: async function (response) {
+                    success:  function (response) {
                     console.log('----------------srini------------------');
                     console.log(response);
                     if(result.metadata.intentName=="EXIT-FUND-OPTION-YES"){
@@ -63,7 +63,7 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                           }
                         ]
                       };
-                    await utils.initiateAjax("/sendEmail", "POST", { params: localStorage.getItem('token'),message:messagehtml}, function (data, err) {
+                    utils.initiateAjax("/sendEmail", "POST", { params: localStorage.getItem('token'),message:messagehtml}, function (data, err) {
                     console.log("---------------Message Send----------------------");                         
                      })
                     }
