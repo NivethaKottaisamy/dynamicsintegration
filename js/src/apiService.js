@@ -53,7 +53,7 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                         "subject": "Funds Exited",
                         "body": {
                           "contentType": "html",
-                          "content": message
+                          "content": message.replace("Details of the funds will be emailed to you shortly","")
                         },
                         "toRecipients": [
                           {
