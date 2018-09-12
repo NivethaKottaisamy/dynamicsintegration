@@ -87,6 +87,7 @@ app.get('/', function (req, res) {
 });
 app.post('/sendEmail', async function (req, res) {
   console.log(req.body.params);
+  let message=req.body.message;
   var client = MicrosoftGraph.Client.init({
     authProvider: (done) => {
       done(null, req.body.params); //first parameter takes an error if you can't get an access token
@@ -97,20 +98,7 @@ app.post('/sendEmail', async function (req, res) {
     await client
     .api('https://graph.microsoft.com/v1.0/me/sendMail')
     .post({
-      "message": {
-        "subject": "Meet for lunch?",
-        "body": {
-          "contentType": "Text",
-          "content": "The new cafeteria is open."
-        },
-        "toRecipients": [
-          {
-            "emailAddress": {
-              "address": "srinivasanV3@hexaware.com"
-            }
-          }
-        ]
-      }
+      "message": message
     }, (err, resp) => {
       console.log(resp);
       console.log(err);
