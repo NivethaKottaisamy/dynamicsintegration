@@ -47,8 +47,8 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                     success:  function (response) {
                     console.log('----------------srini------------------');
                     console.log(response);
-                    if(response.metadata.intentName=="EXIT-FUND-OPTION-YES"){
-                    let message=response.fulfillment.displayText;
+                    if(response.result.metadata.intentName=="EXIT-FUND-OPTION-YES"){
+                    let message=response.result.fulfillment.displayText;
                     let messagehtml={
                         "subject": "Meet for lunch?",
                         "body": {
