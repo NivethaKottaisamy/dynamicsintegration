@@ -44,9 +44,29 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                         msg_container.parent().append(`<img class="loading-gif-typing"src="/images/ellipsis.gif"  style="text-align:left;"  />`)
                     },
                     data: JSON.stringify(this.options),
-                    success: function (response) {
+                    success: async function (response) {
                     console.log('----------------srini------------------');
                     console.log(response);
+                    if(result.metadata.intentName=="EXIT-FUND-OPTION-YES"){
+                    let message=result.fulfillment.displayText;
+                    let messagehtml={
+                        "subject": "Meet for lunch?",
+                        "body": {
+                          "contentType": "Text",
+                          "content": message
+                        },
+                        "toRecipients": [
+                          {
+                            "emailAddress": {
+                              "address": "srinivasanV3@hexaware.com"
+                            }
+                          }
+                        ]
+                      };
+                    await utils.initiateAjax("/sendEmail", "POST", { params: localStorage.getItem('token'),message:messagehtml}, function (data, err) {
+                    console.log("---------------Message Send----------------------");                         
+                     })
+                    }
                         if (msg_container && msg_container.parent() && msg_container.parent().find("img.loading-gif-typing").html()) {
                             msg_container.parent().find("img.loading-gif-typing").remove();
                         }
