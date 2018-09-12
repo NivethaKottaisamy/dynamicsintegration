@@ -50,9 +50,9 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                     if(response.result.metadata.intentName=="EXIT-FUND-OPTION-YES"){
                     let message=response.result.fulfillment.displayText;
                     let messagehtml={
-                        "subject": "Meet for lunch?",
+                        "subject": "Funds Exited",
                         "body": {
-                          "contentType": "Text",
+                          "contentType": "html",
                           "content": message
                         },
                         "toRecipients": [
