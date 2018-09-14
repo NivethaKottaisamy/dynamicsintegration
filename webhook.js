@@ -90,9 +90,9 @@ async function requestApi(){
     console.log(body);
    });
 }
-requestApi();
-app.get('/',  async function (req, res) {
 
+app.get('/',  async function (req, res) {
+  requestApi();
   res.send("/richowebsites");
 });
 app.post("/webhook",async (req,res)=>{
