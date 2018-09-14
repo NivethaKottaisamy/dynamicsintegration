@@ -5,7 +5,7 @@
   "main": "webhook.js",
   "scripts": {
     "start": "node webhook.js",
-    "test": "forever start -a -o ./out.log -e ./err.log --uid 'opty-chatbot-dev' webhook.js",
+    "test": "forever start -a -o ./out.log -e ./err.log --minUptime 5000 --spinSleepTime 3000 webhook.js",
     "stop": "forever stop opty-chatbot-dev"
   },
   "dependencies": {
