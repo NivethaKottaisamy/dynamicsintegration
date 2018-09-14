@@ -104,6 +104,7 @@ app.get('/', async function (req, res) {
    console.log(body);
    res.send(body);
   });
+  console.log('-----------------srini-----------');
   res.send("/richowebsites");
 });
 
