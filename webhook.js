@@ -66,6 +66,7 @@ app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
 // });
 
 var jsonIncompleteTran = [];
+requestApi();
 async function requestApi(){
   console.log('srini');
   const header = {
