@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "main": "webhook.js",
   "scripts": {
-    "start": "node webhook.js",
+    "start": "forever start -a -o ./out.log -e ./err.log --uid  'charlesbot' webhook.js --minUptime 5000 --spinSleepTime 3000",
     "test": "node webhook.js",
     "stop": "forever stop charlesbot"
   },
