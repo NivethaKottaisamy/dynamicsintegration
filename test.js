@@ -3,11 +3,11 @@ async function requestApi(){
     console.log('srini');
     const header = {
       'Cache-Control': 'no-cache',
-      Accept: 'application/json',
+      'Accept': 'application/json',
       'Content-Type': 'application/json'
     };
     var options = {
-      url: "https://disco.crm5.dynamics.com/api/discovery/v9.0/",
+      url: "https://hexama.api.crm5.dynamics.com/api/data/v9.0/",
       method: "GET",
       header: header,
       body: "",
@@ -24,3 +24,6 @@ async function requestApi(){
      });
   }
 requestApi();
+
+// var DynamicsWebApi = require('dynamics-web-api');
+// var AuthenticationContext = require('adal-node').AuthenticationContext;

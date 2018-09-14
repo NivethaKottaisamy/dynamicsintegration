@@ -75,7 +75,7 @@ async function requestApi(){
     'Content-Type': 'application/json'
   };
   var options = {
-    url: "https://disco.crm5.dynamics.com/api/discovery/v9.0/",
+    url: "https://hexama.api.crm5.dynamics.com/api/data/v9.0",
     method: "GET",
     header: header,
     body: "",
@@ -92,8 +92,7 @@ async function requestApi(){
    });
 }
 
-app.get('/',  async function (req, res) {
-  requestApi();
+app.get('/', function (req, res) {
   res.send("/richowebsites");
 });
 app.post("/webhook",async (req,res)=>{
