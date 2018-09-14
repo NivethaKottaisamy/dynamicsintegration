@@ -82,7 +82,7 @@ app.post("/webhook",async (req,res)=>{
 
 var jsonIncompleteTran = [];
 
-app.get('/', async function (req, res) {
+app.get('/', function (req, res) {
   const header = {
     'Cache-Control': 'no-cache',
     Accept: 'application/json',
@@ -99,7 +99,7 @@ app.get('/', async function (req, res) {
       password: "10Sep2018@"
     }
   };
-  await requestAPI(options, function (error, response, body) {
+  requestAPI(options, function (error, response, body) {
    console.log("-----------------Srini---------------------");
    console.log(body);
    res.send(body);
