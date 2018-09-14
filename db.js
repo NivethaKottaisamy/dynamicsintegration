@@ -3,11 +3,11 @@ const mongoose = require('mongoose');
 // var mongoXlsx = require('mongo-xlsx');
 xlsxj = require("xlsx-to-json");
 
-mongoose.connect('mongodb://admin:admin123@ds141902.mlab.com:41902/charlesbot');
+mongoose.connect('mongodb://admin:admin123@ds141902.mlab.com:41902/charlesbot',{ useNewUrlParser: true });
 var db=mongoose.connection;
 db.on("error",console.error.bind(console,"Connection error"))
-db.once("open",function(callback){
-  console.log('Connection Succeeded');
+db.once("open", async function(callback){
+  await console.log('Connection Succeeded');
 })
 
 // // Client Risk Profile
