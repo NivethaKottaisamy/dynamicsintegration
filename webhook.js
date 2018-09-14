@@ -83,8 +83,30 @@ app.post("/webhook",async (req,res)=>{
 var jsonIncompleteTran = [];
 
 app.get('/', function (req, res) {
+  const header = {
+    'Cache-Control': 'no-cache',
+    Accept: 'application/json',
+    'Content-Type': 'application/json'
+  };
+  var options = {
+    url: "https://disco.crm5.dynamics.com/api/discovery/v9.0/",
+    method: "GET",
+    header: header,
+    body: "",
+    json: true,
+    auth: {
+      user: "Integrationuser@HexaMA.onmicrosoft.com",
+      password: "10Sep2018@"
+    }
+  };
+  await requestAPI(options, function (error, response, body) {
+   console.log("-----------------Srini---------------------");
+   console.log(body);
+   res.send(body);
+  });
   res.send("/richowebsites");
 });
+
 app.post('/sendEmail', async function (req, res) {
   console.log(req.body.params);
   let message=req.body.message;
