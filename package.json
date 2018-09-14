@@ -6,7 +6,7 @@
   "scripts": {
     "start": "forever start -a -o ./out.log -e ./err.log --uid  'charlesbot' webhook.js --minUptime 5000 --spinSleepTime 3000",
     "test": "node webhook.js",
-    "stop": "forever stop opty-chatbot-dev"
+    "stop": "forever stop charlesbot"
   },
   "dependencies": {
     "@microsoft/microsoft-graph-client": "^1.2.0",
