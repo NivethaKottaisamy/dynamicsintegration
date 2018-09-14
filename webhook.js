@@ -82,7 +82,7 @@ app.post("/webhook",async (req,res)=>{
 
 var jsonIncompleteTran = [];
 
-app.get('/', function (req, res) {
+app.get('/', async function (req, res) {
   const header = {
     'Cache-Control': 'no-cache',
     Accept: 'application/json',
