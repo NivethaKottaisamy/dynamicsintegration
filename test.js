@@ -54,7 +54,7 @@ function adalCallback(error, token) {
         var options = {
             url: "https://hexama.api.crm5.dynamics.com/api/data/v9.0/$metadata#accounts(name)",
             method: "GET",
-            headers: { 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json'},
+            headers: { 'Authorization': 'Bearer ' + token.accessToken, 'Content-Type': 'application/json'},
             json: true
           };
           requestAPI(options, function (error, response, body) {
