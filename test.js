@@ -43,4 +43,11 @@ dynamicsWebApi.executeUnboundFunction("WhoAmI").then(function (response) {
 }).catch(function(error){
     console.log(error.message);
 });
+dynamicsWebApi.retrieveMultiple("account").then(function (records) {
+    //do something with retrieved records here
+    console.log(records);
+})
+.catch(function (error) {
+    //catch an error
+});
  
