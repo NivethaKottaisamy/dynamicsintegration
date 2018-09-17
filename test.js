@@ -53,7 +53,7 @@ var options = {
     headers: { 'Authorization': 'Bearer ' + acquireToken, 'Content-Type': 'application/json'},
     json: true
   };
-  await requestAPI(options, function (error, response, body) {
+  requestAPI(options, function (error, response, body) {
    res.send(body);
   });
 
