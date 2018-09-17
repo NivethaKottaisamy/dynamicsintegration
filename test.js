@@ -47,7 +47,6 @@ dynamicsWebApi.executeUnboundFunction("WhoAmI").then(function (response) {
 
 var request = {
     collection: "Client",
-    select: ["Age", "Clienttype","Name"],
     maxPageSize: 5				//just for an example
 };
  
@@ -64,7 +63,7 @@ dynamicsWebApi.retrieveAllRequest(request).then(function (response) {
 });
 
 //perform a multiple records retrieve operation
-dynamicsWebApi.retrieveAll("leads", ["fullname", "subject"], "statecode eq 0").then(function (response) {
+dynamicsWebApi.retrieveAll("leads").then(function (response) {
  
     var records = response.value;
     console.log(records[0])
