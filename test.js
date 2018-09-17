@@ -9,7 +9,7 @@ var authorityUrl = 'https://login.microsoftonline.com/72a65f94-18d8-4ac4-b401-9c
 var resource = 'https://hexama.crm5.dynamics.com/';
 //Dynamics 365 Client Id when registered in Azure
 var clientId = '43431254-7b9c-49ac-8e0b-4ac5be824c8b';
-var username = 'applicationusers1@HexaMA.onmicrosoft.com';
+var username = 'applicationusers@HexaMA.onmicrosoft.com';
 var password = 'abcde@123';
  
 var adalContext = new AuthenticationContext(authorityUrl);
