@@ -34,7 +34,8 @@ function acquireToken(dynamicsWebApiCallback){
 //create DynamicsWebApi object
 var dynamicsWebApi = new DynamicsWebApi({
     webApiUrl: 'https://hexama.api.crm5.dynamics.com/api/data/v9.0/',
-    onTokenRefresh: acquireToken
+    onTokenRefresh: acquireToken,
+    useEntityNames: true
 });
  
 //call any function
