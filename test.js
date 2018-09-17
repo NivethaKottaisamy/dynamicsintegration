@@ -48,11 +48,12 @@ dynamicsWebApi.executeUnboundFunction("WhoAmI").then(function (response) {
 
 adalContext.acquireTokenWithClientCredentials(resource, clientId,clientSecret, adalCallback)
 function adalCallback(error, token) {
+    console.log(token);
     if (!error){
         //call DynamicsWebApi callback only when a token has been retrieved
         var options = {
             url: "https://hexama.api.crm5.dynamics.com/api/data/v9.0/$metadata#accounts(name)",
-            method: "POST",
+            method: "GET",
             headers: { 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json'},
             json: true
           };
