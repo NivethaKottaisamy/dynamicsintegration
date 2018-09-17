@@ -45,23 +45,8 @@ dynamicsWebApi.executeUnboundFunction("WhoAmI").then(function (response) {
     console.log(error.message);
 });
 
-var request = {
-    collection: "Client",
-    maxPageSize: 5				//just for an example
-};
- 
-//perform a multiple records retrieve operation
-dynamicsWebApi.retrieveAllRequest(request).then(function (response) {
- 
-    var records = response.value;
-    console.log(records)
-    //do something else with a records array. Access a record: response.value[0].subject;
-})
-.catch(function (error){
-    console.log(error)
-    //catch an error
-});
 
+ 
 //perform a multiple records retrieve operation
 dynamicsWebApi.retrieveAll("leads").then(function (response) {
  
@@ -72,4 +57,20 @@ dynamicsWebApi.retrieveAll("leads").then(function (response) {
     console.log(error)
     //catch an error
 });
+//perform a multiple records retrieve operation
+dynamicsWebApi.retrieveAllRequest({
+    collection: "Client",
+    maxPageSize: 5				//just for an example
+}).then(function (response) {
+ 
+    var records = response.value;
+    console.log(records)
+    //do something else with a records array. Access a record: response.value[0].subject;
+})
+.catch(function (error){
+    console.log(error)
+    //catch an error
+});
+
+
  
