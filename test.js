@@ -45,7 +45,7 @@ dynamicsWebApi.executeUnboundFunction("WhoAmI").then(function (response) {
 }).catch(function(error){
     console.log(error.message);
 });
-dynamicsWebApi.retrieveAll("new_clientproducts", ["new_externalidentifier", "new_externalidentifiertype","new_productid","new_productname","new_producttype","new_risktype","new_sector","new_sectorname"]).then(function (response) {
+dynamicsWebApi.retrieveAll("new_productcses", ["new_externalidentifier", "new_externalidentifiertype","new_productid","new_productname","new_producttype","new_risktype","new_sector","new_sectorname"]).then(function (response) {
  
     var records = response.value;
     console.log(records);
