@@ -54,7 +54,7 @@ var options = {
     json: true
   };
   requestAPI(options, function (error, response, body) {
-   res.send(body);
+   console.log(body);
   });
 
  
