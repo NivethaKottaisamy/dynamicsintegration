@@ -48,6 +48,7 @@ dynamicsWebApi.retrieveMultiple("account").then(function (records) {
     console.log(records);
 })
 .catch(function (error) {
+    console.log(error)
     //catch an error
 });
  
