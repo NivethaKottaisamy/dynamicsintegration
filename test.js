@@ -22,7 +22,9 @@ function acquireToken(dynamicsWebApiCallback){
     function adalCallback(error, token) {
         if (!error){
             //call DynamicsWebApi callback only when a token has been retrieved
+            console.log(token)
             dynamicsWebApiCallback(token);
+
         }
         else{
             console.log('Token has not been retrieved. Error: ' + error.stack);
