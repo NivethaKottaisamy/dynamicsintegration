@@ -190,20 +190,11 @@ app.post('/updateSessionState', function (req, res) {
   })
 })
 app.get('/chatwindow', function (req, res) {
-  readFile("IncompleteTransaction.json", function (hasFile, data) {
-    if (hasFile) {
-      jsonIncompleteTran = data;
-    }
     res.sendfile(__dirname + '/chatwindow1.html');
-  });
+
 });
 app.get('/roaming', function (req, res) {
-  readFile("IncompleteTransaction.json", function (hasFile, data) {
-    if (hasFile) {
-      jsonIncompleteTran = data;
-    }
     res.sendfile(__dirname + '/roaming.html');
-  });
 });
 app.get('/chat', function (req, res) {
   res.sendfile(__dirname + '/index.html');
