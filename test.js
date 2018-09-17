@@ -43,14 +43,14 @@ dynamicsWebApi.executeUnboundFunction("WhoAmI").then(function (response) {
 }).catch(function(error){
     console.log(error.message);
 });
-dynamicsWebApi.retrieveMultiple("Client").then(function (records) {
-    //do something with retrieved records here
-    console.log(records);
-})
-.catch(function (error) {
-    console.log(error)
-    //catch an error
-});
+// dynamicsWebApi.retrieveMultiple("Client").then(function (records) {
+//     //do something with retrieved records here
+//     console.log(records);
+// })
+// .catch(function (error) {
+//     console.log(error)
+//     //catch an error
+// });
 // var request = {
 //     collection: "Client",
 //     // select: ["new_age", "new_clienttype","new_nameclient"],
