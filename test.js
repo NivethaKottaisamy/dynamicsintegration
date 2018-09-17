@@ -67,7 +67,7 @@ dynamicsWebApi.retrieveMultiple("Client").then(function (records) {
 //     //catch an error
 // });
 var request = {
-    collection: "new_client",
+    collection: "Client",
     select: ["new_age", "new_clienttype","new_nameclient"],
     maxPageSize: 5				//just for an example
 };
