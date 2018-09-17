@@ -52,7 +52,7 @@ dynamicsWebApi.retrieveMultiple("account").then(function (records) {
     //catch an error
 });
 var request = {
-    collection: "new_client",
+    collection: "Client",
     select: ["new_age", "new_clienttype","new_nameclient"],
     // filter: "statecode eq 0",
     maxPageSize: 5				//just for an example
