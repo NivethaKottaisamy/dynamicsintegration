@@ -57,7 +57,7 @@ var request = {
     // filter: "statecode eq 0",
     maxPageSize: 5				//just for an example
 }
-dynamicsWebApi.retrieveEntity("LogicalName='new_client'").then(function (response) {
+dynamicsWebApi.retrieveAttributes("LogicalName='new_client'").then(function (response) {
  
     console.log(response);
     //do something else with a records array. Access a record: response.value[0].subject;
