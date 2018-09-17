@@ -52,11 +52,22 @@ var request = {
 };
  
 //perform a multiple records retrieve operation
-dynamicsWebApi.retrieveMultiple(request).then(function (response) {
+dynamicsWebApi.retrieveAllRequest(request).then(function (response) {
  
     var records = response.value;
     console.log(records)
     //do something else with a records array. Access a record: response.value[0].subject;
+})
+.catch(function (error){
+    console.log(error)
+    //catch an error
+});
+
+//perform a multiple records retrieve operation
+dynamicsWebApi.retrieveAll("leads", ["fullname", "subject"], "statecode eq 0").then(function (response) {
+ 
+    var records = response.value;
+    console.log(records[0])
 })
 .catch(function (error){
     console.log(error)
