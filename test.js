@@ -45,25 +45,36 @@ dynamicsWebApi.executeUnboundFunction("WhoAmI").then(function (response) {
 }).catch(function(error){
     console.log(error.message);
 });
+dynamicsWebApi.retrieveAll("new_clientproducts").then(function (response) {
+ 
+    var records = response.value;
+    console.log(records);
+    //do something else with a records array. Access a record: response.value[0].subject;
+})
+.catch(function (error){
+    //catch an error
+});
 
-adalContext.acquireTokenWithClientCredentials(resource, clientId,clientSecret, adalCallback)
-function adalCallback(error, token) {
-    console.log(token);
-    if (!error){
-        //call DynamicsWebApi callback only when a token has been retrieved
-        var options = {
-            url: "https://hexama.api.crm5.dynamics.com/api/data/v9.0/$metadata#accounts(name)",
-            method: "GET",
-            headers: { 'Authorization': 'Bearer ' + token.accessToken, 'Accept': 'application/json','OData-MaxVersion':'4.0','OData-Version':'4.0'}
-          };
-          requestAPI(options, function (error, response, body) {
-           console.log(body);
-        });
-    }
-    else{
-        console.log('Token has not been retrieved. Error: ' + error.stack);
-    }
-}
+
+
+// adalContext.acquireTokenWithClientCredentials(resource, clientId,clientSecret, adalCallback)
+// function adalCallback(error, token) {
+//     console.log(token);
+//     if (!error){
+//         //call DynamicsWebApi callback only when a token has been retrieved
+//         var options = {
+//             url: "https://hexama.api.crm5.dynamics.com/api/data/v9.0/",
+//             method: "GET",
+//             headers: { 'Authorization': 'Bearer ' + token.accessToken, 'Accept': 'application/json','OData-MaxVersion':'4.0','OData-Version':'4.0'}
+//           };
+//           requestAPI(options, function (error, response, body) {
+//            console.log(body);
+//         });
+//     }
+//     else{
+//         console.log('Token has not been retrieved. Error: ' + error.stack);
+//     }
+// }
 
 
  
