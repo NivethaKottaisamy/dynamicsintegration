@@ -11,6 +11,7 @@ var resource = 'https://hexama.crm5.dynamics.com/';
 var clientId = '43431254-7b9c-49ac-8e0b-4ac5be824c8b';
 var username = '_crm1_applicationusers1@HexaMA.onmicrosoft.com';
 var password = 'abcde@12345';
+var clientSecret='JPpWrYI2ZGXnMc1BNgaMt+u/1V+dG7i7vQwnoBDCmpY=';
  
 var adalContext = new AuthenticationContext(authorityUrl);
  
@@ -28,7 +29,7 @@ function acquireToken(dynamicsWebApiCallback){
     }
  
     //call a necessary function in adal-node object to get a token
-    adalContext.acquireTokenWithUsernamePassword(resource, username, password, clientId, adalCallback);
+    adalContext.acquireTokenWithClientCredentials(resource, clientId,clientSecret, adalCallback);
 }
 //create DynamicsWebApi object
 var dynamicsWebApi = new DynamicsWebApi({
