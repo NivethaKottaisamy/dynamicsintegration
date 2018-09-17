@@ -45,10 +45,10 @@ dynamicsWebApi.executeUnboundFunction("WhoAmI").then(function (response) {
 });
 dynamicsWebApi.retrieveMultiple("account").then(function (records) {
     //do something with retrieved records here
-    console.log(records);
+    // console.log(records);
 })
 .catch(function (error) {
-    console.log(error)
+    // console.log(error)
     //catch an error
 });
 var request = {
@@ -60,10 +60,11 @@ var request = {
 dynamicsWebApi.retrieveAllRequest(request).then(function (response) {
  
     var records = response.value;
-    console.log(value);
+    console.log(records);
     //do something else with a records array. Access a record: response.value[0].subject;
 })
 .catch(function (error){
+    console.log(error);
     //catch an error
 });
  
