@@ -53,7 +53,7 @@ dynamicsWebApi.retrieveMultiple("account").then(function (records) {
 });
 var request = {
     collection: "Client",
-    select: ["new_age", "new_clienttype","new_nameclient"],
+    // select: ["new_age", "new_clienttype","new_nameclient"],
     // filter: "statecode eq 0",
     maxPageSize: 5				//just for an example
 }
