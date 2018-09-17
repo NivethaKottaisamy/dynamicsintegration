@@ -52,6 +52,7 @@ dynamicsWebApi.retrieveAll("new_clientproducts", ["new_externalidentifier", "new
     //do something else with a records array. Access a record: response.value[0].subject;
 })
 .catch(function (error){
+    console.log(error)
     //catch an error
 });
 
