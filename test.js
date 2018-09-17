@@ -51,4 +51,19 @@ dynamicsWebApi.retrieveMultiple("account").then(function (records) {
     console.log(error)
     //catch an error
 });
+var request = {
+    collection: "account",
+    select: ["new_accountingbasis", "new_accounttype"],
+    // filter: "statecode eq 0",
+    maxPageSize: 5				//just for an example
+}
+dynamicsWebApi.retrieveAllRequest(request).then(function (response) {
+ 
+    var records = response.value;
+    console.log(value);
+    //do something else with a records array. Access a record: response.value[0].subject;
+})
+.catch(function (error){
+    //catch an error
+});
  
