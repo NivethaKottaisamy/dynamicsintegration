@@ -1,5 +1,6 @@
 var DynamicsWebApi = require('dynamics-web-api');
 var AuthenticationContext = require('adal-node').AuthenticationContext;
+const requestAPI = require('request');
 //the following settings should be taken from Azure for your application
 //and stored in app settings file or in global variables
  
@@ -46,31 +47,14 @@ dynamicsWebApi.executeUnboundFunction("WhoAmI").then(function (response) {
 });
 
 
- 
-//perform a multiple records retrieve operation
-dynamicsWebApi.retrieveAll("leads").then(function (response) {
- 
-    var records = response.value;
-    console.log(records[0])
-})
-.catch(function (error){
-    console.log(error)
-    //catch an error
-});
-//perform a multiple records retrieve operation
-dynamicsWebApi.retrieveAllRequest({
-    collection: "Client",
-    maxPageSize: 5				//just for an example
-}).then(function (response) {
- 
-    var records = response.value;
-    console.log(records)
-    //do something else with a records array. Access a record: response.value[0].subject;
-})
-.catch(function (error){
-    console.log(error)
-    //catch an error
-});
-
+var options = {
+    url: "https://hexama.api.crm5.dynamics.com/api/data/v9.0/$metadata#accounts(name)",
+    method: "POST",
+    headers: { 'Authorization': 'Bearer ' + acquireToken, 'Content-Type': 'application/json'},
+    json: true
+  };
+  await requestAPI(options, function (error, response, body) {
+   res.send(body);
+  });
 
  
