@@ -46,15 +46,24 @@ dynamicsWebApi.executeUnboundFunction("WhoAmI").then(function (response) {
     console.log(error.message);
 });
 
+adalContext.acquireTokenWithClientCredentials(resource, clientId,clientSecret, adalCallback)
+function adalCallback(error, token) {
+    if (!error){
+        //call DynamicsWebApi callback only when a token has been retrieved
+        var options = {
+            url: "https://hexama.api.crm5.dynamics.com/api/data/v9.0/$metadata#accounts(name)",
+            method: "POST",
+            headers: { 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json'},
+            json: true
+          };
+          requestAPI(options, function (error, response, body) {
+           console.log(body);
+        });
+    }
+    else{
+        console.log('Token has not been retrieved. Error: ' + error.stack);
+    }
+}
 
-var options = {
-    url: "https://hexama.api.crm5.dynamics.com/api/data/v9.0/$metadata#accounts(name)",
-    method: "POST",
-    headers: { 'Authorization': 'Bearer ' + acquireToken, 'Content-Type': 'application/json'},
-    json: true
-  };
-  requestAPI(options, function (error, response, body) {
-   console.log(body);
-  });
 
  
