@@ -69,6 +69,7 @@ function initSparkline() {
 }
 
 function initDonutChart() {
+  
     Morris.Donut({
         element: 'donut_chart',
         data: [{

@@ -2955,7 +2955,9 @@ section.content {
     color: #555;
     padding: 20px;
     position: relative;
-    border-bottom: 1px solid rgba(204, 204, 204, 0.35); }
+    border-bottom: 1px solid rgba(204, 204, 204, 0.35);
+    background: #2196f3;
+  }
     .card .header .header-dropdown {
       position: absolute;
       top: 20px;

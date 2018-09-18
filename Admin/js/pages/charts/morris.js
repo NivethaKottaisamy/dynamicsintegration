@@ -1,13 +1,16 @@
 
 
-// getMorris('line', 'line_chart');
-// getMorris('bar', 'bar_chart');
-getMorris('area', 'area_chart');
+getMorris('line', 'line_chart');
+getMorris('bar', 'bar_chart');
 getMorris('donut', 'donut_chart');
+getMorris('bar', 'bar_chart2');
+// getMorris('area', 'area_chart');
+
 function getMorris(type, element) {
     if (type === 'line') {
         Morris.Line({
             element: element,
+            
             data: [{
                 'period': '2011 Q3',
                 'licensed': 3407,
@@ -54,6 +57,7 @@ function getMorris(type, element) {
     } else if (type === 'bar') {
         Morris.Bar({
             element: element,
+            
             data: [{
                 x: '2011 Q1',
                 y: 3,
@@ -83,6 +87,7 @@ function getMorris(type, element) {
     } else if (type === 'area') {
         Morris.Area({
             element: element,
+            
             data: [{
                 period: '2010 Q1',
                 iphone: 2666,
@@ -144,6 +149,7 @@ function getMorris(type, element) {
     } else if (type === 'donut') {
         Morris.Donut({
             element: element,
+            
             data: [{
                 label: 'Jam',
                 value: 25
