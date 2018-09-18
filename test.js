@@ -74,6 +74,7 @@ var fetchXml = '<fetch mapping="logical">' +
                         '<attribute name="new_name"/>' +
                         '<attribute name="new_productname"/>' +
                         '<link-entity name="new_name" from="new_productperformance" to="new_name">'+
+                        '</link-entity>'+
                     '</entity>' +
                '</fetch>';
  
