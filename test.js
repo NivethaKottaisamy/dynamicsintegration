@@ -47,7 +47,7 @@ dynamicsWebApi.executeUnboundFunction("WhoAmI").then(function (response) {
 }).catch(function(error){
     console.log(error.message);
 });
-dynamicsWebApi.retrieveAll("new_productcses", ["new_externalidentifier", "new_externalidentifiertype","new_productid","new_productname","new_producttype","new_risktype","new_sector","new_sectorname"]).then(function (response) {
+dynamicsWebApi.retrieveAll("new_productcses", ["new_externalidentifier", "new_externalidentifiertype","new_name","new_productname","new_producttype","new_risktype","new_sector","new_sectorname"]).then(function (response) {
  
     var records = response.value;
     console.log(records);
@@ -55,6 +55,16 @@ dynamicsWebApi.retrieveAll("new_productcses", ["new_externalidentifier", "new_ex
 })
 .catch(function (error){
     console.log(error)
+    //catch an error
+});
+
+var accountId = '00000000-0000-0000-0000-000000000001';
+var leadId = '00000000-0000-0000-0000-000000000002';
+dynamicsWebApi.associate("new_productcses", "P1125", "new_name", "new_productperformances", "P1125").then(function (response) {
+    console.log(response);
+
+    //success
+}).catch(function (error) {
     //catch an error
 });
 
