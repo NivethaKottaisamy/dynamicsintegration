@@ -70,7 +70,7 @@ dynamicsWebApi.retrieveAll("new_productcses", ["new_externalidentifier", "new_ex
 
 
 var fetchXml = '<fetch mapping="logical">' +
-                    '<entity name="new_productcses">' +
+                    '<entity name="Product">' +
                         '<attribute name="new_name"/>' +
                         '<attribute name="new_productname"/>' +
                     '</entity>' +
