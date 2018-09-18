@@ -43,18 +43,18 @@ var dynamicsWebApi = new DynamicsWebApi({
  
 //call any function
 dynamicsWebApi.executeUnboundFunction("WhoAmI").then(function (response) {
-    console.log('Hello Dynamics 365! My id is: ' + response.UserId);
+    // console.log('Hello Dynamics 365! My id is: ' + response.UserId);
 }).catch(function(error){
-    console.log(error.message);
+    // console.log(error.message);
 });
 dynamicsWebApi.retrieveAll("new_productcses", ["new_externalidentifier", "new_externalidentifiertype","new_name","new_productname","new_producttype","new_risktype","new_sector","new_sectorname"]).then(function (response) {
  
     var records = response.value;
-    console.log(records);
+    // console.log(records);
     //do something else with a records array. Access a record: response.value[0].subject;
 })
 .catch(function (error){
-    console.log(error)
+    // console.log(error)
     //catch an error
 });
 
