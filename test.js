@@ -58,16 +58,28 @@ dynamicsWebApi.retrieveAll("new_productcses", ["new_externalidentifier", "new_ex
     //catch an error
 });
 
-var accountId = '00000000-0000-0000-0000-000000000001';
-var leadId = '00000000-0000-0000-0000-000000000002';
-dynamicsWebApi.associate("new_productcses", "P1125", "new_name", "new_productperformances", "P1125").then(function (response) {
-    console.log(response);
+// var accountId = '00000000-0000-0000-0000-000000000001';
+// var leadId = '00000000-0000-0000-0000-000000000002';
+// dynamicsWebApi.associate("new_productcses", "P1125", "new_name", "new_productperformances", "P1125").then(function (response) {
+//     console.log(response);
 
-    //success
-}).catch(function (error) {
-    //catch an error
-});
+//     //success
+// }).catch(function (error) {
+//     //catch an error
+// });
 
+
+var fetchXml = '<fetch mapping="logical">' +
+                    '<entity name="new_productcses">' +
+                        '<attribute name="new_name"/>' +
+                        '<attribute name="new_productname"/>' +
+                    '</entity>' +
+               '</fetch>';
+ 
+dynamicsWebApi.executeFetchXmlAll("new_productcses", fetchXml).then(function (response) {
+    console.log(response)
+    //do something with results here; access records response.value[0].accountid
+})
 
 
 // adalContext.acquireTokenWithClientCredentials(resource, clientId,clientSecret, adalCallback)
