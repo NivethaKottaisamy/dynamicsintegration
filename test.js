@@ -88,7 +88,22 @@ dynamicsWebApi.executeFetchXmlAll("new_productcses", fetchXml).then(function (re
 }).catch(function (error) {
   console.log(error);
  });
-    
+ var options = { method: 'POST',
+ url: 'https://login.microsoftonline.com/',
+ headers: 
+  { 'postman-token': '89b0e739-ee4e-4c89-e7bf-d76f69b395c7',
+    'cache-control': 'no-cache',
+    clientsecret: 'JPpWrYI2ZGXnMc1BNgaMt+u/1V+dG7i7vQwnoBDCmpY=',
+    client_id: '43431254-7b9c-49ac-8e0b-4ac5be824c8b',
+    resource: 'https://graph.microsoft.com',
+    grant_type: 'client_credentials' } };
+
+request(options, function (error, response, body) {
+ if (error) throw new Error(error);
+
+ console.log(body);
+});
+
 
 
 // adalContext.acquireTokenWithClientCredentials(resource, clientId,clientSecret, adalCallback)
