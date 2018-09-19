@@ -89,8 +89,14 @@ app.post('/outlook', async function (req, res) {
     const result = await client
       .api(`https://graph.microsoft.com/v1.0/me/calendarView?StartDateTime=${startdate}&EndDateTime=${enddate}`)
       .get();
-    let data = result.value;
-    console.log(result);
+    let data = result.value[0]["subject"];
+    let client_name='';
+    await dbs.ClientProfileGet({
+      ClientId: data
+    }).then(function (data) {
+      client_name=data[0].Name;
+    })
+    result.value[0]["client_name"]=client_name;
     res.send(result);
   } catch (e) {
     res.send(e)
