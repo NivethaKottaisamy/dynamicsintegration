@@ -75,6 +75,23 @@ let ClientProfileGet=function(obje){
 let transactionsGet=function(obje){
     return transactions.find(obje);
 }
+let transactionsProductGet=function(obje){
+    console.log(obje);
+    return transactions.aggregate([ { $project : {
+        ProductID : 1,
+        CustomerID:1,
+        Action : 1 ,
+        Date : 1,
+        Price:1,
+        Quantity:1
+    }},{ $match : { CustomerID : obje } },{$lookup:{
+        from:"products",
+        localField:"ProductID",
+        foreignField:"ProductID",
+        as: "productsname"
+        }},
+    { $unwind: { path: "$productsname", preserveNullAndEmptyArrays: true }}]);
+}
 let holdingsProfileGet=function(obje){
     return holdings.find(obje);
 }
@@ -122,6 +139,7 @@ module.exports.clientRiskProfileUpdate=clientRiskProfileUpdate;
 module.exports.ClientProfileGet=ClientProfileGet;
 module.exports.transactionsGet=transactionsGet;
 module.exports.productPeformance=productPeformance;
+module.exports.transactionsProductGet=transactionsProductGet;
 
 
 

@@ -173,9 +173,7 @@ app.post("/viewProfile", async function (req, res) {
 })
 app.post("/viewTransactions", async function (req, res) {
   let custid = req.body.params;
-  await dbs.transactionsGet({
-    CustomerID: custid
-  }).then(function (data) {
+  await dbs.transactionsProductGet(custid).then(function (data) {
     console.log(data);
     res.send(data);
   })

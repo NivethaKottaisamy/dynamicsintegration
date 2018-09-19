@@ -42,17 +42,15 @@ $(function () {
       
             });
         }
-        else if (final_url[0] == "transactions") {
+        else if (final_url[0] == "Dashboard") {
             initiateAjax("/viewTransactions", "POST", {
                 params: queryprofileid
             }, function (data, err) {
-                var dt = $('.risk-profile-table').dataTable().api();
                 let resultdata='';
                 $.each(data,function(index,value){
-                dt.row.add($(`<tr><td>${value.CustomerID}</td><td>${value.ProductID}</td><td>${value.Quantity}</td><td>${value.Price}</td><td>${value.Action}</td><td>${value.Date}</td></tr>`));
-                dt.draw();
+                resultdata+=`<tr><td>${index+1}</td><td>${value.productsname.Name}</td><td>${value.Action}</td><td>${value.Date}</td></tr>`
                 })
-      
+              $("table.transaction-details tbody").html(resultdata);
             });
         }
     else if (final_url[0] == "RiskProfile") {
@@ -81,45 +79,14 @@ $(function () {
   
         });
 
-    } else if (final_url[0] == "Profile") {
+    } else if (final_url[0] == "Dashboard") {
         
         initiateAjax("/viewProfile", "POST", {
             params: queryprofileid
         }, function (data, err) {
             let profile=data[0];
             if (data) {
-                $("div.body").html(`<div class="row clearfix">
-            <h2 class="card-inside-title col-sm-6">ClientID</h2>
-            <div class="col-sm-6">
-                <div class="form-group">
-                        <span>${profile.ClientId}</span>
-                </div>
-            </div>
-        </div>
-        <div class="row clearfix">
-                <h2 class="card-inside-title col-sm-6">Name</h2>
-                <div class="col-sm-6">
-                    <div class="form-group">
-                            <span>${profile.Name}</span>
-                    </div>
-                </div>
-            </div>
-            <div class="row clearfix">
-                    <h2 class="card-inside-title col-sm-6">Client Type</h2>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                                <span>${profile.ClientType}</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row clearfix">
-                        <h2 class="card-inside-title col-sm-6">Age</h2>
-                        <div class="col-sm-6">
-                            <div class="form-group">  
-                                    <span>${profile.Age}</span>
-                            </div>
-                        </div>
-                    </div>`)
+             $("span.profile-name").html(profile.Name);
             }
         });
     }
