@@ -2402,7 +2402,7 @@ a {
   animation: none !important; }
 
 section.content {
-  margin: 100px 15px 0 0px;
+  margin: 25px 15px 0 0px;
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -2827,7 +2827,7 @@ section.content {
   min-height: 50px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: -2px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -2953,7 +2953,7 @@ section.content {
       color: #555; }
   .card .header {
     color: #555;
-    padding: 20px;
+    padding: 8px;
     position: relative;
     border-bottom: 1px solid rgba(204, 204, 204, 0.35);
     background: #2196f3;
@@ -2978,7 +2978,7 @@ section.content {
           color: #000; }
     .card .header h2 {
       margin: 0;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: normal;
       color: #111; }
       .card .header h2 small {
@@ -2993,9 +2993,9 @@ section.content {
     .card .header .col-xs-12 h2 {
       margin-top: 5px; }
   .card .body {
-    font-size: 14px;
+    font-size: 13px;
     color: #555;
-    padding: 20px; }
+    padding: 10px; }
     .card .body .col-xs-1,
     .card .body .col-sm-1,
     .card .body .col-md-1,
@@ -5547,7 +5547,9 @@ fieldset[disabled] .form-control {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
+  padding:5px 0px 0px 16px;
   border-radius: 0; }
+
 
 .list-group .list-group-item .list-group-item-heading {
   font-weight: bold;

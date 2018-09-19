@@ -95,10 +95,52 @@ let transactionsProductGet=function(obje){
 let holdingsProfileGet=function(obje){
     return holdings.find(obje);
 }
+let holdingsProductGet=function(obje){
+    return holdings.aggregate([ { $project : {
+        ProductID : 1,
+        CustomerID: 1,
+        Quantity: 1,
+        CurrentPrice: 1,
+        MarketValue: 1
+    }},{ $match : { CustomerID : obje } },{$lookup:{
+        from:"products",
+        localField:"ProductID",
+        foreignField:"ProductID",
+        as: "productsname"
+        }},
+    { $unwind: { path: "$productsname", preserveNullAndEmptyArrays: true }}
+]);
+}
 let clientRiskProfileUpdate=function(clientID,obje){
     clientriskprofile.where({ ClientID: clientID }).update({ $set: obje})
 }
-
+let getLowPerformingFund=function(clientID){
+    return holdings.aggregate([ {$lookup:{
+        from:"products",
+        localField:"ProductID",
+        foreignField:"ProductID",
+        as: "product"
+        }},
+        { $unwind: { path: "$product", preserveNullAndEmptyArrays: true }},{$lookup:{
+        from:"productperformances",
+        localField:"ProductID",
+        foreignField:"ProductID",
+        as: "productHoldings"
+        }},
+        { $unwind: { path: "$productHoldings", preserveNullAndEmptyArrays: true }},{ $project : {
+        product:1,
+        ProductID : 1,
+        CustomerID: 1,
+        Quantity : 1 ,
+        CurrentPrice : 1,
+        Months6:1,
+        yr1:1,
+        yr3:1,
+        MarketValue:1,
+        productHoldings:1
+    }},{ $match : { CustomerID : clientID } }
+])
+}
 let productPeformance=function(){
     return productperformance.aggregate([ { $project : {
         ProductID : 1,
@@ -139,7 +181,9 @@ module.exports.clientRiskProfileUpdate=clientRiskProfileUpdate;
 module.exports.ClientProfileGet=ClientProfileGet;
 module.exports.transactionsGet=transactionsGet;
 module.exports.productPeformance=productPeformance;
+module.exports.getLowPerformingFund=getLowPerformingFund;
 module.exports.transactionsProductGet=transactionsProductGet;
+module.exports.holdingsProductGet=holdingsProductGet;
 
 
 
@@ -229,6 +273,7 @@ module.exports.transactionsProductGet=transactionsProductGet;
 //     ProductID:String,
 //     Name:String,
 //     Type:String,
+//     Ticker:String,
 //     ExternalIdentifier:String,
 //     ExternalIdentifierType:String,
 //     Sector:String,
@@ -238,7 +283,7 @@ module.exports.transactionsProductGet=transactionsProductGet;
 // var product =mongoose.model("product",clientSchema);
 
 // xlsxj({
-//     input: "./Book1.xlsx", 
+//     input: "./Book2.xlsx", 
 //     output: "./output.json"
 //   }, function(err, mongoData) {
 //     if(err) {
@@ -251,6 +296,7 @@ module.exports.transactionsProductGet=transactionsProductGet;
 //             ProductID:element.ProductID,
 //             Name:element.Name,
 //             Type:element.Type,
+//             Ticker:element.Ticker,
 //             ExternalIdentifierType:element.ExternalIdentifierType,
 //             ExternalIdentifier:element.ExternalIdentifier,
 //             Sector:element.Sector,
@@ -357,13 +403,16 @@ module.exports.transactionsProductGet=transactionsProductGet;
 //     ProductID:String,
 //     Currentprice:String,
 //     Previousday:String,
+//     Months6:String,
+//     yr1:String,
+//     yr3:String,
 //     Daychange:String,
 //     PercentageChange:String,
 //     Performance:String
 // })
 // var productperformance =mongoose.model("productperformance",productperformSchema);
 // xlsxj({
-//     input: "./Book1.xlsx", 
+//     input: "./Book2.xlsx", 
 //     output: "./output.json"
 //   }, function(err, mongoData) {
 //     if(err) {
@@ -375,6 +424,9 @@ module.exports.transactionsProductGet=transactionsProductGet;
 //                 ProductID:element.ProductID,
 //                 Currentprice:element.Currentprice,
 //                 Previousday:element.Previousday,
+//                 Months6:element.Previousday,
+//                 yr1:element.yr1,
+//                 yr3:element.yr3,
 //                 Daychange:element.Daychange,
 //                 PercentageChange:element.PercentageChange,
 //                 Performance:element.Performance

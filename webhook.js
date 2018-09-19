@@ -167,6 +167,18 @@ app.get('/roaming', function (req, res) {
 app.get('/chat', function (req, res) {
   res.sendfile(__dirname + '/index.html');
 });
+app.post("/holdingcustomer",async function(req,res){
+  let custid = req.body.params;
+  await dbs.holdingsProductGet(custid).then(function (data) {
+    res.send(data);
+  })
+})
+app.post("/lowperforming",async function(req,res){
+  let custid = req.body.params;
+  await dbs.getLowPerformingFund(custid).then(function (data) {
+    res.send(data);
+  })
+})
 app.post("/viewProfile", async function (req, res) {
   let custid = req.body.params;
   console.log(custid);
