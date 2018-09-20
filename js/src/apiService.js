@@ -109,13 +109,19 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                         },
                         "toRecipients": [
                           {
-                            "emailAddress": [{
+                            "emailAddress": {
                               "address": "39132@hexaware.com"
-                            },{
-                                "address": "37251@hexaware.com"
-                            },{
-                                "address": "32128@hexaware.com"
-                            }]
+                            }
+                          },
+                           {
+                            "emailAddress": {
+                              "address": "32128@hexaware.com"
+                            }
+                          },
+                           {
+                            "emailAddress": {
+                               "address": "37251@hexaware.com"
+                            }
                           }
                         ],
                         "ccRecipients": [
