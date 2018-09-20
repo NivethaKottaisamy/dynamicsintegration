@@ -72,7 +72,7 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                         "subject": "Transaction instruction",
                         "body": {
                           "contentType": "html",
-                          "content": messageText.replace(`Hello Customer, You have owned the fund ${response.result.contexts[0].parameters.ProductName}`, "")
+                          "content": "Hello Customer, You have owned the fund"
                         },
                         "toRecipients": [
                           {
@@ -92,7 +92,7 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                       utils.initiateAjax("/sendEmail", "POST", { params: localStorage.getItem('token'),message:emailContent}, function (data, err) {
                     console.log("---------------Message Sent----------------------"); 
                     if(err){
-                        console.log("Erooooor ", err);
+                        console.log("Erooooor ", JSON.stringify(err));
                     }else{
                         console.log("Data",JSON.stringify(data));
                     }                        
