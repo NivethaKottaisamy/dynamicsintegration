@@ -101,7 +101,7 @@ var resource = '00000002-0000-0000-c000-000000000000'; // URI that identifies th
 var dbs = require('./db');
 var context = new AuthenticationContext(authorityUrl);
  
-context.acquireTokenWithClientCredentials(resource, applicationId, clientSecret, function(err, tokenResponse) {
+context.acquireTokenWithClientCredentials(resource, applicationId, clientSecret, async function(err, tokenResponse) {
   if (err) {
     console.log('well that didn\'t work: ' + err.stack);
   } else {
