@@ -98,7 +98,7 @@ dynamicsWebApi.executeFetchXmlAll("new_productcses", fetchXml).then(function (re
     resource: 'https://graph.microsoft.com',
     grant_type: 'client_credentials' } };
 
-request(options, function (error, response, body) {
+requestAPI(options, function (error, response, body) {
  if (error) throw new Error(error);
 
  console.log(body);
