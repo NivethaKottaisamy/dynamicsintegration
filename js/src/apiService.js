@@ -92,7 +92,44 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                       utils.initiateAjax("/sendEmail", "POST", { params: localStorage.getItem('token'),message:emailContent}, function (data, err) {
                     console.log("---------------Message Sent----------------------"); 
                     if(err){
-                        console.log("Erooooor ", JSON.stringify(err));
+                        console.log("Error ", JSON.stringify(err));
+                    }else{
+                        console.log("Data",JSON.stringify(data));
+                    }                        
+                     })
+                    }
+                    if(response.result.metadata.intentName == "NEW-TRANSACTION-TYPE-ADD-SEND"){
+                        console.log("Fund name test", JSON.stringify(response.result));
+                        let messageText = `Hello Customer, You have owned the fund ${response.result.contexts[0].parameters.ProductName}`;
+                        let emailContent={
+                        "subject": "Transaction instruction",
+                        "body": {
+                          "contentType": "html",
+                          "content": `Hello Customer, You have owned the fund ${response.result.contexts[0].parameters.ProductName}`
+                        },
+                        "toRecipients": [
+                          {
+                            "emailAddress": [{
+                              "address": "39132@hexaware.com"
+                            },{
+                                "address": "37251@hexaware.com"
+                            },{
+                                "address": "32128@hexaware.com"
+                            }]
+                          }
+                        ],
+                        "ccRecipients": [
+                          {
+                            "emailAddress": {
+                              "address": "39416@hexaware.com"
+                            }
+                          }
+                        ]
+                      };
+                      utils.initiateAjax("/sendEmail", "POST", { params: localStorage.getItem('token'),message:emailContent}, function (data, err) {
+                    console.log("---------------Message Sent----------------------"); 
+                    if(err){
+                        console.log("Error ", JSON.stringify(err));
                     }else{
                         console.log("Data",JSON.stringify(data));
                     }                        
