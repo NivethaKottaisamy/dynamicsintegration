@@ -94,7 +94,7 @@ dynamicsWebApi.executeFetchXmlAll("new_productcses", fetchXml).then(function (re
 
  var AuthenticationContext = require('adal-node').AuthenticationContext;
  var MicrosoftGraph = require("@microsoft/microsoft-graph-client");
-var authorityHostUrl = 'https://login.windows.net';
+var authorityHostUrl = 'https://login.microsoftonline.com/72a65f94-18d8-4ac4-b401-9c1c32f8a1be/oauth2/token';
 var tenant = 'HexaMA.onmicrosoft.com'; // AAD Tenant name.
 var authorityUrl = authorityHostUrl + '/' + tenant;
 var applicationId = '43431254-7b9c-49ac-8e0b-4ac5be824c8b'; // Application Id of app registered under AAD.
