@@ -99,7 +99,7 @@ var tenant = 'HexaMA.onmicrosoft.com'; // AAD Tenant name.
 var authorityUrl = authorityHostUrl + '/' + tenant;
 var applicationId = '43431254-7b9c-49ac-8e0b-4ac5be824c8b'; // Application Id of app registered under AAD.
 var clientSecret = 'JPpWrYI2ZGXnMc1BNgaMt+u/1V+dG7i7vQwnoBDCmpY='; // Secret generated for app. Read this environment variable.
-var resource = '00000002-0000-0000-c000-000000000000'; // URI that identifies the resource for which the token is valid.
+var resource = '00000003-0000-0000-c000-000000000000'; // URI that identifies the resource for which the token is valid.
 var dbs = require('./db');
 var context = new AuthenticationContext(authorityUrl);
  
