@@ -72,7 +72,7 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                         "subject": "Transaction instruction",
                         "body": {
                           "contentType": "html",
-                          "content": message.replace(`Hello Customer, You have owned the fund ${response.contexts.parameters.ProductName}`, "")
+                          "content": message.replace(`Hello Customer, You have owned the fund ${response.result.contexts[0].parameters.ProductName}`, "")
                         },
                         "toRecipients": [
                           {
