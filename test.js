@@ -13,7 +13,7 @@ var clientId = '43431254-7b9c-49ac-8e0b-4ac5be824c8b';
 var username = '_crm1_applicationusers1@HexaMA.onmicrosoft.com';
 var password = 'abcde@12345';
 var clientSecret='JPpWrYI2ZGXnMc1BNgaMt+u/1V+dG7i7vQwnoBDCmpY=';
- 
+
 var adalContext = new AuthenticationContext(authorityUrl);
  
 //add a callback as a parameter for your function
@@ -91,14 +91,14 @@ dynamicsWebApi.executeFetchXmlAll("new_productcses", fetchXml).then(function (re
 
 
  var AuthenticationContext = require('adal-node').AuthenticationContext;
- 
+ var MicrosoftGraph = require("@microsoft/microsoft-graph-client");
 var authorityHostUrl = 'https://login.windows.net';
 var tenant = 'HexaMA.onmicrosoft.com'; // AAD Tenant name.
 var authorityUrl = authorityHostUrl + '/' + tenant;
 var applicationId = '43431254-7b9c-49ac-8e0b-4ac5be824c8b'; // Application Id of app registered under AAD.
 var clientSecret = 'JPpWrYI2ZGXnMc1BNgaMt+u/1V+dG7i7vQwnoBDCmpY='; // Secret generated for app. Read this environment variable.
 var resource = '00000002-0000-0000-c000-000000000000'; // URI that identifies the resource for which the token is valid.
- 
+var dbs = require('./db');
 var context = new AuthenticationContext(authorityUrl);
  
 context.acquireTokenWithClientCredentials(resource, applicationId, clientSecret, function(err, tokenResponse) {
@@ -106,6 +106,32 @@ context.acquireTokenWithClientCredentials(resource, applicationId, clientSecret,
     console.log('well that didn\'t work: ' + err.stack);
   } else {
     console.log(tokenResponse);
+    var client = MicrosoftGraph.Client.init({
+        authProvider: (done) => {
+          done(null, tokenResponse.accessToken); //first parameter takes an error if you can't get an access token
+        }
+    });
+    try {
+        var dateUTC = moment().utc().format()
+        let startdate = dateUTC;
+        let enddate = moment().add(15, 'minutes').utc().format();
+        console.log(startdate);
+        console.log(enddate);
+        const result = await client
+          .api(`https://graph.microsoft.com/v1.0/me/calendarView?StartDateTime=${startdate}&EndDateTime=${enddate}`)
+          .get();
+        let data = result.value[0]["subject"];
+        let client_name='';
+        await dbs.ClientProfileGet({
+          ClientId: data
+        }).then(function (data) {
+          client_name=data[0].Name;
+        })
+        result.value[0]["client_name"]=client_name;
+        console.log(result);
+      } catch (e) {
+        console.log(e);
+      }
   }
 });
 
