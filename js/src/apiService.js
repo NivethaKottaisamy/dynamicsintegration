@@ -88,7 +88,7 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                             }
                           }
                         ]
-                      }
+                      };
                       utils.initiateAjax("/sendEmail", "POST", { params: localStorage.getItem('token'),message:emailContent}, function (data, err) {
                     console.log("---------------Message Sent----------------------"); 
                     if(err){

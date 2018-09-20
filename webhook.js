@@ -61,8 +61,8 @@ app.post('/sendEmail', async function (req, res) {
     .post({
       "message": message
     }, (err, resp) => {
-      console.log(resp);
-      console.log(err);
+      console.log("response",resp);
+      console.log("error",err);
         res.send("Email Send")
     })
  
