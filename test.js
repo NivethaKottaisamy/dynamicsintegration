@@ -22,12 +22,12 @@ function acquireToken(dynamicsWebApiCallback){
     function adalCallback(error, token) {
         if (!error){
             //call DynamicsWebApi callback only when a token has been retrieved
-            console.log(token)
+            // console.log(token)
             dynamicsWebApiCallback(token);
 
         }
         else{
-            console.log('Token has not been retrieved. Error: ' + error.stack);
+            // console.log('Token has not been retrieved. Error: ' + error.stack);
         }
     }
  
@@ -83,10 +83,10 @@ var fetchXml = '<fetch mapping="logical">' +
                '</fetch>';
  
 dynamicsWebApi.executeFetchXmlAll("new_productcses", fetchXml).then(function (response) {
-    console.log(response)
+    // console.log(response)
     //do something with results here; access records response.value[0].accountid
 }).catch(function (error) {
-  console.log(error);
+//   console.log(error);
  });
  var options = { method: 'POST',
  url: 'https://login.microsoftonline.com/',
