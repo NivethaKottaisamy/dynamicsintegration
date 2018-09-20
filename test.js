@@ -120,7 +120,7 @@ context.acquireTokenWithClientCredentials(resource, applicationId, clientSecret,
         console.log(startdate);
         console.log(enddate);
         const result = await client
-          .api(`https://graph.microsoft.com/v1.0/users/calendarView?StartDateTime=${startdate}&EndDateTime=${enddate}`)
+          .api(`https://graph.microsoft.com/v1.0/me/calendarView?StartDateTime=${startdate}&EndDateTime=${enddate}`)
           .get();
         let data = result.value[0]["subject"];
         let client_name='';
