@@ -1,6 +1,8 @@
 var DynamicsWebApi = require('dynamics-web-api');
 var AuthenticationContext = require('adal-node').AuthenticationContext;
 const requestAPI = require('request');
+var moment = require('moment');
+var momentTz = require('moment-timezone');
 //the following settings should be taken from Azure for your application
 //and stored in app settings file or in global variables
  
