@@ -67,7 +67,7 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                     }
                     if(response.result.metadata.intentName == "CRP-TARGET-SELECT-YES-BUY-YES"){
                         console.log("Fund name test", JSON.stringify(response.result));
-                        let message = `Hello Customer, You have owned the fund ${response.contexts.parameters.ProductName}`;
+                        let message = `Hello Customer, You have owned the fund ${response.contexts[0].parameters.ProductName}`;
                         let emailContent={
                         "subject": "Transaction instruction",
                         "body": {
