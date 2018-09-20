@@ -419,6 +419,9 @@ img.welcome-message-big{
   background-color: transparent;
   border: solid 1px #cc0033;
   text-transform: capitalize;
+  white-space: normal;
+    font-size: 10px;
+    line-height: 12px;
 }
 .pmd-btn-outline.btn-info:hover, .pmd-btn-outline.btn-info:focus {
   color: #fff;
