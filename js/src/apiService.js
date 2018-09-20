@@ -67,12 +67,12 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                     }
                     if(response.result.metadata.intentName == "CRP-TARGET-SELECT-YES-BUY-YES"){
                         console.log("Fund name test", JSON.stringify(response.result));
-                        let message = `Hello Customer, You have owned the fund ${response.result.contexts[0].parameters.ProductName}`;
+                        let messageText = `Hello Customer, You have owned the fund ${response.result.contexts[0].parameters.ProductName}`;
                         let emailContent={
                         "subject": "Transaction instruction",
                         "body": {
                           "contentType": "html",
-                          "content": message.replace(`Hello Customer, You have owned the fund ${response.result.contexts[0].parameters.ProductName}`, "")
+                          "content": messageText.replace(`Hello Customer, You have owned the fund ${response.result.contexts[0].parameters.ProductName}`, "")
                         },
                         "toRecipients": [
                           {
@@ -90,7 +90,12 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                         ]
                       }
                       utils.initiateAjax("/sendEmail", "POST", { params: localStorage.getItem('token'),message:emailContent}, function (data, err) {
-                    console.log("---------------Message Sent----------------------");                         
+                    console.log("---------------Message Sent----------------------"); 
+                    if(err){
+                        console.log("Erooooor ", err);
+                    }else{
+                        console.log("Data",JSON.stringify(data));
+                    }                        
                      })
                     }
                         if (msg_container && msg_container.parent() && msg_container.parent().find("img.loading-gif-typing").html()) {
