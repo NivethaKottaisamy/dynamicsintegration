@@ -67,17 +67,17 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                     }
                     if(response.result.metadata.intentName == "CRP-TARGET-SELECT-YES-BUY-YES"){
                         console.log("Fund name test", JSON.stringify(response.result));
-                        let message = "Hello Customer, You have owned the fund {fund Name}"
+                        let message = `Hello Customer, You have owned the fund ${response.contexts.parameters.ProductName}`;
                         let emailContent={
                         "subject": "Transaction instruction",
                         "body": {
                           "contentType": "html",
-                          "content": message
+                          "content": message.replace(`Hello Customer, You have owned the fund ${response.contexts.parameters.ProductName}`, "");
                         },
                         "toRecipients": [
                           {
                             "emailAddress": {
-                              "address": "39132@hexaware.com"
+                              "address": "nivethak@hexaware.com"
                             }
                           }
                         ],
