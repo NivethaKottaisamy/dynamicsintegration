@@ -182,12 +182,15 @@
         recognition.onresult = function(e) {
           document.getElementById('btn-input').value
                                    = e.results[0][0].transcript;
-                                   console.log(e.results[0][0]);
+                                   console.log();
+                                   alert('success');
+                                   alert(JSON.stringify(e));
           recognition.stop();
         };
   
         recognition.onerror = function(e) {
           console.log(e);
+          alert(JSON.stringify(e));
           recognition.stop();
         }
   
