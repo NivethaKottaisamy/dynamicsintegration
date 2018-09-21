@@ -130,6 +130,9 @@ app.post('/callPhone', function (req, res) {
     res.send(data);
   })
 })
+app.get('/Admin/News', function (req, res) {
+  res.sendfile(__dirname + '/Admin/news.html');
+})
 app.get('/Admin/RiskProfile', function (req, res) {
   res.sendfile(__dirname + '/Admin/risk-profile.html');
 })

@@ -49,6 +49,7 @@ dynamicsWebApi.executeUnboundFunction("WhoAmI").then(function (response) {
 }).catch(function(error){
     // console.log(error.message);
 });
+
 dynamicsWebApi.retrieveAll("new_productcses", ["new_externalidentifier", "new_externalidentifiertype","new_name","new_productname","new_producttype","new_risktype","new_sector","new_sectorname"]).then(function (response) {
  
     var records = response.value;
@@ -92,50 +93,104 @@ dynamicsWebApi.executeFetchXmlAll("new_productcses", fetchXml).then(function (re
  });
 
 
- var AuthenticationContext = require('adal-node').AuthenticationContext;
- var MicrosoftGraph = require("@microsoft/microsoft-graph-client");
-var authorityHostUrl = 'https://login.microsoftonline.com/72a65f94-18d8-4ac4-b401-9c1c32f8a1be/oauth2/token';
-var tenant = 'HexaMA.onmicrosoft.com'; // AAD Tenant name.
-var authorityUrl = authorityHostUrl + '/' + tenant;
-var applicationId = '43431254-7b9c-49ac-8e0b-4ac5be824c8b'; // Application Id of app registered under AAD.
-var clientSecret = 'JPpWrYI2ZGXnMc1BNgaMt+u/1V+dG7i7vQwnoBDCmpY='; // Secret generated for app. Read this environment variable.
-var resource = 'https://graph.microsoft.com'; // URI that identifies the resource for which the token is valid.
-var dbs = require('./db');
-var context = new AuthenticationContext(authorityHostUrl);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  var AuthenticationContext = require('adal-node').AuthenticationContext;
+//  var MicrosoftGraph = require("@microsoft/microsoft-graph-client");
+// var authorityHostUrl = 'https://login.microsoftonline.com/72a65f94-18d8-4ac4-b401-9c1c32f8a1be/oauth2/token';
+// var tenant = 'HexaMA.onmicrosoft.com'; // AAD Tenant name.
+// var authorityUrl = authorityHostUrl + '/' + tenant;
+// var applicationId = '43431254-7b9c-49ac-8e0b-4ac5be824c8b'; // Application Id of app registered under AAD.
+// var clientSecret = 'JPpWrYI2ZGXnMc1BNgaMt+u/1V+dG7i7vQwnoBDCmpY='; // Secret generated for app. Read this environment variable.
+// var resource = 'https://graph.microsoft.com'; // URI that identifies the resource for which the token is valid.
+// var dbs = require('./db');
+// var context = new AuthenticationContext(authorityHostUrl);
  
-context.acquireTokenWithClientCredentials(resource, applicationId, clientSecret, async function(err, tokenResponse) {
-  if (err) {
-    console.log('well that didn\'t work: ' + err.stack);
-  } else {
-    console.log(tokenResponse);
-    var client = MicrosoftGraph.Client.init({
-        authProvider: (done) => {
-          done(null, tokenResponse.accessToken); //first parameter takes an error if you can't get an access token
-        }
-    });
-    try {
-        var dateUTC = moment().utc().format()
-        let startdate = dateUTC;
-        let enddate = moment().add(15, 'minutes').utc().format();
-        console.log(startdate);
-        console.log(enddate);
-        const result = await client
-          .api(`https://graph.microsoft.com/v1.0/me/calendarView?StartDateTime=${startdate}&EndDateTime=${enddate}`)
-          .get();
-        let data = result.value[0]["subject"];
-        let client_name='';
-        await dbs.ClientProfileGet({
-          ClientId: data
-        }).then(function (data) {
-          client_name=data[0].Name;
-        })
-        result.value[0]["client_name"]=client_name;
-        console.log(result);
-      } catch (e) {
-        console.log(e);
-      }
-  }
-});
+// context.acquireTokenWithClientCredentials(resource, applicationId, clientSecret, async function(err, tokenResponse) {
+//   if (err) {
+//     console.log('well that didn\'t work: ' + err.stack);
+//   } else {
+//     console.log(tokenResponse);
+//     var client = MicrosoftGraph.Client.init({
+//         authProvider: (done) => {
+//           done(null, tokenResponse.accessToken); //first parameter takes an error if you can't get an access token
+//         }
+//     });
+//     try {
+//         var dateUTC = moment().utc().format()
+//         let startdate = dateUTC;
+//         let enddate = moment().add(15, 'minutes').utc().format();
+//         console.log(startdate);
+//         console.log(enddate);
+//         const result = await client
+//           .api(`https://graph.microsoft.com/v1.0/me/calendarView?StartDateTime=${startdate}&EndDateTime=${enddate}`)
+//           .get();
+//         let data = result.value[0]["subject"];
+//         let client_name='';
+//         await dbs.ClientProfileGet({
+//           ClientId: data
+//         }).then(function (data) {
+//           client_name=data[0].Name;
+//         })
+//         result.value[0]["client_name"]=client_name;
+//         console.log(result);
+//       } catch (e) {
+//         console.log(e);
+//       }
+//   }
+// });
 
 
 //  var options = { method: 'POST',
