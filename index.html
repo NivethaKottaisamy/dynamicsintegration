@@ -101,6 +101,13 @@
                               <i class="material-icons pmd-sm">send</i>
                             </a>
               </div>
+              <div class="menu" role="navigation">
+                  <a id="mic-send-message" onclick="startDictation()" class="pmd-floating-action-btn btn btn-sm pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-primary"
+                    href="#" style="background-color: #cc0033;padding-left:8px;margin-top:5px;">
+                                <span class="pmd-floating-hidden">Primary</span>
+                                <i class="material-icons pmd-sm">mic none</i>
+                              </a>
+                </div>
             </div>
           </div>
         </div>
@@ -157,8 +164,36 @@
         });
       });
     </script>
+
 </body>
-<script type="text/javascript" src="https://lpcdn.lpsnmedia.net/api/chat/public/lpChat.min.js"></script>
+<script>
+    function startDictation() {
+  alert(window.hasOwnProperty('webkitSpeechRecognition'));
+      if (window.hasOwnProperty('webkitSpeechRecognition')) {
+  
+        var recognition = new webkitSpeechRecognition();
+  
+        recognition.continuous = false;
+        recognition.interimResults = false;
+  
+        recognition.lang = "en-US";
+        recognition.start();
+  
+        recognition.onresult = function(e) {
+          document.getElementById('btn-input').value
+                                   = e.results[0][0].transcript;
+                                   console.log(e.results[0][0]);
+          recognition.stop();
+        };
+  
+        recognition.onerror = function(e) {
+          console.log(e);
+          recognition.stop();
+        }
+  
+      }
+    }
+  </script>
 
 
 </html>
