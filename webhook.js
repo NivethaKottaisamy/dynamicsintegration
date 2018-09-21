@@ -47,7 +47,7 @@ app.post("/webhook",async (req,res)=>{
 })
 
 app.post('/sendEmail', async function (req, res) {
-  console.log(req.body.params);
+  console.log("Send email..............",JSON.stringify(req.body));
   let message=req.body.message;
   var client = MicrosoftGraph.Client.init({
     authProvider: (done) => {
@@ -61,8 +61,8 @@ app.post('/sendEmail', async function (req, res) {
     .post({
       "message": message
     }, (err, resp) => {
-      console.log(resp);
-      console.log(err);
+      console.log("response",resp);
+      console.log("error",err);
         res.send("Email Send")
     })
  

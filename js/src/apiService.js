@@ -65,32 +65,82 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                     console.log("---------------Message Send----------------------");                         
                      })
                     }
-                    // if(response.result.metadata.intentName == "NEW-TRANSACTION-TYPE-ADD-SEND"){
-                    //     let emailContent={
-                    //     "subject": "Transaction instruction",
-                    //     "body": {
-                    //       "contentType": "html",
-                    //       "content": "Details of the funds will be emailed to you shortly"
-                    //     },
-                    //     "toRecipients": [
-                    //       {
-                    //         "emailAddress": {
-                    //           "address": "srinivasanV3@hexaware.com"
-                    //         }
-                    //       }
-                    //     ],
-                    //     "ccRecipients": [
-                    //       {
-                    //         "emailAddress": {
-                    //           "address": "39959@hexaware.com"
-                    //         }
-                    //       }
-                    //     ]
-                    //   }
-                    //   utils.initiateAjax("/sendEmail", "POST", { params: localStorage.getItem('token'),message:emailContent}, function (data, err) {
-                    // console.log("---------------Message Sent----------------------");                         
-                    //  })
-                    // }
+                    if(response.result.metadata.intentName == "CRP-TARGET-SELECT-YES-BUY-YES"){
+                        console.log("Fund name test", JSON.stringify(response.result));
+                        let messageText = `Hello Customer, You have owned the fund ${response.result.contexts[0].parameters.ProductName}`;
+                        let emailContent={
+                        "subject": "Transaction instruction",
+                        "body": {
+                          "contentType": "html",
+                          "content": `Hello Customer, You have owned the fund ${response.result.contexts[0].parameters.ProductName}`
+                        },
+                        "toRecipients": [
+                          {
+                            "emailAddress": {
+                              "address": "nivethak@hexaware.com"
+                            }
+                          }
+                        ],
+                        "ccRecipients": [
+                          {
+                            "emailAddress": {
+                              "address": "39416@hexaware.com"
+                            }
+                          }
+                        ]
+                      };
+                      utils.initiateAjax("/sendEmail", "POST", { params: localStorage.getItem('token'),message:emailContent}, function (data, err) {
+                    console.log("---------------Message Sent----------------------"); 
+                    if(err){
+                        console.log("Error ", JSON.stringify(err));
+                    }else{
+                        console.log("Data",JSON.stringify(data));
+                    }                        
+                     })
+                    }
+                    if(response.result.metadata.intentName == "NEW-TRANSACTION-TYPE-ADD-SEND"){
+                        console.log("Fund name test", JSON.stringify(response.result));
+                        let messageText = `Hello Customer, You have owned the fund ${response.result.contexts[0].parameters.ProductName}`;
+                        let emailContent={
+                        "subject": "Transaction instruction",
+                        "body": {
+                          "contentType": "html",
+                          "content": `Hello Customer, You have owned the fund ${response.result.contexts[0].parameters.ProductName}`
+                        },
+                        "toRecipients": [
+                          {
+                            "emailAddress": {
+                              "address": "39132@hexaware.com"
+                            }
+                          },
+                           {
+                            "emailAddress": {
+                              "address": "32128@hexaware.com"
+                            }
+                          },
+                           {
+                            "emailAddress": {
+                               "address": "37251@hexaware.com"
+                            }
+                          }
+                        ],
+                        "ccRecipients": [
+                          {
+                            "emailAddress": {
+                              "address": "39416@hexaware.com"
+                            }
+                          }
+                        ]
+                      };
+                      utils.initiateAjax("/sendEmail", "POST", { params: localStorage.getItem('token'),message:emailContent}, function (data, err) {
+                    console.log("---------------Message Sent----------------------"); 
+                    if(err){
+                        console.log("Error ", JSON.stringify(err));
+                    }else{
+                        console.log("Data",JSON.stringify(data));
+                    }                        
+                     })
+                    }
                         if (msg_container && msg_container.parent() && msg_container.parent().find("img.loading-gif-typing").html()) {
                             msg_container.parent().find("img.loading-gif-typing").remove();
                         }
