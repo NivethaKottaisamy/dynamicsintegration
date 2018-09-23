@@ -3,6 +3,32 @@ Copyright (c) 2017-2017 Hexaware Technologies
 This file is part of the Innovation LAB - Offline Bott.
 ------------------------------------------------------------------- */
 /* Bootstrap css */
+
+.mic-send-message-active {
+  
+  border-radius: 50%;
+  -webkit-animation: ripple 0.7s linear infinite;
+          animation: ripple 0.7s linear infinite;
+}
+
+@-webkit-keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 3em rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 3em rgba(0, 0, 0, 0);
+  }
+}
+
 @font-face {
 font-family: "markpro";
 src: 
