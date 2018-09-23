@@ -101,13 +101,13 @@
                               <i class="material-icons pmd-sm">send</i>
                             </a>
               </div>
-              <!-- <div class="menu" role="navigation">
+              <div class="menu" role="navigation">
                   <a id="mic-send-message" onclick="startDictation()" class="pmd-floating-action-btn btn btn-sm pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-primary"
                     href="#" style="background-color: #cc0033;padding-left:8px;margin-top:5px;">
                                 <span class="pmd-floating-hidden">Primary</span>
                                 <i class="material-icons pmd-sm">mic none</i>
                               </a>
-                </div> -->
+                </div>
             </div>
           </div>
         </div>
@@ -168,9 +168,14 @@
 </body>
 <script>
     function startDictation() {
-  alert(window.hasOwnProperty('webkitSpeechRecognition'));
-      if (window.hasOwnProperty('webkitSpeechRecognition')) {
   
+      if (window.hasOwnProperty('webkitSpeechRecognition')) {
+        document.getElementById('mic-send-message').classList.add('mic-send-message-active');
+  //       var iFrame =  document.getElementsByTagName('iframe');
+  //       let body=iFrame.contentWindow;
+      
+  //  alert(body);    
+        
         var recognition = new webkitSpeechRecognition();
   
         recognition.continuous = false;
@@ -178,19 +183,19 @@
   
         recognition.lang = "en-US";
         recognition.start();
-  
+        
         recognition.onresult = function(e) {
           document.getElementById('btn-input').value
                                    = e.results[0][0].transcript;
-                                   console.log();
-                                   alert('success');
-                                   alert(JSON.stringify(e));
+          // document.getElementById('mic-send-message').style.display="block"; 
+          document.getElementById('mic-send-message').classList.remove('mic-send-message-active');
+          document.getElementById('btn-send-message').click();
           recognition.stop();
         };
   
         recognition.onerror = function(e) {
-          console.log(e);
-          alert(JSON.stringify(e));
+          // document.getElementById('mic-send-message').style.display="block";    
+          document.getElementById('mic-send-message').classList.remove('mic-send-message-active');                     
           recognition.stop();
         }
   
