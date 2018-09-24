@@ -46,6 +46,12 @@ app.post("/webhook",async (req,res)=>{
    res.send(body);
   });
 })
+app.post('/Appointments',async function(req,res){
+  var dateUTC = moment().utc().format()
+  let startdate = dateUTC;
+  let enddate = moment().add(15, 'minutes').utc().format();
+  res.send("Start Date =>"+startdate+"End Date =>"+enddate);
+})
 app.post('/ExitFund',async function(req,res){
   let custid=req.body.custid;
   let productame=req.body.productname;
