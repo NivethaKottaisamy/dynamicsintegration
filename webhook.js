@@ -50,9 +50,7 @@ app.post('/Appointments',async function(req,res){
   var dateUTC = moment().utc().format()
   let startdate = dateUTC;
   let enddate = moment().add(15, 'minutes').utc().format();
-  let custid=req.body.custid;
-  if(custid)
-  { 
+
   await dynamics.getAppointment(startdate,enddate).then(function(response){
   if(response.hasOwnProperty("value") && response.value.length>0){
     res.send(response)
@@ -64,11 +62,7 @@ app.post('/Appointments',async function(req,res){
   {
     res.send("Error Occured");
   }
-  }
-  else{
-    res.send("No meeting Details found");
-  }
-  
+ 
 })
 app.post('/ExitFund',async function(req,res){
   let custid=req.body.custid;
