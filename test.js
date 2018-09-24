@@ -81,9 +81,6 @@ var fetchXml = '<fetch mapping="logical">' +
                         '<attribute name="new_previousday"/>' +
                         '<attribute name="new_daychange"/>' +
                         '<attribute name="new_currentprice"/>' +
-                        '<link-entity name="new_holdings"  from="_new_productid_value" to="_new_productid_value" intersect="true">'+
-                     
-                        '</link-entity>'+
                         '</link-entity>'+
                     '</entity>' +
                '</fetch>';
