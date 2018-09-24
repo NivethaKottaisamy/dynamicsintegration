@@ -49,9 +49,21 @@ app.post("/webhook",async (req,res)=>{
 app.post('/ExitFund',async function(req,res){
   let custid=req.body.custid;
   let productame=req.body.productname;
+  if(custid && productame)
+  {
   await dynamics.ExitFund(custid,productame).then(function(response){
+  if(response.hasOwnProperty("value") && response.value.length>0)
+  {
   res.send(response);
+  }
+  else{
+    res.send("Sorry No Fund Details Available");
+  }
   })
+  }
+  else{
+    res.send("Please input proper Fund name");
+  }
 })
 app.post('/sendEmail', async function (req, res) {
   console.log("Send email..............",JSON.stringify(req.body));
