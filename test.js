@@ -76,11 +76,16 @@ var fetchXml = '<fetch mapping="logical">' +
                     '<entity name="new_productcs">' +
                         '<attribute name="new_name"/>' +
                         '<attribute name="new_productname"/>' +
-                        '<link-entity name="new_productperformance" from="new_name" to="new_name" intersect="true">'+
+                        '<link-entity name="new_productperformance" from="new_productcsid" to="_new_productid_value" intersect="true">'+
                         '<attribute name="new_performance"/>' +
                         '<attribute name="new_previousday"/>' +
                         '<attribute name="new_daychange"/>' +
                         '<attribute name="new_currentprice"/>' +
+                        '<link-entity name="new_holdings"  from="_new_productid_value" to="_new_productid_value" intersect="true">'+
+                        '<filter>'+
+                        '<condition attribute="_owninguser_value" operator="eq" value="99dbaa43-83b5-4321-a64e-92a9c2aea991" />'+
+                        '</filter>'+
+                        '</link-entity>'+
                         '</link-entity>'+
                     '</entity>' +
                '</fetch>';
