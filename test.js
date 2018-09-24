@@ -82,6 +82,7 @@ var fetchXml = '<fetch mapping="logical">' +
                         '<attribute name="new_daychange"/>' +
                         '<attribute name="new_currentprice"/>' +
                         '<link-entity name="new_holdings"  from="new_productid" to="new_productid" intersect="true">'+
+                        '<attribute name="owninguser"/>' +
                         '<filter>'+
                         '<condition attribute="owninguser" operator="eq" value="99dbaa43-83b5-4321-a64e-92a9c2aea991" />'+
                         '</filter>'+
