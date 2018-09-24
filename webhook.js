@@ -8,6 +8,7 @@ var router = express.Router();
 var moment = require('moment');
 var momentTz = require('moment-timezone');
 var dbs = require('./db');
+var dynamics=require('./dynamics');
 var MicrosoftGraph = require("@microsoft/microsoft-graph-client");
 var authHelper = require('./helper');
 
@@ -45,7 +46,13 @@ app.post("/webhook",async (req,res)=>{
    res.send(body);
   });
 })
-
+app.post('/ExitFund',async function(req,res){
+  let custid=req.body.custid;
+  let productame=req.body.productname;
+  await dynamics.ExitFund(custid,productame).then(function(response){
+  res.send(response);
+  })
+})
 app.post('/sendEmail', async function (req, res) {
   console.log("Send email..............",JSON.stringify(req.body));
   let message=req.body.message;

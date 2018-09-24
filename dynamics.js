@@ -32,7 +32,6 @@ function acquireToken(dynamicsWebApiCallback){
             // console.log('Token has not been retrieved. Error: ' + error.stack);
         }
     }
- 
     //call a necessary function in adal-node object to get a token
     adalContext.acquireTokenWithClientCredentials(resource, clientId,clientSecret, adalCallback);
 }
@@ -42,36 +41,8 @@ var dynamicsWebApi = new DynamicsWebApi({
     onTokenRefresh: acquireToken,
     useEntityNames: true
 });
- 
-//call any function
-dynamicsWebApi.executeUnboundFunction("WhoAmI").then(function (response) {
-    // console.log('Hello Dynamics 365! My id is: ' + response.UserId);
-}).catch(function(error){
-    // console.log(error.message);
-});
 
-dynamicsWebApi.retrieveAll("new_productcses", ["new_externalidentifier", "new_externalidentifiertype","new_name","new_productname","new_producttype","new_risktype","new_sector","new_sectorname"]).then(function (response) {
- 
-    var records = response.value;
-    // console.log(records);
-    //do something else with a records array. Access a record: response.value[0].subject;
-})
-.catch(function (error){
-    // console.log(error)
-    //catch an error
-});
-
-// var accountId = '00000000-0000-0000-0000-000000000001';
-// var leadId = '00000000-0000-0000-0000-000000000002';
-// dynamicsWebApi.associate("new_productcses", "P1125", "new_name", "new_productperformances", "P1125").then(function (response) {
-//     console.log(response);
-
-//     //success
-// }).catch(function (error) {
-//     //catch an error
-// });
-
-let ExitFund=function(){
+let ExitFund=function(custid,productname){
 var fetchXml = '<fetch mapping="logical">' +
                     '<entity name="new_productcs">' +
                         '<attribute name="new_name"/>' +
@@ -84,22 +55,16 @@ var fetchXml = '<fetch mapping="logical">' +
                         '<link-entity name="new_holdings"  from="new_productid" to="new_productid" intersect="true">'+
                         '<attribute name="owninguser"/>' +
                         '<filter>'+
-                        '<condition attribute="owninguser" operator="eq" value="99dbaa43-83b5-4321-a64e-92a9c2aea991" />'+
-                        '<condition attribute="new_productname" operator="eq" value="ABCAM PLC" />'+
+                        '<condition attribute="owninguser" operator="eq" value="'+custid+'" />'+
+                        '<condition attribute="new_productname" operator="eq" value="'+productname+'" />'+
                         '</filter>'+
                         '</link-entity>'+
                         '</link-entity>'+
                     '</entity>' +
                '</fetch>';
  
-dynamicsWebApi.executeFetchXmlAll("new_productcses", fetchXml).then(function (response) {
-    console.log(response)
-    //do something with results here; access records response.value[0].accountid
-}).catch(function (error) {
-  console.log(error);
- });
+return dynamicsWebApi.executeFetchXmlAll("new_productcses", fetchXml)
 }
-ExitFund();
 module.exports.ExitFund=ExitFund;
 
 
@@ -155,8 +120,33 @@ module.exports.ExitFund=ExitFund;
 
 
 
+// var accountId = '00000000-0000-0000-0000-000000000001';
+// var leadId = '00000000-0000-0000-0000-000000000002';
+// dynamicsWebApi.associate("new_productcses", "P1125", "new_name", "new_productperformances", "P1125").then(function (response) {
+//     console.log(response);
 
+//     //success
+// }).catch(function (error) {
+//     //catch an error
+// });
 
+//call any function
+// dynamicsWebApi.executeUnboundFunction("WhoAmI").then(function (response) {
+//     // console.log('Hello Dynamics 365! My id is: ' + response.UserId);
+// }).catch(function(error){
+//     // console.log(error.message);
+// });
+
+// dynamicsWebApi.retrieveAll("new_productcses", ["new_externalidentifier", "new_externalidentifiertype","new_name","new_productname","new_producttype","new_risktype","new_sector","new_sectorname"]).then(function (response) {
+ 
+//     var records = response.value;
+//     // console.log(records);
+//     //do something else with a records array. Access a record: response.value[0].subject;
+// })
+// .catch(function (error){
+//     // console.log(error)
+//     //catch an error
+// });
 //  var AuthenticationContext = require('adal-node').AuthenticationContext;
 //  var MicrosoftGraph = require("@microsoft/microsoft-graph-client");
 // var authorityHostUrl = 'https://login.microsoftonline.com/72a65f94-18d8-4ac4-b401-9c1c32f8a1be/oauth2/token';
