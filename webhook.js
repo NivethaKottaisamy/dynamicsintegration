@@ -59,7 +59,10 @@ app.post('/ExitFund',async function(req,res){
   else{
     res.send("Sorry No Fund Details Available");
   }
-  })
+  }).catch(e)
+  {
+    res.send(e);
+  }
   }
   else{
     res.send("Please input proper Fund name");
