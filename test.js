@@ -24,7 +24,7 @@ function acquireToken(dynamicsWebApiCallback){
     function adalCallback(error, token) {
         if (!error){
             //call DynamicsWebApi callback only when a token has been retrieved
-            // console.log(token)
+            console.log(token)
             dynamicsWebApiCallback(token);
 
         }
@@ -86,7 +86,7 @@ var fetchXml = '<fetch mapping="logical">' +
                '</fetch>';
  
 dynamicsWebApi.executeFetchXmlAll("new_productcses", fetchXml).then(function (response) {
-    // console.log(response)
+    console.log(response)
     //do something with results here; access records response.value[0].accountid
 }).catch(function (error) {
 //   console.log(error);
