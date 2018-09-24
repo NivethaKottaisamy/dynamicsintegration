@@ -85,7 +85,7 @@ var fetchXml = '<fetch mapping="logical">' +
                         '<attribute name="owninguser"/>' +
                         '<filter>'+
                         '<condition attribute="owninguser" operator="eq" value="99dbaa43-83b5-4321-a64e-92a9c2aea991" />'+
-                        '<condition attribute="new_productname" operator="eq" value="ABCAM PLC" />'+
+                        '<condition attribute="new_productname" entityname="new_productcs" operator="eq" value="ABCAM PLC" />'+
                         '</filter>'+
                         '</link-entity>'+
                         '</link-entity>'+
