@@ -86,7 +86,7 @@ var fetchXml = '<fetch mapping="logical">' +
                '</fetch>';
  
 dynamicsWebApi.executeFetchXmlAll("new_productcses", fetchXml).then(function (response) {
-    // console.log(response)
+    console.log(response)
     //do something with results here; access records response.value[0].accountid
 }).catch(function (error) {
 //   console.log(error);
