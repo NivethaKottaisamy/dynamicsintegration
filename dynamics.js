@@ -41,7 +41,7 @@ var dynamicsWebApi = new DynamicsWebApi({
     onTokenRefresh: acquireToken,
     useEntityNames: true
 });
-let getAppointment=function(from,to,custid){
+let getAppointment=function(from,to){
     var fetchXml = '<fetch mapping="logical">' +
                     '<entity name="appointment">' +
                         '<attribute name="scheduledstart"/>' +
@@ -53,7 +53,6 @@ let getAppointment=function(from,to,custid){
                          '<filter>'+
                         '<condition attribute="scheduledstart" operator="on-or-before" value="'+from+'" />'+
                         '<condition attribute="scheduledend" operator="on-or-after" value="'+to+'" />'+
-                        '<condition attribute="ownerid" operator="eq" value="'+custid+'" />'+
                         '</filter>'+
                     '</entity>' +
                '</fetch>';

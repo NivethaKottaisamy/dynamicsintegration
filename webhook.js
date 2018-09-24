@@ -52,8 +52,8 @@ app.post('/Appointments',async function(req,res){
   let enddate = moment().add(15, 'minutes').utc().format();
   let custid=req.body.custid;
   if(custid)
-  {
-  await dynamics.getAppointment(startdate,enddate,custid).then(function(response){
+  { 
+  await dynamics.getAppointment(startdate,enddate).then(function(response){
   if(response.hasOwnProperty("value") && response.value.length>0){
     res.send(response)
   }
