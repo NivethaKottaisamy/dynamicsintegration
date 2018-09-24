@@ -71,7 +71,7 @@ dynamicsWebApi.retrieveAll("new_productcses", ["new_externalidentifier", "new_ex
 //     //catch an error
 // });
 
-
+let ExitFund=function(){
 var fetchXml = '<fetch mapping="logical">' +
                     '<entity name="new_productcs">' +
                         '<attribute name="new_name"/>' +
@@ -85,6 +85,7 @@ var fetchXml = '<fetch mapping="logical">' +
                         '<attribute name="owninguser"/>' +
                         '<filter>'+
                         '<condition attribute="owninguser" operator="eq" value="99dbaa43-83b5-4321-a64e-92a9c2aea991" />'+
+                        '<condition attribute="GF INTERNATIONAL" operator="eq" value="99dbaa43-83b5-4321-a64e-92a9c2aea991" />'+
                         '</filter>'+
                         '</link-entity>'+
                         '</link-entity>'+
@@ -97,6 +98,9 @@ dynamicsWebApi.executeFetchXmlAll("new_productcses", fetchXml).then(function (re
 }).catch(function (error) {
   console.log(error);
  });
+}
+
+module.exports.ExitFund=ExitFund;
 
 
 
