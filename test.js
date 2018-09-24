@@ -87,7 +87,6 @@ var fetchXml = '<fetch mapping="logical">' +
                         '</filter>'+
                         '</link-entity>'+
                         '</link-entity>'+
-                        '</link-entity>'+
                     '</entity>' +
                '</fetch>';
  
