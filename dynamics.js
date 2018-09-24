@@ -41,7 +41,24 @@ var dynamicsWebApi = new DynamicsWebApi({
     onTokenRefresh: acquireToken,
     useEntityNames: true
 });
-
+let getAppointment=function(from,to,custid){
+    var fetchXml = '<fetch mapping="logical">' +
+                    '<entity name="appointment">' +
+                        '<attribute name="scheduledstart"/>' +
+                         '<attribute name="scheduledend"/>' +
+                         '<attribute name="location"/>' +
+                         '<attribute name="subject"/>' +
+                         '<attribute name="ownerid"/>' +
+                         '<order attribute="scheduledstart" />'+
+                         '<filter>'+
+                        '<condition attribute="scheduledstart" operator="on-or-before" value="'+from+'" />'+
+                        '<condition attribute="scheduledend" operator="on-or-after" value="'+to+'" />'+
+                        '<condition attribute="ownerid" operator="eq" value="'+custid+'" />'+
+                        '</filter>'+
+                    '</entity>' +
+               '</fetch>';
+    return dynamicsWebApi.executeFetchXmlAll("appointments", fetchXml)
+}
 let ExitFund=function(custid,productname){
 var fetchXml = '<fetch mapping="logical">' +
                     '<entity name="new_productcs">' +
@@ -66,6 +83,7 @@ var fetchXml = '<fetch mapping="logical">' +
 return dynamicsWebApi.executeFetchXmlAll("new_productcses", fetchXml)
 }
 module.exports.ExitFund=ExitFund;
+module.exports.getAppointment=getAppointment;
 
 
 

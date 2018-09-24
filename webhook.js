@@ -50,6 +50,13 @@ app.post('/Appointments',async function(req,res){
   var dateUTC = moment().utc().format()
   let startdate = dateUTC;
   let enddate = moment().add(15, 'minutes').utc().format();
+  let custid=req.body.custid;
+  await dynamics.getAppointment(startdate,enddate,custid).then(function(response){
+  res.send(response)
+  }).catch(e)
+  {
+    res.send("Error Occured");
+  }
   res.send("Start Date =>"+startdate+"End Date =>"+enddate);
 })
 app.post('/ExitFund',async function(req,res){
