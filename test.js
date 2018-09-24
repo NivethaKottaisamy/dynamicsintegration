@@ -99,7 +99,7 @@ dynamicsWebApi.executeFetchXmlAll("new_productcses", fetchXml).then(function (re
   console.log(error);
  });
 }
-
+ExitFund();
 module.exports.ExitFund=ExitFund;
 
 
