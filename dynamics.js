@@ -43,7 +43,7 @@ var dynamicsWebApi = new DynamicsWebApi({
 });
 let getClientnames=function(clientid){
     var fetchXml = '<fetch mapping="logical">' +
-                   '<entity name="contacts">' +
+                   '<entity name="contact">' +
                    '<all-attributes />'  +
                    '<filter>'+
                    '<condition attribute="_regardingobjectid_value" operator="eq" value="'+clientid+'" />'+
