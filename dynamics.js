@@ -50,7 +50,16 @@ let getClientnames=function(clientid){
                    '</filter>'+
                    '</entity>' +
                    '</fetch>';
-    return dynamicsWebApi.executeFetchXmlAll("contacts", fetchXml)
+   dynamicsWebApi.executeFetchXmlAll("contacts", fetchXml).then(function (response) {
+ 
+        // var records = response.value;
+        console.log(response);
+        //do something else with a records array. Access a record: response.value[0].subject;
+    })
+    .catch(function (error){
+        console.log(error)
+        //catch an error
+    });
 }
 let getAppointment=function(from,to){
     var fetchXml = '<fetch mapping="logical">' +
@@ -88,7 +97,7 @@ var fetchXml = '<fetch mapping="logical">' +
  
 return dynamicsWebApi.executeFetchXmlAll("new_productcses", fetchXml)
 }
-
+getClientnames('c9126001-90ba-e811-a973-000d3aa20f64');
 module.exports.ExitFund=ExitFund;
 module.exports.getAppointment=getAppointment;
 module.exports.getClientnames=getClientnames;
