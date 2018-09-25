@@ -44,13 +44,8 @@ var dynamicsWebApi = new DynamicsWebApi({
 let getAppointment=function(from,to){
     var fetchXml = '<fetch mapping="logical">' +
                     '<entity name="appointment">' +
-                        '<attribute name="scheduledstart"/>' +
-                         '<attribute name="scheduledend"/>' +
-                         '<attribute name="location"/>' +
-                         '<attribute name="subject"/>' +
-                         '<attribute name="ownerid"/>' +
-                         '<attribute name="_regardingobjectid_value"/>' +
-                         '<order attribute="scheduledstart" />'+
+                        '<all-attributes />'  +
+                        '<order attribute="scheduledstart" />'+
                          '<filter>'+
                         '<condition attribute="scheduledstart" operator="on-or-before" value="'+from+'" />'+
                         '<condition attribute="scheduledend" operator="on-or-after" value="'+to+'" />'+
