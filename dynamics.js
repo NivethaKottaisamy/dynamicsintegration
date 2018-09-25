@@ -82,6 +82,7 @@ var fetchXml = '<fetch mapping="logical">' +
  
 return dynamicsWebApi.executeFetchXmlAll("new_productcses", fetchXml)
 }
+ExitFund();
 module.exports.ExitFund=ExitFund;
 module.exports.getAppointment=getAppointment;
 
