@@ -41,6 +41,16 @@ var dynamicsWebApi = new DynamicsWebApi({
     onTokenRefresh: acquireToken,
     useEntityNames: true
 });
+let getClientnames=function(clientid){
+    var fetchXml = '<fetch mapping="logical">' +
+                   '<entity name="contacts">' +
+                   '<all-attributes />'  +
+                   '<filter>'+
+                   '<condition attribute="_regardingobjectid_value" operator="eq" value="'+clientid+'" />'+
+                   '</filter>'+
+                   '</entity>' +
+                   '</fetch>';
+}
 let getAppointment=function(from,to){
     var fetchXml = '<fetch mapping="logical">' +
                     '<entity name="appointment">' +
@@ -80,7 +90,7 @@ return dynamicsWebApi.executeFetchXmlAll("new_productcses", fetchXml)
 ExitFund();
 module.exports.ExitFund=ExitFund;
 module.exports.getAppointment=getAppointment;
-
+module.exports.getClientnames=getClientnames;
 
 
 

@@ -46,6 +46,20 @@ app.post("/webhook",async (req,res)=>{
    res.send(body);
   });
 })
+app.post("/ClientNames",async function(req,res){
+  let custid=req.body.clientid;
+  await dynamics.getClientnames(custid).then(function(response){
+    if(response.hasOwnProperty("value") && response.value.length>0){
+      res.send(response)
+    }
+    else{
+      res.send("No Client Details found");
+    }
+    }).catch(e)
+    {
+      res.send("Error Occured");
+    }
+})
 app.post('/Appointments',async function(req,res){
   var dateUTC = moment().utc().format()
   let startdate = dateUTC;
