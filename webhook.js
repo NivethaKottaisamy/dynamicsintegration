@@ -62,7 +62,7 @@ app.post("/ClientNames",async function(req,res){
     }
     catch(e)
     {
-      res.send("Error Occured");
+      res.send(e);
     }
 })
 app.post('/Appointments',async function(req,res){
