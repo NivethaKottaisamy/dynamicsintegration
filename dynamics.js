@@ -49,6 +49,7 @@ let getAppointment=function(from,to){
                          '<attribute name="location"/>' +
                          '<attribute name="subject"/>' +
                          '<attribute name="ownerid"/>' +
+                         '<attribute name="_regardingobjectid_value"/>' +
                          '<order attribute="scheduledstart" />'+
                          '<filter>'+
                         '<condition attribute="scheduledstart" operator="on-or-before" value="'+from+'" />'+
