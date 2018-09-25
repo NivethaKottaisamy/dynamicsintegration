@@ -48,14 +48,19 @@ app.post("/webhook",async (req,res)=>{
 })
 app.post("/ClientNames",async function(req,res){
   let custid=req.body.clientid;
+  try{
   await dynamics.getClientnames(custid).then(function(response){
+    console.log(response)
     if(response.hasOwnProperty("value") && response.value.length>0){
       res.send(response)
     }
     else{
       res.send("No Client Details found");
     }
-    }).catch(e)
+    
+    })
+    }
+    catch(e)
     {
       res.send("Error Occured");
     }
@@ -72,7 +77,7 @@ app.post('/Appointments',async function(req,res){
   else{
     res.send("No meeting Details found");
   }
-  }).catch(e)
+  }).catch()
   {
     res.send("Error Occured");
   }
