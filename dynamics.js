@@ -50,6 +50,7 @@ let getClientnames=function(clientid){
                    '</filter>'+
                    '</entity>' +
                    '</fetch>';
+    return dynamicsWebApi.executeFetchXmlAll("contacts", fetchXml)
 }
 let getAppointment=function(from,to){
     var fetchXml = '<fetch mapping="logical">' +
@@ -87,7 +88,7 @@ var fetchXml = '<fetch mapping="logical">' +
  
 return dynamicsWebApi.executeFetchXmlAll("new_productcses", fetchXml)
 }
-ExitFund();
+
 module.exports.ExitFund=ExitFund;
 module.exports.getAppointment=getAppointment;
 module.exports.getClientnames=getClientnames;
