@@ -50,16 +50,7 @@ let getClientnames=function(clientid){
                    '</filter>'+
                    '</entity>' +
                    '</fetch>';
-   dynamicsWebApi.executeFetchXmlAll("contacts", fetchXml).then(function (response) {
- 
-        // var records = response.value;
-        console.log(response);
-        //do something else with a records array. Access a record: response.value[0].subject;
-    })
-    .catch(function (error){
-        console.log(error)
-        //catch an error
-    });
+   return dynamicsWebApi.executeFetchXmlAll("contacts", fetchXml);
 }
 let getAppointment=function(from,to){
     var fetchXml = '<fetch mapping="logical">' +
