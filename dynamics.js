@@ -42,7 +42,12 @@ var dynamicsWebApi = new DynamicsWebApi({
     useEntityNames: true
 });
 var lead = {
-    new_quantity: 3000
+    new_quantity: 3000,
+    new_clientid:"ef126001-90ba-e811-a973-000d3aa20f64",
+    new_productid:"3bb08bbf-6fba-e811-a973-000d3aa20f64",
+    new_action:"Sell",
+    new_value:15930
+
 };
 //call dynamicsWebApi.create function
 dynamicsWebApi.create(lead, "new_transactions").then(function (id) {
