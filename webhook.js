@@ -48,7 +48,7 @@ app.post("/webhook",async (req,res)=>{
 })
 app.post("/ClientNames",async function(req,res){
   console.log(req.body);
-  let custid=req.body;
+  let custid=req.body.clientid;
   try{
   await dynamics.getClientnames(custid).then(function(response){
     console.log(response)
