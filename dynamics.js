@@ -46,7 +46,7 @@ var lead = {
     new_clientid:"ef126001-90ba-e811-a973-000d3aa20f64",
     new_productid:"3bb08bbf-6fba-e811-a973-000d3aa20f64",
     new_action:"Sell",
-    new_value:15930
+    new_price:15930
 
 };
 //call dynamicsWebApi.create function
