@@ -41,6 +41,17 @@ var dynamicsWebApi = new DynamicsWebApi({
     onTokenRefresh: acquireToken,
     useEntityNames: true
 });
+var lead = {
+    new_quantity: "Test WebAPI"
+};
+//call dynamicsWebApi.create function
+dynamicsWebApi.create(lead, "new_transactions").then(function (id) {
+    //do something with id here
+    console.log(id);
+}).catch(function (error) {
+    //catch error here
+    console.log(error);
+})
 let getClientnames=function(clientid){
     var fetchXml = '<fetch mapping="logical">' +
                    '<entity name="contact">' +
