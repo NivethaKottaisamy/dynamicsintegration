@@ -46,7 +46,7 @@ let getClientnames=function(clientid){
                    '<entity name="contact">' +
                    '<all-attributes />'  +
                    '<filter>'+
-                   '<condition attribute="_regardingobjectid_value" operator="eq" value="'+clientid+'" />'+
+                   '<condition attribute="contactid" operator="eq" value="'+clientid+'" />'+
                    '</filter>'+
                    '</entity>' +
                    '</fetch>';
