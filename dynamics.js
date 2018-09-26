@@ -42,7 +42,7 @@ var dynamicsWebApi = new DynamicsWebApi({
     useEntityNames: true
 });
 var lead = {
-    new_quantity: "Test WebAPI"
+    new_quantity: 3000
 };
 //call dynamicsWebApi.create function
 dynamicsWebApi.create(lead, "new_transactions").then(function (id) {
