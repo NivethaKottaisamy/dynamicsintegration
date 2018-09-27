@@ -43,7 +43,7 @@ var dynamicsWebApi = new DynamicsWebApi({
 });
 var lead = {
     new_quantity: 3000,
-    'new_clientID@odata.bind':"/contacts(ef126001-90ba-e811-a973-000d3aa20f64)",
+    'contactid@odata.bind':"/contacts(ef126001-90ba-e811-a973-000d3aa20f64)",
     'new_productid@odata.bind':"/new_productcses(3bb08bbf-6fba-e811-a973-000d3aa20f64)",
     new_action:"Sell",
     new_price:15930
