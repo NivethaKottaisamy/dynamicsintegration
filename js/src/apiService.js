@@ -16,9 +16,9 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
             }
 
             userSays(userInput, callback) {
-                let uuid = !localStorage.getItem('uuid') ? localStorage.setItem('uuid', uuidv1()) : localStorage.getItem('uuid');
+                let uuid = !localStorage.getItem('clientid') ?  localStorage.setItem('uuid', uuidv1()): localStorage.getItem('clientid');
                 this.options = {
-                    sessionId: uuid + localStorage.getItem('clientid'),
+                    sessionId: uuid,
                     lang: "en"
                 };
 

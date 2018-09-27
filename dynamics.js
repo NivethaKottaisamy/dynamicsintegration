@@ -17,22 +17,15 @@ var password = 'abcde@12345';
 var clientSecret='JPpWrYI2ZGXnMc1BNgaMt+u/1V+dG7i7vQwnoBDCmpY=';
 
 var adalContext = new AuthenticationContext(authorityUrl);
- 
-//add a callback as a parameter for your function
 function acquireToken(dynamicsWebApiCallback){
-    //a callback for adal-node
     function adalCallback(error, token) {
         if (!error){
-            //call DynamicsWebApi callback only when a token has been retrieved
             console.log(token)
             dynamicsWebApiCallback(token);
-
         }
         else{
-            // console.log('Token has not been retrieved. Error: ' + error.stack);
         }
     }
-    //call a necessary function in adal-node object to get a token
     adalContext.acquireTokenWithClientCredentials(resource, clientId,clientSecret, adalCallback);
 }
 //create DynamicsWebApi object
@@ -41,22 +34,16 @@ var dynamicsWebApi = new DynamicsWebApi({
     onTokenRefresh: acquireToken,
     useEntityNames: true
 });
-var lead = {
-    new_quantity: 3000,
-    'new_ClientID@odata.bind':"contacts(ef126001-90ba-e811-a973-000d3aa20f64)",
-    'new_ProductID@odata.bind':"new_productcses(3bb08bbf-6fba-e811-a973-000d3aa20f64)",
-    new_action:"Sell",
-    new_price:15930
-
-};
-//call dynamicsWebApi.create function
-dynamicsWebApi.create(lead, "new_transactions").then(function (id) {
-    //do something with id here
-    console.log(id);
-}).catch(function (error) {
-    //catch error here
-    console.log(error);
-})
+let createTransactions=function(quantity,price,action,contactid,productid){
+    var transactions = {
+        new_quantity: quantity,
+        'new_ClientID@odata.bind':"contacts("+contactid+")",
+        'new_ProductID@odata.bind':"new_productcses("+productid+")",
+        new_action:action,
+        new_price:price
+    };
+    return dynamicsWebApi.create(transactions, "new_transactions");
+}
 let getClientnames=function(clientid){
     var fetchXml = '<fetch mapping="logical">' +
                    '<entity name="contact">' +
@@ -108,6 +95,7 @@ getClientnames('c9126001-90ba-e811-a973-000d3aa20f64');
 module.exports.ExitFund=ExitFund;
 module.exports.getAppointment=getAppointment;
 module.exports.getClientnames=getClientnames;
+module.exports.createTransactions=createTransactions;
 
 
 
